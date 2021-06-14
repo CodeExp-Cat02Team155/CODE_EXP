@@ -48,7 +48,9 @@ export default function App() {
     setPassword("");
     setLoggedIn(true);
 
-    /*
+    // Authentication [username, password] with DB
+
+    /* Test authentication
     if (username === dummyUsername && password === dummyPassword)
       setLoggedIn(true);
     else {
@@ -64,7 +66,7 @@ export default function App() {
     if (newPassword === newPasswordRepeat) {
       console.log("Create Account: [" + username + ", " + newPassword + "]");
 
-      // Add [username, password1] to database
+      // Add [username, newPassword] to DB
 
       resetSignUpScreen();
     } else Alert.alert("Password Error", "The 2 passwords are not the same!");
