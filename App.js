@@ -48,7 +48,9 @@ export default function App() {
     setPassword("");
     setLoggedIn(true);
 
-    /*
+    // Authentication [username, password] with DB
+
+    /* Test authentication
     if (username === dummyUsername && password === dummyPassword)
       setLoggedIn(true);
     else {
