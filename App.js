@@ -17,6 +17,8 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
+
+// dummy authentication value, to be changed when switching to authentication
 const dummyUsername = "admin";
 const dummyPassword = "12345";
 
@@ -37,12 +39,13 @@ export default function App() {
   function authLogin() {
     if (username === dummyUsername && password === dummyPassword)
       setLoggedIn(true);
-    else
+    else {
       console.log(
         "Error: login\n Error Message: username or password is wrong!"
       );
 
-    Alert.alert("Authentication Error", "Wrong username / password!");
+      Alert.alert("Authentication Error", "Wrong username / password!");
+    }
   }
 
   if (isLoggedIn) {
@@ -103,7 +106,6 @@ export default function App() {
 }
 
 // Styles
-
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",

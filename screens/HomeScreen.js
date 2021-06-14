@@ -11,6 +11,7 @@ import {
   Image,
 } from "react-native";
 
+<<<<<<< HEAD
 export default function HomeScreen() {
     function logout() {
         DeviceEventEmitter.emit("logout");
@@ -35,6 +36,12 @@ export default function HomeScreen() {
             <Text style={styles.itemText}>{data.name}</Text>
         </TouchableOpacity>)
     }
+=======
+export default function HomeScreen({ navigation }) {
+  function logout() {
+    DeviceEventEmitter.emit("logout");
+  }
+>>>>>>> temp2
 
     return (
         <SafeAreaView style={styles.container}>
