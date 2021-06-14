@@ -205,7 +205,7 @@ export default function App() {
               style={styles.buttonPrimary}
               onPress={createAccount}
             >
-              <Text style={styles.buttonPrimaryText}>Register</Text>
+              <Text style={styles.buttonPrimaryText}>Confirm</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonSecondary}
