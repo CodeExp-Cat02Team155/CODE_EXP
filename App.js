@@ -28,9 +28,10 @@ const dummyPassword = "12345";
 
 export default function App() {
   useEffect(() => {
-    const listener = DeviceEventEmitter.addListener("logout", () =>
-      setLoggedIn(false)
-    );
+    const listener = DeviceEventEmitter.addListener("logout", () => {
+      setLoggedIn(false);
+      console.log("Logout");
+    });
     return () => listener.remove();
   }, []);
 
@@ -48,10 +49,10 @@ export default function App() {
     setPassword("");
     setLoggedIn(true);
 
-    // Authentication [username, password] with DB
+    // Authentication [email, password] with DB
 
     /* Test authentication
-    if (username === dummyUsername && password === dummyPassword)
+    if (email === dummyEmail && password === dummyPassword)
       setLoggedIn(true);
     else {
       Alert.alert("Authentication Error", "Invalid email / password!");
@@ -77,6 +78,29 @@ export default function App() {
     setNewPassword("");
     setNewPasswordRepeat("");
     setDisplaySignUp(false);
+    console.log("Reset Sign Up Screen");
+  }
+
+  function Input(props) {
+    return (
+      <View style={styles.row}>
+        <Ionicons
+          style={styles.icon}
+          name={props.iconName}
+          size={30}
+          color={mainColor}
+        />
+        <TextInput
+          style={styles.input}
+          secureTextEntry={props.secure}
+          placeholder={props.placeholder}
+          selectionColor="#66F2A86F"
+          placeholderTextColor="#AAAAAA"
+          value={props.value}
+          onChangeText={props.setValue}
+        />
+      </View>
+    );
   }
 
   if (isLoggedIn) {
@@ -174,28 +198,6 @@ export default function App() {
         </View>
       </Modal>
     </SafeAreaView>
-  );
-}
-
-function Input(props) {
-  return (
-    <View style={styles.row}>
-      <Ionicons
-        style={styles.icon}
-        name={props.iconName}
-        size={30}
-        color={mainColor}
-      />
-      <TextInput
-        style={styles.input}
-        secureTextEntry={props.secure}
-        placeholder={props.placeholder}
-        selectionColor="#66F2A86F"
-        placeholderTextColor="#AAAAAA"
-        value={props.value}
-        onChangeText={props.setValue}
-      />
-    </View>
   );
 }
 
