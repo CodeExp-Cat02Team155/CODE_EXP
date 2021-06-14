@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   SafeAreaView,
+  View,
   StyleSheet,
   StatusBar,
   TouchableOpacity,
@@ -9,8 +10,37 @@ import {
   DeviceEventEmitter,
   Image,
 } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const mainColor = "#0B3454"
+const categories = [{
+    id: 0,
+    name: "Fashion",
+    icon: "shirt",
+    color: "#E81E1E",
+    colorBackground: "#F2D3CD",
+},
+{
+    id: 1,
+    name: "Electronics",
+    icon: "desktop-outline",
+    color: "#22A1E5",
+    colorBackground: "#DCE9F2",
+},
+{
+    id: 2,
+    name: "Tools",
+    icon: "construct",
+    color: "#F2D11A",
+    colorBackground: "#F9F6D6"
+},
+{
+    id: 3,
+    name: "More",
+    icon: "apps",
+    color: "#11A01B",
+    colorBackground: "#D2EFD7"
+},]
 
 export default function HomeScreen() {
     function logout() {
@@ -28,12 +58,24 @@ export default function HomeScreen() {
         }
     }
 
-    const renderItem = ({item}) => {
+    const storeRenderItem = ({item}) => {
         const data = getStore(item.id)
         return (<TouchableOpacity style={styles.itemContainer}>
             <Image source={{uri: data.iconUrl}}
                 style={styles.itemImage}/>
-            <Text style={styles.itemText}>{data.name}</Text>
+            <Text style={styles.itemText}
+                numberOfLines={1}>{data.name}</Text>
+        </TouchableOpacity>)
+    }
+
+    const categoryRendermItem = ({item}) => {
+        return (<TouchableOpacity style={styles.itemContainer}>
+            <View style={styles.icon}
+                backgroundColor={item.colorBackground}>
+                <Ionicons name={item.icon} size={25} color={item.color}/>
+            </View>
+            <Text style={styles.itemText}
+                numberOfLines={1}>{item.name}</Text>
         </TouchableOpacity>)
     }
 
@@ -50,7 +92,13 @@ export default function HomeScreen() {
                 data={favStoresId}
                 numColumns={4}
                 keyExtractor={(item) => item.id}
-                renderItem={renderItem}/>
+                renderItem={storeRenderItem}/>
+            <FlatList style={styles.categoriesContainer}
+                showsVerticalScrollIndicator={false}
+                data={categories}
+                numColumns={4}
+                keyExtractor={(item) => item.id}
+                renderItem={categoryRendermItem}/>
             <TouchableOpacity onPress={logout}
                 style={styles.buttonPrimary}>
                 <Text style={styles.buttonPrimaryText}>Logout</Text>
@@ -65,17 +113,30 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     header: {
-        paddingTop: 50,
+        paddingTop: 40,
         fontSize: 20,
-
+        paddingLeft: 30,
+        paddingRight: 30,
+        width: "100%",
     },
     favStoreContainer: {
+        elevation: 1,
         marginTop: 20,
         marginLeft: 30,
         marginRight: 30,
         width: "90%",
         height: 200,
-        borderRadius: 30,
+        borderRadius: 20,
+        backgroundColor: "white",
+    },
+    categoriesContainer: {
+        elevation: 1,
+        marginTop: 20,
+        marginLeft: 30,
+        marginRight: 30,
+        width: "90%",
+        height: 100,
+        borderRadius: 20,
         backgroundColor: "white",
     },
     itemContainer: {
@@ -86,13 +147,20 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     itemImage: {
-        width: 40,
-        height: 40,
-        borderRadius: 20,
+        width: 50,
+        height: 50,
+        borderRadius: 25,
     },
     itemText: {
-        paddingTop: 10,
-        fontSize: 16,
+        paddingTop: 5,
+        fontSize: 10,
+    },
+    icon: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     buttonPrimary: {
         backgroundColor: mainColor,
