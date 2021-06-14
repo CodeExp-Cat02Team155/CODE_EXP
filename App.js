@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import {
-  SafeAreaView,
-  View,
-  TextInput,
-  StyleSheet,
-  StatusBar,
-  TouchableOpacity,
-  Text,
+  Alert,
   DeviceEventEmitter,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -15,8 +16,9 @@ import HomeScreen from "./screens/HomeScreen";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Stack = createStackNavigator();
-
 const mainColor = "#0B3454";
+const dummyUsername = "admin";
+const dummyPassword = "12345";
 
 export default function App() {
   useEffect(() => {
@@ -29,8 +31,19 @@ export default function App() {
   }, []);
 
   const [isLoggedIn, setLoggedIn] = useState(false);
-  const [phone, setPhone] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  function authLogin() {
+    if (username === dummyUsername && password === dummyPassword)
+      setLoggedIn(true);
+    else
+      console.log(
+        "Error: login\n Error Message: username or password is wrong!"
+      );
+
+    Alert.alert("Authentication Error", "Wrong username / password!");
+  }
 
   if (isLoggedIn) {
     return (
@@ -52,17 +65,17 @@ export default function App() {
       <View style={styles.row}>
         <Ionicons
           style={styles.icon}
-          name={"call-outline"}
+          name={"person-outline"}
           size={30}
           color={mainColor}
         />
         <TextInput
           style={styles.input}
-          placeholder="Mobile"
+          placeholder="Username"
           selectionColor="#66F2A86F"
           placeholderTextColor="#AAAAAA"
-          value={phone}
-          onChangeText={setPhone}
+          value={username}
+          onChangeText={setUsername}
         />
       </View>
       <View style={styles.row}>
@@ -82,10 +95,7 @@ export default function App() {
           onChangeText={setPassword}
         />
       </View>
-      <TouchableOpacity
-        onPress={() => setLoggedIn(true)}
-        style={styles.buttonPrimary}
-      >
+      <TouchableOpacity onPress={authLogin} style={styles.buttonPrimary}>
         <Text style={styles.buttonPrimaryText}>Login</Text>
       </TouchableOpacity>
     </SafeAreaView>
