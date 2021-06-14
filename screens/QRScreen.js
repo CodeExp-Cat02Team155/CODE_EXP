@@ -13,7 +13,7 @@ export default function QRScreen({ navigation }) {
     })();
   }, []);
 
-  const handleBarCodeScanned = ({ type, data }) => {
+  const handleBarCodeScanned = ({ data }) => {
     const code = String(data);
     if (code.startsWith("ProductCode")) {
       setScanned(true);
@@ -22,25 +22,24 @@ export default function QRScreen({ navigation }) {
     }
   };
 
-  if (hasPermission === null)
+  if (hasPermission === true)
     return (
-      <View style={{ alignItems: "center", justifyContent: "center" }}>
-        <Text>Requesting for camera permission</Text>
-      </View>
-    );
-  else if (hasPermission === false)
-    return (
-      <View style={{ alignItems: "center", justifyContent: "center" }}>
-        <Text>No access to camera</Text>
+      <View style={styles.container}>
+        <BarCodeScanner
+          onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+          style={StyleSheet.absoluteFillObject}
+        />
       </View>
     );
 
+  const displayText =
+    hasPermission === null
+      ? "Requesting for camera permission"
+      : "No access to camera";
+
   return (
-    <View style={styles.container}>
-      <BarCodeScanner
-        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-        style={StyleSheet.absoluteFillObject}
-      />
+    <View style={{ alignItems: "center", justifyContent: "center" }}>
+      <Text>{displayText}</Text>
     </View>
   );
 }

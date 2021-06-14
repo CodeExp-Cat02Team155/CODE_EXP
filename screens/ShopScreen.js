@@ -10,8 +10,7 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function ShopScreen({ navigation, route }) {
-  const storeId = route.params.item;
-  const store = getStore(storeId);
+  const store = getStore(route.params.item);
 
   function getStore(id) {
     // Fetch store details

@@ -48,10 +48,10 @@ export default function App() {
     setPassword("");
     setLoggedIn(true);
 
-    // Authentication [username, password] with DB
+    // Authentication [email, password] with DB
 
     /* Test authentication
-    if (username === dummyUsername && password === dummyPassword)
+    if (email === dummyEmail && password === dummyPassword)
       setLoggedIn(true);
     else {
       Alert.alert("Authentication Error", "Invalid email / password!");
