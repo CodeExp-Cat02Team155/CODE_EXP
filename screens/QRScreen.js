@@ -13,34 +13,34 @@ export default function QRScreen({ navigation }) {
     })();
   }, []);
 
-  const handleBarCodeScanned = ({ data }) => {
+  const handleBarCodeScanned = ({ type, data }) => {
     const code = String(data);
-    if (code.match("^[P, S][0-9]+")) {
+    if (code.startsWith("ProductCode")) {
       setScanned(true);
-      console.log(code);
       navigation.goBack();
-      navigation.navigate(code.charAt(0) === "P" ? "product" : "shop", code);
+      navigation.navigate("product", code.substring("ProductCode".length));
     }
   };
 
-  if (hasPermission === true)
+  if (hasPermission === null)
     return (
-      <View style={styles.container}>
-        <BarCodeScanner
-          onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-          style={StyleSheet.absoluteFillObject}
-        />
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        <Text>Requesting for camera permission</Text>
+      </View>
+    );
+  else if (hasPermission === false)
+    return (
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        <Text>No access to camera</Text>
       </View>
     );
 
-  const displayText =
-    hasPermission === null
-      ? "Requesting for camera permission"
-      : "No access to camera";
-
   return (
-    <View style={{ alignItems: "center", justifyContent: "center" }}>
-      <Text>{displayText}</Text>
+    <View style={styles.container}>
+      <BarCodeScanner
+        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+        style={StyleSheet.absoluteFillObject}
+      />
     </View>
   );
 }
