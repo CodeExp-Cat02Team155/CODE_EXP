@@ -1,10 +1,5 @@
 # CODE_EXP
 
-TODOS:
-
-1. Implement DB
-   App.js - lines 51, 69
-
 For QR Scanner I used these 2
 
 1. expo install expo-barcode-scanner
