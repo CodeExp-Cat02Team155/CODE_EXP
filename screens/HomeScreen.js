@@ -10,13 +10,9 @@ import {
   StyleSheet,
 } from "react-native";
 
-<<<<<<< HEAD
-export default function HomeScreen() {
-=======
 const mainColor = "#0B3454";
 
 export default function HomeScreen({ navigation }) {
->>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
   function logout() {
     DeviceEventEmitter.emit("logout");
   }
@@ -36,14 +32,10 @@ export default function HomeScreen({ navigation }) {
   const renderItem = ({ item }) => {
     const data = getStore(item.id);
     return (
-<<<<<<< HEAD
-      <TouchableOpacity style={styles.itemContainer}>
-=======
       <TouchableOpacity
         style={styles.itemContainer}
         onPress={() => navigation.navigate("shop", { item })}
       >
->>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
         <Image source={{ uri: data.iconUrl }} style={styles.itemImage} />
         <Text style={styles.itemText}>{data.name}</Text>
       </TouchableOpacity>
@@ -57,17 +49,6 @@ export default function HomeScreen({ navigation }) {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-<<<<<<< HEAD
-      <FlatList
-        style={styles.favStoreContainer}
-        data={favStoresId}
-        numColumns={3}
-        keyExtractor={(item) => item.id}
-        renderItem={renderItem}
-      />
-      <TouchableOpacity onPress={logout}>
-        <Text>Logout</Text>
-=======
       <Text style={styles.header}>My Favourite Stores</Text>
       <FlatList
         style={styles.favStoreContainer}
@@ -79,7 +60,6 @@ export default function HomeScreen({ navigation }) {
       />
       <TouchableOpacity onPress={logout} style={styles.buttonPrimary}>
         <Text style={styles.buttonPrimaryText}>Logout</Text>
->>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -95,11 +75,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   favStoreContainer: {
-<<<<<<< HEAD
-    marginTop: 50,
-=======
     marginTop: 20,
->>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
     marginLeft: 30,
     marginRight: 30,
     width: "90%",
@@ -123,8 +99,6 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     fontSize: 16,
   },
-<<<<<<< HEAD
-=======
   buttonPrimary: {
     backgroundColor: mainColor,
     height: 40,
@@ -140,5 +114,4 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "700",
   },
->>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
 });

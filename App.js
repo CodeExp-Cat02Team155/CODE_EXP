@@ -19,11 +19,7 @@ import ShopScreen from "./screens/ShopScreen";
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
 
-<<<<<<< HEAD
-// dummy authentication value, to be changed when switching to authentication
-=======
 // dummy value for authentication, to be replaced when switching to authentication from server
->>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
 const dummyUsername = "admin";
 const dummyPassword = "12345";
 
@@ -50,21 +46,12 @@ export default function App() {
     if (username === dummyUsername && password === dummyPassword)
       setLoggedIn(true);
     else {
-<<<<<<< HEAD
-      console.log(
-        "Error: login\n Error Message: username or password is wrong!"
-      );
-
-      Alert.alert("Authentication Error", "Wrong username / password!");
-    }
-=======
       Alert.alert("Authentication Error", "Invalid username / password!");
       console.log(
         "Error: login\n Error Message: username or password is wrong!"
       );
     }
     */
->>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
   }
 
   if (isLoggedIn) {
