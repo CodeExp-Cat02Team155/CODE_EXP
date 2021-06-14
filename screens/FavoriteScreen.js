@@ -40,7 +40,7 @@ const categories = [
   },
 ];
 
-export default function FavoritesScreen({ navigation }) {
+export default function FavoriteScreen({ navigation }) {
   const [favStoresId, setFavStoresId] = useState(["S0001"]);
 
   function getStore(id) {

@@ -16,6 +16,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./screens/HomeScreen";
 import ShopScreen from "./screens/ShopScreen";
+import QRScreen from "./screens/QRScreen";
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
@@ -26,12 +27,10 @@ const dummyPassword = "12345";
 
 export default function App() {
   useEffect(() => {
-    const listener = DeviceEventEmitter.addListener("logout", () => {
-      setLoggedIn(false);
-    });
-    return () => {
-      listener.remove();
-    };
+    const listener = DeviceEventEmitter.addListener("logout", () =>
+      setLoggedIn(false)
+    );
+    return () => listener.remove();
   }, []);
 
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -83,6 +82,7 @@ export default function App() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="home" component={HomeScreen} />
           <Stack.Screen name="shop" component={ShopScreen} />
+          <Stack.Screen name="qr" component={QRScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );

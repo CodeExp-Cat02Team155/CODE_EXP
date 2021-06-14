@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import {
-  View,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
   DeviceEventEmitter,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 const mainColor = "#0B3454";

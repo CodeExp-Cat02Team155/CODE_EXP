@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, FlatList, Text, StyleSheet, Image } from "react-native";
+import { Image, FlatList, StyleSheet, Text, View } from "react-native";
 import StoreListing from "../listings/StoreListing";
 import ProductListing from "../listings/ProductListing";
 
@@ -34,10 +34,9 @@ export default function SearchScreen({ navigation, keyword }) {
   ]);
 
   const renderItem = ({ item }) => {
-    if (item.type == "store") {
+    if (item.type == "store")
       return <StoreListing item={item} navigation={navigation} />;
-    }
-    return <ProductListing item={item} navigation={navigation} />;
+    else return <ProductListing item={item} navigation={navigation} />;
   };
 
   return (
