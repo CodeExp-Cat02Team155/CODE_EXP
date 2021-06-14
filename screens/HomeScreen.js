@@ -8,7 +8,7 @@ import {
   DeviceEventEmitter,
 } from "react-native";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   function logout() {
     DeviceEventEmitter.emit("logout");
   }
