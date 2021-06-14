@@ -1,3 +1,6 @@
 # CODE_EXP
 
-You actually bothered to read this?
+For now login auth is disabled so just press the button, no need type anything
+
+Username: admin
+Password: 12345
