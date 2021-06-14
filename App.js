@@ -42,6 +42,8 @@ export default function App() {
   const [newPasswordRepeat, setNewPasswordRepeat] = useState("");
 
   function login() {
+    console.log("Login: [" + username + ", " + password + "]");
+
     setUsername("");
     setPassword("");
     setLoggedIn(true);
@@ -60,9 +62,7 @@ export default function App() {
 
   function createAccount() {
     if (newPassword === newPasswordRepeat) {
-      console.log(username);
-      console.log(newPassword);
-      console.log(newPasswordRepeat);
+      console.log("Create Account: [" + username + ", " + newPassword + "]");
 
       // Add [username, password1] to database
 
