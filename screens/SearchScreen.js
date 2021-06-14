@@ -7,7 +7,7 @@ export default function SearchScreen({ navigation, keyword }) {
   const [listings, setListings] = useState([
     {
       type: "store",
-      id: "S0001",
+      id: "0001",
       name: "OPPO",
       followers: 65000,
       iconUrl:
@@ -15,7 +15,7 @@ export default function SearchScreen({ navigation, keyword }) {
     },
     {
       type: "product",
-      id: "P0001",
+      id: "0001",
       name: "OPPO Reno 5 Pro",
       iconUrl:
         "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
@@ -24,7 +24,7 @@ export default function SearchScreen({ navigation, keyword }) {
     },
     {
       type: "product",
-      id: "P0002",
+      id: "0002",
       name: "OPPO Reno 5",
       iconUrl:
         "https://laz-img-sg.alicdn.com/p/a018a1db4a6fd13e414c369093de8de9.jpg_720x720q80.jpg_.webp",
@@ -47,7 +47,7 @@ export default function SearchScreen({ navigation, keyword }) {
         numColumns={2}
         data={listings}
         renderItem={renderItem}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.type + item.id}
       />
     </View>
   );

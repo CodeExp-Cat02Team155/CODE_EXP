@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Modal,
   TextInput,
@@ -7,6 +7,7 @@ import {
   StatusBar,
   StyleSheet,
   View,
+  BackHandler,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ProfileScreen from "./ProfileScreen";
@@ -16,11 +17,35 @@ import SearchScreen from "./SearchScreen";
 const mainColor = "#0B3454";
 
 export default function HomeScreen({ navigation }) {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, _setSearchTerm] = useState("");
   const [isProfileOpen, setProfileOpen] = useState(false);
   const user = {
     id: "U0001",
   };
+
+  const searchTermRef = useRef(searchTerm);
+  const setSearchTerm = (input) => {
+    searchTermRef.current = input;
+    _setSearchTerm(input);
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener("hardwareBackPress", back);
+    return () => {
+      BackHandler.removeEventListener("hardwareBackPress", back);
+    };
+  }, []);
+
+  function back() {
+    if (navigation.canGoBack()) {
+      return false;
+    }
+    if (searchTermRef.current.length == 0) {
+      return false;
+    }
+    setSearchTerm("");
+    return true;
+  }
 
   function Content() {
     if (searchTerm.length == 0)
