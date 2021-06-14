@@ -7,10 +7,10 @@ export default function QRScreen() {
   const [scanned, setScanned] = useState(false);
 
   useEffect(() => {
-    async () => {
+    (async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
       setPermission(status === "granted");
-    };
+    })();
   }, []);
 
   const handleBarCodeScanned = ({ type, data }) => {
