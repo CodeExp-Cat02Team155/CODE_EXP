@@ -28,7 +28,8 @@ export default function HomeScreen({ navigation }) {
     if (searchTerm.length == 0) {
       return <FavoritesScreen navigation={navigation}/>
     } else {
-      return <SearchScreen navigation={navigation}/>
+      return <SearchScreen navigation={navigation}
+        keyword={searchTerm}/>
     }
   }
 
