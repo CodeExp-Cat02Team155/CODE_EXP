@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   DeviceEventEmitter,
   StyleSheet,
@@ -9,13 +9,22 @@ import {
 
 const mainColor = "#0B3454";
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ userId }) {
+  const user = getUser();
+
+  function getUser() {
+    return {
+      email: "abc123@gmail.com",
+    };
+  }
+
   function logout() {
     DeviceEventEmitter.emit("logout");
   }
 
   return (
     <View style={styles.popup}>
+      <Text style={styles.header}>{user.email}</Text>
       <TouchableOpacity onPress={logout} style={styles.buttonPrimary}>
         <Text style={styles.buttonPrimaryText}>Logout</Text>
       </TouchableOpacity>
@@ -31,9 +40,12 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     elevation: 10,
-    height: 330,
+    height: 200,
     width: "100%",
     backgroundColor: "white",
+  },
+  header: {
+    fontSize: 20,
   },
   buttonPrimary: {
     backgroundColor: mainColor,
@@ -41,7 +53,7 @@ const styles = StyleSheet.create({
     width: 120,
     marginLeft: 10,
     marginRight: 10,
-    marginTop: 50,
+    marginTop: 20,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
