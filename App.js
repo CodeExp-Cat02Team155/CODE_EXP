@@ -27,8 +27,6 @@ const dummyPassword = "12345";
 export default function App() {
   useEffect(() => {
     const listener = DeviceEventEmitter.addListener("logout", () => {
-      setUsername("");
-      setPassword("");
       setLoggedIn(false);
     });
     return () => {
@@ -40,10 +38,12 @@ export default function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [displaySignUp, setDisplaySignUp] = useState(false);
-  const [password1, setPassword1] = useState("");
-  const [password2, setPassword2] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [newPasswordRepeat, setNewPasswordRepeat] = useState("");
 
   function login() {
+    setUsername("");
+    setPassword("");
     setLoggedIn(true);
 
     /*
@@ -59,25 +59,21 @@ export default function App() {
   }
 
   function createAccount() {
-    if (password1 === password2) {
+    if (newPassword === newPasswordRepeat) {
       console.log(username);
-      console.log(password1);
-      console.log(password2);
+      console.log(newPassword);
+      console.log(newPasswordRepeat);
 
       // Add [username, password1] to database
 
-      setPassword("");
-      setPassword1("");
-      setPassword2("");
-      setDisplaySignUp(false);
+      resetSignUpScreen();
     } else Alert.alert("Password Error", "The 2 passwords are not the same!");
   }
 
-  function cancelCreateAccount() {
-    setUsername("");
+  function resetSignUpScreen() {
     setPassword("");
-    setPassword1("");
-    setPassword2("");
+    setNewPassword("");
+    setNewPasswordRepeat("");
     setDisplaySignUp(false);
   }
 
@@ -138,18 +134,22 @@ export default function App() {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => setDisplaySignUp(true)}
-          style={styles.buttonPrimary}
+          style={styles.buttonSecondary}
         >
-          <Text style={styles.buttonPrimaryText}>Sign Up</Text>
+          <Text style={styles.buttonSecondaryText}>Sign Up</Text>
         </TouchableOpacity>
       </View>
       <Modal
         visible={displaySignUp}
+        animationType="slide"
         transparent={true}
         statusBarTranslucent={true}
-        onRequestClose={cancelCreateAccount}
+        onRequestClose={resetSignUpScreen}
       >
-        <View style={styles.container}>
+        <View style={styles.headerContainer}>
+          <Text style={styles.header}>Sign Up</Text>
+        </View>
+        <View style={styles.modalContainer}>
           <View style={styles.row}>
             <Ionicons
               style={styles.icon}
@@ -179,37 +179,37 @@ export default function App() {
               placeholder="Password"
               selectionColor="#66F2A86F"
               placeholderTextColor="#AAAAAA"
-              value={password1}
-              onChangeText={setPassword1}
+              value={newPassword}
+              onChangeText={setNewPassword}
             />
           </View>
           <View style={styles.row}>
             <Ionicons
               style={styles.icon}
-              name={"lock-open-outline"}
+              name={null}
               size={30}
               color={mainColor}
             />
             <TextInput
               style={styles.input}
               secureTextEntry={true}
-              placeholder="Repeat Password Again"
+              placeholder="Repeat Password"
               selectionColor="#66F2A86F"
               placeholderTextColor="#AAAAAA"
-              value={password2}
-              onChangeText={setPassword2}
+              value={newPasswordRepeat}
+              onChangeText={setNewPasswordRepeat}
             />
           </View>
           <View style={styles.row}>
             <TouchableOpacity
-              style={styles.buttonSecondary}
+              style={styles.buttonPrimary}
               onPress={createAccount}
             >
-              <Text style={styles.buttonSecondaryText}>Create Account</Text>
+              <Text style={styles.buttonPrimaryText}>Register</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonSecondary}
-              onPress={cancelCreateAccount}
+              onPress={resetSignUpScreen}
             >
               <Text style={styles.buttonSecondaryText}>Cancel</Text>
             </TouchableOpacity>
@@ -222,11 +222,24 @@ export default function App() {
 
 // Styles
 const styles = StyleSheet.create({
+  headerContainer: {
+    backgroundColor: mainColor,
+    height: "30%",
+    paddingLeft: "10%",
+    paddingBottom: 20,
+    justifyContent: "flex-end",
+  },
   container: {
     backgroundColor: "white",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  modalContainer: {
+    paddingTop: 50,
+    backgroundColor: "white",
+    flex: 1,
+    alignItems: "center",
   },
   row: {
     justifyContent: "center",
@@ -246,7 +259,7 @@ const styles = StyleSheet.create({
   header: {
     paddingLeft: 10,
     fontSize: 50,
-    color: mainColor,
+    color: "white",
   },
   input: {
     height: 40,
