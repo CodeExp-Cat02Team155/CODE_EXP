@@ -42,7 +42,8 @@ export default function SearchScreen({ navigation, keyword }) {
   return (
     <View style={{ flex: 1, width: "100%" }}>
       <FlatList
-        style={{ paddingTop: 50 }}
+        fadingEdgeLength={50}
+        style={{ marginTop: 30, paddingTop: 20 }}
         numColumns={2}
         data={listings}
         renderItem={renderItem}
@@ -51,31 +52,3 @@ export default function SearchScreen({ navigation, keyword }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  listingContainer: {
-    flexGrow: 0,
-    width: "50%",
-    height: 250,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  listingBackground: {
-    width: "95%",
-    height: 230,
-    backgroundColor: "white",
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 10,
-  },
-  storeIcon: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-  },
-  storeHeader: {
-    paddingTop: 10,
-    fontSize: 20,
-  },
-});

@@ -50,10 +50,10 @@ const styles = StyleSheet.create({
   },
   bannerContainer: {
     width: "100%",
-    height: 100,
+    height: 95,
     backgroundColor: "white",
     justifyContent: "flex-end",
-    padding: 20,
+    padding: 15,
     elevation: 5,
   },
   header: {

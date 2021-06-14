@@ -2,9 +2,13 @@ import React from "react";
 import { Image, Text, TouchableOpacity, StyleSheet, View } from "react-native";
 
 export default function ProductListing({ item, navigation }) {
+  function openProduct() {
+    navigation.navigate("product", item.id);
+  }
+
   return (
     <View style={styles.listingContainer}>
-      <TouchableOpacity style={styles.listingBackground}>
+      <TouchableOpacity style={styles.listingBackground} onPress={openProduct}>
         <Image source={{ uri: item.iconUrl }} style={styles.productIcon} />
         <Text style={styles.productHeader} numberOfLines={1}>
           {item.name}
