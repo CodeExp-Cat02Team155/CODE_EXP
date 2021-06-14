@@ -32,12 +32,14 @@ export default function QRScreen({ navigation }) {
       </View>
     );
 
+  const displayText =
+    hasPermission === null
+      ? "Requesting for camera permission"
+      : "No access to camera";
+
   return (
-    <View style={styles.container}>
-      <BarCodeScanner
-        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-        style={StyleSheet.absoluteFillObject}
-      />
+    <View style={{ alignItems: "center", justifyContent: "center" }}>
+      <Text>{displayText}</Text>
     </View>
   );
 }
