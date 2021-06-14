@@ -37,12 +37,13 @@ export default function App() {
   function authLogin() {
     if (username === dummyUsername && password === dummyPassword)
       setLoggedIn(true);
-    else
+    else {
       console.log(
         "Error: login\n Error Message: username or password is wrong!"
       );
-
-    Alert.alert("Authentication Error", "Wrong username / password!");
+      Alert.alert("Authentication Error", "Invalid username / password!");
+    }
+      
   }
 
   if (isLoggedIn) {

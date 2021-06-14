@@ -7,9 +7,10 @@ import {
   Text,
   FlatList,
   DeviceEventEmitter,
-  View,
   Image,
 } from "react-native";
+
+const mainColor = "#0B3454"
 
 export default function HomeScreen() {
     function logout() {
@@ -38,51 +39,74 @@ export default function HomeScreen() {
 
     return (
         <SafeAreaView style={styles.container}>
-        <StatusBar
-            translucent
-            backgroundColor="transparent"
-            barStyle="dark-content"
-        />
-        <FlatList style={styles.favStoreContainer}
-            data={favStoresId}
-            numColumns={3}
-            keyExtractor={(item) => item.id}
-            renderItem={renderItem}/>
-            <TouchableOpacity onPress={logout}>
-                <Text>Logout</Text>
+            <StatusBar
+                translucent
+                backgroundColor="transparent"
+                barStyle="dark-content"
+            />
+            <Text style={styles.header}>My Favourite Stores</Text>
+            <FlatList style={styles.favStoreContainer}
+                showsVerticalScrollIndicator={false}
+                data={favStoresId}
+                numColumns={4}
+                keyExtractor={(item) => item.id}
+                renderItem={renderItem}/>
+            <TouchableOpacity onPress={logout}
+                style={styles.buttonPrimary}>
+                <Text style={styles.buttonPrimaryText}>Logout</Text>
             </TouchableOpacity>
         </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  favStoreContainer: {
-      marginTop: 50,
-      marginLeft: 30,
-      marginRight: 30,
-      width: "90%",
-      height: 200,
-      borderRadius: 30,
-      backgroundColor: "white",
-  },
-  itemContainer: {
-    width: "25%",
-    height: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 10,
-  },
-  itemImage: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-  },
-  itemText: {
-    paddingTop: 10,
-    fontSize: 16,
-  }
+    container: {
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    header: {
+        paddingTop: 50,
+        fontSize: 20,
+
+    },
+    favStoreContainer: {
+        marginTop: 20,
+        marginLeft: 30,
+        marginRight: 30,
+        width: "90%",
+        height: 200,
+        borderRadius: 30,
+        backgroundColor: "white",
+    },
+    itemContainer: {
+        width: "25%",
+        height: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+    },
+    itemImage: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+    },
+    itemText: {
+        paddingTop: 10,
+        fontSize: 16,
+    },
+    buttonPrimary: {
+        backgroundColor: mainColor,
+        height: 40,
+        width: 120,
+        marginLeft: 10,
+        marginRight: 10,
+        marginTop: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 20,
+    },
+    buttonPrimaryText: {
+        color: "white",
+        fontWeight: "700",
+    },
 });
