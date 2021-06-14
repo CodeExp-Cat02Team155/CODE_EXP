@@ -21,15 +21,13 @@ export default function HomeScreen({ navigation }) {
   const [isProfileOpen, setProfileOpen] = useState(false);
   const user = {
     id: "U0001",
-    icon: "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/60338958_2385453971699436_4792821904744382464_n.png?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=fQEALJ_s-KAAX8gcPMr&_nc_ht=scontent.fsin9-2.fna&oh=7ae79db0a4dd620b73387047ddeb22a2&oe=60CB2E4B",
   };
 
   function Content() {
     if (searchTerm.length == 0) {
-      return <FavoritesScreen navigation={navigation}/>
+      return <FavoritesScreen navigation={navigation} />;
     } else {
-      return <SearchScreen navigation={navigation}
-        keyword={searchTerm}/>
+      return <SearchScreen navigation={navigation} keyword={searchTerm} />;
     }
   }
 
@@ -59,7 +57,7 @@ export default function HomeScreen({ navigation }) {
           style={styles.bottomToggle}
           onPress={() => setProfileOpen(true)}
         >
-          <Image source={{ uri: user.icon }} style={styles.userIcon} />
+          <Ionicons name="person-circle-outline" size={40} color="white" />
         </TouchableOpacity>
         <TextInput
           style={styles.searchBar}
