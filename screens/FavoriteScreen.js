@@ -9,34 +9,30 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const categories = [
+const menu = [
   {
     id: 0,
-    name: "Fashion",
-    icon: "shirt",
-    color: "#E81E1E",
-    colorBackground: "#F2D3CD",
+    name: "My Cart",
+    icon: "cart-outline",
+    colorBackground: "#EC3232",
   },
   {
     id: 1,
-    name: "Electronics",
-    icon: "desktop-outline",
-    color: "#22A1E5",
-    colorBackground: "#DCE9F2",
+    name: "My Orders",
+    icon: "document-text-outline",
+    colorBackground: "#448AEA",
   },
   {
     id: 2,
-    name: "Tools",
-    icon: "construct",
-    color: "#F2D11A",
-    colorBackground: "#F9F6D6",
+    name: "Message",
+    icon: "chatbubbles-outline",
+    colorBackground: "#4BBD4D",
   },
   {
     id: 3,
     name: "More",
-    icon: "apps",
-    color: "#11A01B",
-    colorBackground: "#D2EFD7",
+    icon: "grid-outline",
+    colorBackground: "#FBC72B",
   },
 ];
 
@@ -69,11 +65,11 @@ export default function FavoriteScreen({ navigation }) {
     );
   };
 
-  const categoryRendermItem = ({ item }) => {
+  const menuRendermItem = ({ item }) => {
     return (
       <TouchableOpacity style={styles.itemContainer}>
         <View style={styles.icon} backgroundColor={item.colorBackground}>
-          <Ionicons name={item.icon} size={25} color={item.color} />
+          <Ionicons name={item.icon} size={25} color="white" />
         </View>
         <Text style={styles.itemText} numberOfLines={1}>
           {item.name}
@@ -95,12 +91,12 @@ export default function FavoriteScreen({ navigation }) {
       />
       <View style={{ height: 100, marginTop: 20 }}>
         <FlatList
-          style={styles.categoriesContainer}
+          style={styles.menuContainer}
           showsVerticalScrollIndicator={false}
-          data={categories}
+          data={menu}
           numColumns={4}
           keyExtractor={(item) => item.id}
-          renderItem={categoryRendermItem}
+          renderItem={menuRendermItem}
         />
       </View>
     </View>
@@ -123,7 +119,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "white",
   },
-  categoriesContainer: {
+  menuContainer: {
     elevation: 1,
     width: "90%",
     height: 100,

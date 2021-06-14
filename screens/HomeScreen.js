@@ -13,15 +13,19 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import ProfileScreen from "./ProfileScreen";
 import FavoriteScreen from "./FavoriteScreen";
 import SearchScreen from "./SearchScreen";
+import SearchSuggestionScreen from "./SearchSuggestionScreen";
 
 const mainColor = "#0B3454";
 
 export default function HomeScreen({ navigation }) {
+  useEffect(() => {
+    global.cart = new Object();
+  }, []);
+
   const [searchTerm, _setSearchTerm] = useState("");
+  const [isSearching, setSearching] = useState(false);
   const [isProfileOpen, setProfileOpen] = useState(false);
-  const user = {
-    id: "U0001",
-  };
+  const userId = "U0001";
 
   const searchTermRef = useRef(searchTerm);
   const setSearchTerm = (input) => {
@@ -44,13 +48,17 @@ export default function HomeScreen({ navigation }) {
       return false;
     }
     setSearchTerm("");
+    setSearching(false);
     return true;
   }
 
   function Content() {
     if (searchTerm.length == 0)
       return <FavoriteScreen navigation={navigation} />;
-    else return <SearchScreen navigation={navigation} keyword={searchTerm} />;
+    if (isSearching) {
+      return <SearchSuggestionScreen keyword={searchTerm} />;
+    }
+    return <SearchScreen navigation={navigation} keyword={searchTerm} />;
   }
 
   return (
@@ -71,7 +79,7 @@ export default function HomeScreen({ navigation }) {
           onPress={() => setProfileOpen(false)}
           style={styles.clearBackground}
         />
-        <ProfileScreen />
+        <ProfileScreen userId={userId} />
       </Modal>
       <Content />
       <View style={styles.row}>
@@ -79,19 +87,26 @@ export default function HomeScreen({ navigation }) {
           style={styles.bottomToggle}
           onPress={() => setProfileOpen(true)}
         >
-          <Ionicons name="person-circle-outline" size={40} color="white" />
+          <Ionicons name="person" size={20} color="white" />
         </TouchableOpacity>
         <View style={styles.searchBar}>
           <View style={{ flex: 1 }}>
             <TextInput
               style={styles.searchBarInput}
               value={searchTerm}
-              onChangeText={setSearchTerm}
+              onChangeText={(input) => {
+                setSearchTerm(input);
+                setSearching(true);
+              }}
+              onBlur={() => setSearching(false)}
               placeholder="Tap to Search"
             />
           </View>
           <TouchableOpacity
-            onPress={() => setSearchTerm("")}
+            onPress={() => {
+              setSearchTerm("");
+              setSearching(false);
+            }}
             style={{
               width: 20,
               justifyContent: "center",

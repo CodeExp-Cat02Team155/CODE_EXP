@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+const mainColor = "#0B3454";
+
 export default function ProductScreen({ route, navigation }) {
   const productId = route.params;
 
@@ -34,6 +36,15 @@ export default function ProductScreen({ route, navigation }) {
     navigation.navigate("shop", { seller });
   }
 
+  function addToCart() {
+    if (productId in global.cart) {
+      global.cart[productId]++;
+    } else {
+      global.cart[productId] = 1;
+    }
+    console.log(global.cart);
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView style={styles.scrollView}>
@@ -51,6 +62,11 @@ export default function ProductScreen({ route, navigation }) {
           </View>
         </TouchableOpacity>
       </ScrollView>
+      <View style={styles.bottomRow}>
+        <TouchableOpacity style={styles.buttonSecondary} onPress={addToCart}>
+          <Text style={styles.buttonSecondaryText}>Add to Cart</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
@@ -88,5 +104,27 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontWeight: "700",
     textAlignVertical: "center",
+  },
+  bottomRow: {
+    height: 70,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "white",
+  },
+  buttonSecondary: {
+    borderColor: mainColor,
+    borderWidth: 1,
+    height: 40,
+    width: 120,
+    marginLeft: 10,
+    marginRight: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+  },
+  buttonSecondaryText: {
+    color: mainColor,
+    fontWeight: "700",
   },
 });
