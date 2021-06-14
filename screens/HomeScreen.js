@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import {
+  Modal,
+  TextInput,
   TouchableOpacity,
   SafeAreaView,
   StatusBar,
   StyleSheet,
   View,
-  TextInput,
-  Modal,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ProfileScreen from "./ProfileScreen";
-import FavoritesScreen from "./FavoriteScreen";
+import FavoriteScreen from "./FavoriteScreen";
 import SearchScreen from "./SearchScreen";
 
 const mainColor = "#0B3454";
@@ -23,11 +23,9 @@ export default function HomeScreen({ navigation }) {
   };
 
   function Content() {
-    if (searchTerm.length == 0) {
-      return <FavoritesScreen navigation={navigation} />;
-    } else {
-      return <SearchScreen navigation={navigation} keyword={searchTerm} />;
-    }
+    if (searchTerm.length == 0)
+      return <FavoriteScreen navigation={navigation} />;
+    else return <SearchScreen navigation={navigation} keyword={searchTerm} />;
   }
 
   return (
@@ -64,7 +62,10 @@ export default function HomeScreen({ navigation }) {
           onChangeText={setSearchTerm}
           placeholder="Tap to Search"
         />
-        <TouchableOpacity style={styles.bottomToggle}>
+        <TouchableOpacity
+          style={styles.bottomToggle}
+          onPress={() => navigation.navigate("qr")}
+        >
           <Ionicons name="qr-code" size={20} color="white" />
         </TouchableOpacity>
       </View>
