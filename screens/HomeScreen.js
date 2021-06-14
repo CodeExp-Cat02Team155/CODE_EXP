@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import {
-  SafeAreaView,
-  View,
-  StyleSheet,
-  StatusBar,
-  TouchableOpacity,
-  Text,
-  FlatList,
   DeviceEventEmitter,
+  FlatList,
   Image,
+  Text,
+  TouchableOpacity,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  View,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -42,12 +42,12 @@ const categories = [{
     colorBackground: "#D2EFD7"
 },]
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
     function logout() {
         DeviceEventEmitter.emit("logout");
     }
 
-    const [favStoresId, setFavStoresId] = useState(["0001"])
+    const [favStoresId, setFavStoresId] = useState(["0001"]);
 
     function getStore(id) {
         // Fetch store details
@@ -60,7 +60,8 @@ export default function HomeScreen() {
 
     const storeRenderItem = ({item}) => {
         const data = getStore(item.id)
-        return (<TouchableOpacity style={styles.itemContainer}>
+        return (<TouchableOpacity style={styles.itemContainer}
+            onPress={() => navigation.navigate("shop", { item })}>
             <Image source={{uri: data.iconUrl}}
                 style={styles.itemImage}/>
             <Text style={styles.itemText}
