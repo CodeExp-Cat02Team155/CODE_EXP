@@ -17,6 +17,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./screens/HomeScreen";
 import ShopScreen from "./screens/ShopScreen";
 import QRScreen from "./screens/QRScreen";
+import ProductScreen from "./screens/ProductScreen";
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
@@ -83,6 +84,7 @@ export default function App() {
           <Stack.Screen name="home" component={HomeScreen} />
           <Stack.Screen name="shop" component={ShopScreen} />
           <Stack.Screen name="qr" component={QRScreen} />
+          <Stack.Screen name="product" component={ProductScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
