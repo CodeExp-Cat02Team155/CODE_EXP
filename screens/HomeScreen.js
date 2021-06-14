@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import {
-  SafeAreaView,
-  StyleSheet,
-  StatusBar,
-  TouchableOpacity,
-  Text,
-  FlatList,
   DeviceEventEmitter,
-  View,
+  FlatList,
   Image,
+  Text,
+  TouchableOpacity,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
 } from "react-native";
 
+<<<<<<< HEAD
 export default function HomeScreen() {
+=======
+const mainColor = "#0B3454";
+
+export default function HomeScreen({ navigation }) {
+>>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
   function logout() {
     DeviceEventEmitter.emit("logout");
   }
@@ -31,7 +36,14 @@ export default function HomeScreen() {
   const renderItem = ({ item }) => {
     const data = getStore(item.id);
     return (
+<<<<<<< HEAD
       <TouchableOpacity style={styles.itemContainer}>
+=======
+      <TouchableOpacity
+        style={styles.itemContainer}
+        onPress={() => navigation.navigate("shop", { item })}
+      >
+>>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
         <Image source={{ uri: data.iconUrl }} style={styles.itemImage} />
         <Text style={styles.itemText}>{data.name}</Text>
       </TouchableOpacity>
@@ -45,6 +57,7 @@ export default function HomeScreen() {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
+<<<<<<< HEAD
       <FlatList
         style={styles.favStoreContainer}
         data={favStoresId}
@@ -54,6 +67,19 @@ export default function HomeScreen() {
       />
       <TouchableOpacity onPress={logout}>
         <Text>Logout</Text>
+=======
+      <Text style={styles.header}>My Favourite Stores</Text>
+      <FlatList
+        style={styles.favStoreContainer}
+        showsVerticalScrollIndicator={false}
+        data={favStoresId}
+        numColumns={4}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+      />
+      <TouchableOpacity onPress={logout} style={styles.buttonPrimary}>
+        <Text style={styles.buttonPrimaryText}>Logout</Text>
+>>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -64,8 +90,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  header: {
+    paddingTop: 50,
+    fontSize: 20,
+  },
   favStoreContainer: {
+<<<<<<< HEAD
     marginTop: 50,
+=======
+    marginTop: 20,
+>>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
     marginLeft: 30,
     marginRight: 30,
     width: "90%",
@@ -89,4 +123,22 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     fontSize: 16,
   },
+<<<<<<< HEAD
+=======
+  buttonPrimary: {
+    backgroundColor: mainColor,
+    height: 40,
+    width: 120,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+  },
+  buttonPrimaryText: {
+    color: "white",
+    fontWeight: "700",
+  },
+>>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
 });

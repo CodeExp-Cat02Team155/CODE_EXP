@@ -12,21 +12,28 @@ import {
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./screens/HomeScreen";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import HomeScreen from "./screens/HomeScreen";
+import ShopScreen from "./screens/ShopScreen";
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
 
+<<<<<<< HEAD
 // dummy authentication value, to be changed when switching to authentication
+=======
+// dummy value for authentication, to be replaced when switching to authentication from server
+>>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
 const dummyUsername = "admin";
 const dummyPassword = "12345";
 
 export default function App() {
   useEffect(() => {
-    const listener = DeviceEventEmitter.addListener("logout", () =>
-      setLoggedIn(false)
-    );
+    const listener = DeviceEventEmitter.addListener("logout", () => {
+      setUsername("");
+      setPassword("");
+      setLoggedIn(false);
+    });
     return () => {
       listener.remove();
     };
@@ -37,15 +44,27 @@ export default function App() {
   const [password, setPassword] = useState("");
 
   function authLogin() {
+    setLoggedIn(true);
+
+    /*
     if (username === dummyUsername && password === dummyPassword)
       setLoggedIn(true);
     else {
+<<<<<<< HEAD
       console.log(
         "Error: login\n Error Message: username or password is wrong!"
       );
 
       Alert.alert("Authentication Error", "Wrong username / password!");
     }
+=======
+      Alert.alert("Authentication Error", "Invalid username / password!");
+      console.log(
+        "Error: login\n Error Message: username or password is wrong!"
+      );
+    }
+    */
+>>>>>>> 3e5fc95b5b5dac616613bdd19dba193969ae446b
   }
 
   if (isLoggedIn) {
@@ -53,6 +72,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="home" component={HomeScreen} />
+          <Stack.Screen name="shop" component={ShopScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
