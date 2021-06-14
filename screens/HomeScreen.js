@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  DeviceEventEmitter,
   FlatList,
   Image,
   Text,
@@ -9,6 +8,8 @@ import {
   StatusBar,
   StyleSheet,
   View,
+  TextInput,
+  Modal,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -43,11 +44,14 @@ const categories = [{
 },]
 
 export default function HomeScreen({ navigation }) {
-    function logout() {
-        DeviceEventEmitter.emit("logout");
-    }
 
+    const [isProfileOpen, setProfileOpen] = useState(false)
     const [favStoresId, setFavStoresId] = useState(["0001"]);
+    const user = {
+        id: "U0001",
+        icon: "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/60338958_2385453971699436_4792821904744382464_n.png?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=fQEALJ_s-KAAX8gcPMr&_nc_ht=scontent.fsin9-2.fna&oh=7ae79db0a4dd620b73387047ddeb22a2&oe=60CB2E4B"
+
+    }
 
     function getStore(id) {
         // Fetch store details
@@ -87,29 +91,45 @@ export default function HomeScreen({ navigation }) {
                 backgroundColor="transparent"
                 barStyle="dark-content"
             />
-            <Text style={styles.header}>My Favourite Stores</Text>
+            <Modal visible={isProfileOpen}
+                statusBarTranslucent={true}
+                onRequestClose={() => setProfileOpen(false)}>
+
+            </Modal>
+            <Text style={styles.header}>AppName</Text>
             <FlatList style={styles.favStoreContainer}
                 showsVerticalScrollIndicator={false}
                 data={favStoresId}
                 numColumns={4}
                 keyExtractor={(item) => item.id}
                 renderItem={storeRenderItem}/>
-            <FlatList style={styles.categoriesContainer}
-                showsVerticalScrollIndicator={false}
-                data={categories}
-                numColumns={4}
-                keyExtractor={(item) => item.id}
-                renderItem={categoryRendermItem}/>
-            <TouchableOpacity onPress={logout}
-                style={styles.buttonPrimary}>
-                <Text style={styles.buttonPrimaryText}>Logout</Text>
-            </TouchableOpacity>
+            <View style={{height: 100, marginTop: 20}}>
+                <FlatList style={styles.categoriesContainer}
+                    showsVerticalScrollIndicator={false}
+                    data={categories}
+                    numColumns={4}
+                    keyExtractor={(item) => item.id}
+                    renderItem={categoryRendermItem}/>
+            </View>
+            <View style={styles.row}>
+                <TouchableOpacity style={styles.bottomToggle}
+                    onPress={() => setProfileOpen(true)}>
+                    <Image source={{uri: user.icon}}
+                        style={styles.userIcon}/>
+                </TouchableOpacity>
+                <TextInput style={styles.searchBar}
+                    placeholder="Tap to Search"/>
+                <TouchableOpacity style={styles.bottomToggle}>
+                    <Ionicons name="qr-code" size={20} color="white"/>
+                </TouchableOpacity>
+            </View>
         </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         alignItems: "center",
         justifyContent: "center",
     },
@@ -119,6 +139,14 @@ const styles = StyleSheet.create({
         paddingLeft: 30,
         paddingRight: 30,
         width: "100%",
+    },
+    row: {
+        justifyContent: "center",
+        flexDirection: "row",
+        marginTop: 20,
+        marginBottom: 20,
+        marginLeft: 15,
+        marginRight: 15,
     },
     favStoreContainer: {
         elevation: 1,
@@ -132,7 +160,6 @@ const styles = StyleSheet.create({
     },
     categoriesContainer: {
         elevation: 1,
-        marginTop: 20,
         marginLeft: 30,
         marginRight: 30,
         width: "90%",
@@ -163,19 +190,27 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    buttonPrimary: {
+    bottomToggle: {
         backgroundColor: mainColor,
         height: 40,
-        width: 120,
+        width: 40,
         marginLeft: 10,
         marginRight: 10,
-        marginTop: 50,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 20,
     },
-    buttonPrimaryText: {
-        color: "white",
-        fontWeight: "700",
+    userIcon: {
+        width: 38,
+        height: 38,
+        borderRadius: 19,
     },
+    searchBar: {
+        backgroundColor: 'white',
+        flex: 1,
+        height: 40,
+        borderRadius: 25,
+        paddingLeft: 20,
+        paddingRight: 20,
+    }
 });
