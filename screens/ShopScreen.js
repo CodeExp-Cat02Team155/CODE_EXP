@@ -10,8 +10,8 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function ShopScreen({ navigation, route }) {
-  const storeId = route.params.item;
-  const store = getStore(storeId);
+  const store = getStore(route.params.item);
+  console.log(store);
 
   function getStore(id) {
     // Fetch store details
@@ -24,6 +24,7 @@ export default function ShopScreen({ navigation, route }) {
   }
 
   function exit() {
+    console.log("Going back from ShopScreen to HomeScreen");
     navigation.goBack();
   }
 
