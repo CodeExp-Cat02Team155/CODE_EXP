@@ -1,14 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function StoreListing({ item, navigation }) {
   function getFollowerCount(followers) {
-    if (followers >= 1000000) {
-      return Math.floor(followers / 1000000) + "M";
-    } else if (followers >= 1000) {
-      return Math.floor(followers / 1000) + "K";
-    }
-    return item.fans;
+    if (followers >= 1000000) return Math.floor(followers / 1000000) + "M";
+    else if (followers >= 1000) return Math.floor(followers / 1000) + "K";
+    else return item.fans;
   }
 
   function openStore() {

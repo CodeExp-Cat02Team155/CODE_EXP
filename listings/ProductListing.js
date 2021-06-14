@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { Image, Text, TouchableOpacity, StyleSheet, View } from "react-native";
 
-export default function StoreListing({ item, navigation }) {
+export default function ProductListing({ item, navigation }) {
   return (
     <View style={styles.listingContainer}>
       <TouchableOpacity style={styles.listingBackground}>
