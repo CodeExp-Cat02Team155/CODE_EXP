@@ -23,7 +23,7 @@ const Stack = createStackNavigator();
 const mainColor = "#0B3454";
 
 // dummy value for authentication, to be replaced when switching to authentication from server
-const dummyUsername = "admin";
+const dummyEmail = "admin";
 const dummyPassword = "12345";
 
 export default function App() {
@@ -35,16 +35,16 @@ export default function App() {
   }, []);
 
   const [isLoggedIn, setLoggedIn] = useState(false);
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displaySignUp, setDisplaySignUp] = useState(false);
   const [newPassword, setNewPassword] = useState("");
   const [newPasswordRepeat, setNewPasswordRepeat] = useState("");
 
   function login() {
-    console.log("Login: [" + username + ", " + password + "]");
+    console.log("Login: [" + email + ", " + password + "]");
 
-    setUsername("");
+    setEmail("");
     setPassword("");
     setLoggedIn(true);
 
@@ -54,9 +54,9 @@ export default function App() {
     if (username === dummyUsername && password === dummyPassword)
       setLoggedIn(true);
     else {
-      Alert.alert("Authentication Error", "Invalid username / password!");
+      Alert.alert("Authentication Error", "Invalid email / password!");
       console.log(
-        "Error: login\n Error Message: username or password is wrong!"
+        "Error: login\n Error Message: email or password is wrong!"
       );
     }
     */
@@ -64,9 +64,9 @@ export default function App() {
 
   function createAccount() {
     if (newPassword === newPasswordRepeat) {
-      console.log("Create Account: [" + username + ", " + newPassword + "]");
+      console.log("Create Account: [" + email + ", " + newPassword + "]");
 
-      // Add [username, password1] to database
+      // Add [email, password1] to database
 
       resetSignUpScreen();
     } else Alert.alert("Password Error", "The 2 passwords are not the same!");
@@ -99,39 +99,20 @@ export default function App() {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-      <View style={styles.row}>
-        <Ionicons
-          style={styles.icon}
-          name={"person-outline"}
-          size={30}
-          color={mainColor}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Username"
-          selectionColor="#66F2A86F"
-          placeholderTextColor="#AAAAAA"
-          value={username}
-          onChangeText={setUsername}
-        />
-      </View>
-      <View style={styles.row}>
-        <Ionicons
-          style={styles.icon}
-          name={"lock-open-outline"}
-          size={30}
-          color={mainColor}
-        />
-        <TextInput
-          style={styles.input}
-          secureTextEntry={true}
-          placeholder="Password"
-          selectionColor="#66F2A86F"
-          placeholderTextColor="#AAAAAA"
-          value={password}
-          onChangeText={setPassword}
-        />
-      </View>
+      <Input
+        iconName="mail-outline"
+        placeholder="Email"
+        value={email}
+        setValue={setEmail}
+        secure={false}
+      />
+      <Input
+        iconName="lock-open-outline"
+        placeholder="Password"
+        value={password}
+        setValue={setPassword}
+        secure={true}
+      />
       <View style={styles.row}>
         <TouchableOpacity onPress={login} style={styles.buttonPrimary}>
           <Text style={styles.buttonPrimaryText}>Login</Text>
@@ -153,57 +134,29 @@ export default function App() {
         <View style={styles.headerContainer}>
           <Text style={styles.header}>Sign Up</Text>
         </View>
+
         <View style={styles.modalContainer}>
-          <View style={styles.row}>
-            <Ionicons
-              style={styles.icon}
-              name={"person-outline"}
-              size={30}
-              color={mainColor}
-            />
-            <TextInput
-              style={styles.input}
-              placeholder="Username"
-              selectionColor="#66F2A86F"
-              placeholderTextColor="#AAAAAA"
-              value={username}
-              onChangeText={setUsername}
-            />
-          </View>
-          <View style={styles.row}>
-            <Ionicons
-              style={styles.icon}
-              name={"lock-open-outline"}
-              size={30}
-              color={mainColor}
-            />
-            <TextInput
-              style={styles.input}
-              secureTextEntry={true}
-              placeholder="Password"
-              selectionColor="#66F2A86F"
-              placeholderTextColor="#AAAAAA"
-              value={newPassword}
-              onChangeText={setNewPassword}
-            />
-          </View>
-          <View style={styles.row}>
-            <Ionicons
-              style={styles.icon}
-              name={null}
-              size={30}
-              color={mainColor}
-            />
-            <TextInput
-              style={styles.input}
-              secureTextEntry={true}
-              placeholder="Repeat Password"
-              selectionColor="#66F2A86F"
-              placeholderTextColor="#AAAAAA"
-              value={newPasswordRepeat}
-              onChangeText={setNewPasswordRepeat}
-            />
-          </View>
+          <Input
+            iconName="mail-outline"
+            placeholder="Email"
+            value={email}
+            setValue={setEmail}
+            secure={false}
+          />
+          <Input
+            iconName="lock-open-outline"
+            placeholder="Password"
+            value={newPassword}
+            setValue={setNewPassword}
+            secure={true}
+          />
+          <Input
+            iconName=""
+            placeholder="Repeat Password"
+            value={newPasswordRepeat}
+            setValue={setNewPasswordRepeat}
+            secure={true}
+          />
           <View style={styles.row}>
             <TouchableOpacity
               style={styles.buttonPrimary}
@@ -221,6 +174,28 @@ export default function App() {
         </View>
       </Modal>
     </SafeAreaView>
+  );
+}
+
+function Input(props) {
+  return (
+    <View style={styles.row}>
+      <Ionicons
+        style={styles.icon}
+        name={props.iconName}
+        size={30}
+        color={mainColor}
+      />
+      <TextInput
+        style={styles.input}
+        secureTextEntry={props.secure}
+        placeholder={props.placeholder}
+        selectionColor="#66F2A86F"
+        placeholderTextColor="#AAAAAA"
+        value={props.value}
+        onChangeText={props.setValue}
+      />
+    </View>
   );
 }
 
