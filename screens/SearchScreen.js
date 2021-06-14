@@ -22,15 +22,6 @@ export default function SearchScreen({ navigation, keyword }) {
       currentPrice: 819,
       rrp: 899,
     },
-    {
-      type: "product",
-      id: "0002",
-      name: "OPPO Reno 5",
-      iconUrl:
-        "https://laz-img-sg.alicdn.com/p/a018a1db4a6fd13e414c369093de8de9.jpg_720x720q80.jpg_.webp",
-      currentPrice: 559,
-      rrp: 699,
-    },
   ]);
 
   const renderItem = ({ item }) => {
