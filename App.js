@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {
   Alert,
   DeviceEventEmitter,
+  Modal,
   SafeAreaView,
   StatusBar,
   StyleSheet,
@@ -38,8 +39,11 @@ export default function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [displaySignUp, setDisplaySignUp] = useState(false);
+  const [password1, setPassword1] = useState("");
+  const [password2, setPassword2] = useState("");
 
-  function authLogin() {
+  function login() {
     setLoggedIn(true);
 
     /*
@@ -52,6 +56,29 @@ export default function App() {
       );
     }
     */
+  }
+
+  function createAccount() {
+    if (password1 === password2) {
+      console.log(username);
+      console.log(password1);
+      console.log(password2);
+
+      // Add [username, password1] to database
+
+      setPassword("");
+      setPassword1("");
+      setPassword2("");
+      setDisplaySignUp(false);
+    } else Alert.alert("Password Error", "The 2 passwords are not the same!");
+  }
+
+  function cancelCreateAccount() {
+    setUsername("");
+    setPassword("");
+    setPassword1("");
+    setPassword2("");
+    setDisplaySignUp(false);
   }
 
   if (isLoggedIn) {
@@ -105,9 +132,90 @@ export default function App() {
           onChangeText={setPassword}
         />
       </View>
-      <TouchableOpacity onPress={authLogin} style={styles.buttonPrimary}>
-        <Text style={styles.buttonPrimaryText}>Login</Text>
-      </TouchableOpacity>
+      <View style={styles.row}>
+        <TouchableOpacity onPress={login} style={styles.buttonPrimary}>
+          <Text style={styles.buttonPrimaryText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => setDisplaySignUp(true)}
+          style={styles.buttonPrimary}
+        >
+          <Text style={styles.buttonPrimaryText}>Sign Up</Text>
+        </TouchableOpacity>
+      </View>
+      <Modal
+        visible={displaySignUp}
+        transparent={true}
+        statusBarTranslucent={true}
+        onRequestClose={cancelCreateAccount}
+      >
+        <View style={styles.container}>
+          <View style={styles.row}>
+            <Ionicons
+              style={styles.icon}
+              name={"person-outline"}
+              size={30}
+              color={mainColor}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Username"
+              selectionColor="#66F2A86F"
+              placeholderTextColor="#AAAAAA"
+              value={username}
+              onChangeText={setUsername}
+            />
+          </View>
+          <View style={styles.row}>
+            <Ionicons
+              style={styles.icon}
+              name={"lock-open-outline"}
+              size={30}
+              color={mainColor}
+            />
+            <TextInput
+              style={styles.input}
+              secureTextEntry={true}
+              placeholder="Password"
+              selectionColor="#66F2A86F"
+              placeholderTextColor="#AAAAAA"
+              value={password1}
+              onChangeText={setPassword1}
+            />
+          </View>
+          <View style={styles.row}>
+            <Ionicons
+              style={styles.icon}
+              name={"lock-open-outline"}
+              size={30}
+              color={mainColor}
+            />
+            <TextInput
+              style={styles.input}
+              secureTextEntry={true}
+              placeholder="Repeat Password Again"
+              selectionColor="#66F2A86F"
+              placeholderTextColor="#AAAAAA"
+              value={password2}
+              onChangeText={setPassword2}
+            />
+          </View>
+          <View style={styles.row}>
+            <TouchableOpacity
+              style={styles.buttonSecondary}
+              onPress={createAccount}
+            >
+              <Text style={styles.buttonSecondaryText}>Create Account</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonSecondary}
+              onPress={cancelCreateAccount}
+            >
+              <Text style={styles.buttonSecondaryText}>Cancel</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
