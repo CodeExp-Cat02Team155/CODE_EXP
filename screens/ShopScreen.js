@@ -10,34 +10,14 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ProductListing from "../listings/ProductListing";
+import productList from "../local_data/list_product.json";
 
 export default function ShopScreen({ navigation, route }) {
-  const storeId = route.params.item;
-  const store = getStore();
-  const products = getProducts();
+  const store = route.params.data;
+  const products = getProducts(store.id);
 
-  function getStore() {
-    // Fetch store details
-    return {
-      id: storeId,
-      name: "OPPO",
-      iconUrl:
-        "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/56711067_2371221246241957_3865632581156339712_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uX6Icwxp5coAX_JQptE&_nc_ht=scontent.fsin9-2.fna&oh=39fb345cb548815b26d48b72901a09a9&oe=60CC7B51",
-    };
-  }
-
-  function getProducts() {
-    return [
-      {
-        type: "product",
-        id: "0001",
-        name: "OPPO Reno 5 Pro",
-        iconUrl:
-          "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
-        currentPrice: 819,
-        rrp: 899,
-      },
-    ];
+  function getProducts(id) {
+    return productList.list.filter((product) => product.id === id)[0].products;
   }
 
   function exit() {
