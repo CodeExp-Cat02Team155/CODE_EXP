@@ -19,7 +19,7 @@ export default function DemoLocation({ addressIds }) {
 
   for (let i = 0; i < locations.length; i++) {
     locationItemArray.push(
-      <View style={styles.itemContainer}>
+      <View style={styles.itemContainer} key={locations[i].address}>
         <Text style={styles.itemHeader}>{locations[i].name}</Text>
         <Text style={styles.itemAddress}>{locations[i].address}</Text>
       </View>
