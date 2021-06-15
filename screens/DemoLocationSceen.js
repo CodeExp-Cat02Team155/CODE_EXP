@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { Text, TouchableOpacity, StyleSheet, View } from "react-native";
+import * as WebBrowser from "expo-web-browser";
 
 export default function DemoLocation({ addressIds }) {
   const locations = [
@@ -16,15 +17,22 @@ export default function DemoLocation({ addressIds }) {
   ];
 
   const locationItemArray = [];
-
-  for (let i = 0; i < locations.length; i++) {
+  locations.forEach(({ name, address }) =>
     locationItemArray.push(
-      <View style={styles.itemContainer} key={locations[i].address}>
-        <Text style={styles.itemHeader}>{locations[i].name}</Text>
-        <Text style={styles.itemAddress}>{locations[i].address}</Text>
-      </View>
-    );
-  }
+      <TouchableOpacity
+        style={styles.itemContainer}
+        key={address}
+        onPress={() =>
+          WebBrowser.openBrowserAsync(
+            "https://www.google.com.sg/maps/search/" + address
+          )
+        }
+      >
+        <Text style={styles.itemHeader}>{name}</Text>
+        <Text style={styles.itemAddress}>{address}</Text>
+      </TouchableOpacity>
+    )
+  );
 
   return (
     <View style={{ width: "100%", padding: 20 }}>
