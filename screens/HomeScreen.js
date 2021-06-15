@@ -51,6 +51,13 @@ export default function HomeScreen({ navigation }) {
     return true;
   }
 
+  function addToHistory() {
+    if (global.searchHistory.includes(searchTerm)) {
+      return;
+    }
+    global.searchHistory = [searchTerm, ...global.searchHistory];
+  }
+
   function Content() {
     if (searchTerm.length == 0)
       return <FavoriteScreen navigation={navigation} />;
@@ -98,7 +105,7 @@ export default function HomeScreen({ navigation }) {
                 setSearching(true);
               }}
               onBlur={() => {
-                global.searchHistory = [searchTerm, ...global.searchHistory];
+                addToHistory();
                 setSearching(false);
               }}
               placeholder="Tap to Search"
