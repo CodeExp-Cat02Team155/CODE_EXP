@@ -9,11 +9,13 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Toast from "react-native-easy-toast";
 
 const mainColor = "#0B3454";
 
 export default function CartScreen({ navigation }) {
   const [cart, setCart] = useState(getData());
+  var toast;
 
   function reduceCount(id) {
     global.cart[id]--;
@@ -47,6 +49,7 @@ export default function CartScreen({ navigation }) {
 
   function checkOut() {
     if (getData().length < 1) {
+      toast.show("Cart is empty");
       return;
     }
     navigation.navigate("payment");
@@ -98,6 +101,7 @@ export default function CartScreen({ navigation }) {
     <SafeAreaView
       style={{ flex: 1, paddingHorizontal: 20, paddingVertical: 50 }}
     >
+      <Toast ref={(_toast) => (toast = _toast)} />
       <View style={{ flex: 1 }}>
         <Text style={styles.header}>My Cart</Text>
         <FlatList

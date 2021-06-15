@@ -11,6 +11,7 @@ import {
 import DemoLocationScreen from "./DemoLocationSceen";
 import ProductInfoScreen from "./ProductInfoScreen";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Toast from "react-native-easy-toast";
 
 const mainColor = "#0B3454";
 
@@ -44,7 +45,10 @@ export default function ProductScreen({ route, navigation }) {
     navigation.navigate("shop", { seller });
   }
 
+  var toast;
+
   function addToCart() {
+    toast.show("Added to cart");
     if (productId in global.cart) {
       global.cart[productId]++;
     } else {
@@ -85,6 +89,7 @@ export default function ProductScreen({ route, navigation }) {
 
   return (
     <SafeAreaView style={{ flex: 1, paddingTop: 30, backgroundColor: "white" }}>
+      <Toast ref={(_toast) => (toast = _toast)} />
       <ScrollView style={styles.scrollView} fadingEdgeLength={20}>
         <Image source={{ uri: product.iconUrl }} style={styles.image} />
         <Text style={styles.header}>{product.name}</Text>
