@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FlatList,
   Image,
@@ -12,9 +12,9 @@ import Toast from "react-native-easy-toast";
 
 import storeList from "../local_data/list_store.json";
 
-export default function FavoriteScreen({ navigation }) {
-  const [favStoresId, setFavStoresId] = useState(["S0004", "S0001", "S0002"]);
+global.favStores = ["S0004"];
 
+export default function FavoriteScreen({ navigation }) {
   function getStore(id) {
     return storeList.stores.filter((store) => store.id == id)[0];
   }
@@ -93,13 +93,14 @@ export default function FavoriteScreen({ navigation }) {
       <FlatList
         style={styles.favStoreContainer}
         showsVerticalScrollIndicator={false}
-        data={favStoresId}
+        data={global.favStores}
         numColumns={4}
         keyExtractor={(item) => item.id}
         renderItem={storeRenderItem}
       />
       <View style={{ height: 100, marginTop: 20 }}>
         <FlatList
+          extraData={global.favStores.length}
           style={styles.menuContainer}
           showsVerticalScrollIndicator={false}
           data={menu}
