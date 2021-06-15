@@ -1,269 +1,286 @@
 {
     "list" : [
         {
-            "id": "S0001",
-            "brand": "Samsung",
-            "products": [
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/fdc337ad5017832e02542f75413a78ee.jpg_400x400q90.jpg_.webp",
-                    "name": "Samsung Galaxy S20 FE 5G",
-                    "description": "Qualcomm Snapdragon 865\nINFINITY-O DISPLAY\nPRO-GRADE CAMERA\nSPACE ZOOM\nNIGHT MODE\nSINGLE TAKE\nSUPER SMOOTH 120HZ\nGet the most out of 5G\nSamsung Galaxy S20 FE 5G is 5G-capable and can be used to access 5G network in Singapore after local 5G network is launched. SIM card upgrade and/or software update may be required. Data subscription fees apply.",
-                    "image": "https://sg-test-11.slatic.net/shop/40b940ea8feaff3494e23ad680609551.jpeg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 848,
-                    "rrp": 1168,
-                    "id": 1
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/5682c9c1ec0ee9bc835e2420eb817050.jpg_400x400q90.jpg_.webp",
-                    "name": "Samsung Galaxy A52 5G",
-                    "description": "8GB RAM\nFront Camera 32MP\nBack Camera 64MP + 12MP + 5MP + MP\n4500mAh Battery\n25W Fast Charging\nInfinity-O-Display (120Hz)\nFHD+ Super Amoled",
-                    "image": "https://sg-test-11.slatic.net/shop/9b4adce721278076c526504e8e17a0e8.png_2200x2200q80.jpg_.webp",
-                    "currentPrice": 498,
-                    "rrp": 548,
-                    "id": 2
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/1771ae686c62aacab3cdd6e32508a32b.jpg_400x400q90.jpg_.webp",
-                    "name": "Samsung Galaxy S21 Ultra 5G",
-                    "description": "Brand Samsung\nSKU 1539632696_SGAMZ-7205936655\nBattery Capacity 5000 mAh & Above\nScreen Size (inches) 6.8\nNumber_of_Camera Quad",
-                    "image": "https://sg-test-11.slatic.net/shop/687d257627ef2df34140fa5dc115b437.png_2200x2200q80.jpg_.webp",
-                    "currentPrice": 1698,
-                    "rrp": 1798,
-                    "id": 3
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/5ab466536ccad504849b45dc6bcfcde8.jpg_400x400q90.jpg_.webp",
-                    "name": "Samsung Galaxy M31S Dual Sim M317FD 128GB (6GB RAM) Black / Blue",
-                    "description": "MonsterDisplay\nSegment leading sAMOLED Infinity-O Display\n\nMonsterProcessor\nBlazing fast processor for unmatched performance\n\nMonsterShot\nwith 64 MP Intelli-Cam\n\nSingle Take\nGet up to 10 photos and video outputs with just one take\n\nMonsterVideos\nEnhanced camera experience with scene optimizer\n\nMonsterSelfies\n32MP front camera for great selfies and slowfies\n\nMonsterSecure\nNow unlock your phone instantly with your face or fingerprint\n\nMonsterPunch\nSegment-leading 6000mAh battery and 25W fast charging to conquer the day and the night\n\nReverse Charging\nPass the charge on the go with a Type C to Type C inbox cable",
-                    "image": null,
-                    "currentPrice": 450,
-                    "rrp": 550,
-                    "id": 4
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/2fefead175eb591f8ae72b33ef9b0bbc.png_400x400q90.jpg_.webp",
-                    "name": "Samsung Galaxy A50s Dual Sim A507FD 128GB (4GB RAM) Black / Violet / White",
-                    "description": "Ready for More\nMake every video and picture absolutely stunning with a 48MP Main camera, 8MP Ultra-wide camera and 5MP Depth Camera. Capture cinematic, shake-free videos with Super Steady Mode and low-light shots as bright as day with Night Mode.\n\nReady for Immersive Viewing\nStep up your viewing experience with the new and improved 16.21cm (6.4\u201d) FHD+ sAMOLED Infinity-U Display.\n\nReady to Impress\nAll new premium 3D prism design with glossy pattern is something you would definitely want to flaunt.\n\nReady to Last\nA 4,000mAh battery that gives you the power to keep going all day long, be it streaming, sharing or gaming. And if you start running low, plug in and power up in no time with 15W Fast Charging.\n\nReady for Gaming\nMulti-task more and play games lag free. Do it all with a Exynos 9611 (10nm chipset) Octa Core processor.\n\nReady for Ease\nWith Samsung Pay, secured by Knox security, payments can be quickly made anytime, and anywhere. Simple. Secure. Everywhere.",
-                    "image": null,
-                    "currentPrice": 390,
-                    "rrp": 490,
-                    "id": 5
-                }
-            ]
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/fdc337ad5017832e02542f75413a78ee.jpg_400x400q90.jpg_.webp",
+            "name": "Samsung Galaxy S20 FE 5G",
+            "description": "Qualcomm Snapdragon 865\nINFINITY-O DISPLAY\nPRO-GRADE CAMERA\nSPACE ZOOM\nNIGHT MODE\nSINGLE TAKE\nSUPER SMOOTH 120HZ\nGet the most out of 5G\nSamsung Galaxy S20 FE 5G is 5G-capable and can be used to access 5G network in Singapore after local 5G network is launched. SIM card upgrade and/or software update may be required. Data subscription fees apply.",
+            "image": ["https://sg-test-11.slatic.net/shop/40b940ea8feaff3494e23ad680609551.jpeg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 848,
+            "rrp": 1168,
+            "id": 1,
+            "storeId": "S0001"
+
         },
         {
-            "id": "S0002",
-            "brand": "Apple",
-            "products": [
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/mdc/e9592d365dbdaaaa27aa39edba680960.jpg_400x400q90.jpg_.webp",
-                    "name": "Apple iPhone 12 Pro Max",
-                    "description": "5G goes Pro. A14 Bionic rockets past every other smartphone chip. The Pro camera system takes low-light photography to the next level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic Shield delivers four times better drop performance. Let’s see what this thing can do.",
-                    "image": "https://sg-test-11.slatic.net/shop/f59728bd070b540a4e10ae78b513ab32.jpeg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 1703,
-                    "rrp": 1799,
-                    "id": 1
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/mdc/33110b4aaeee463e6ac98dcd285d4525.jpg_400x400q90.jpg_.webp",
-                    "name": "Apple iPhone 12",
-                    "description": "5G speed. A14 Bionic, the fastest chip in a smartphone.\nAn edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all — in two perfect sizes.",
-                    "image": "https://sg-live-01.slatic.net/p/51229569979496c5d05ccceefd57c95a.jpg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 1231,
-                    "rrp": 1299,
-                    "id": 2
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/07d36a10faecc6dae7b3bfad04c23904.jpg_400x400q90.jpg_.webp",
-                    "name": "Apple iPhone 12 Pro",
-                    "description": "5G goes Pro. A14 Bionic rockets past every other smartphone chip. The Pro camera system takes low-light photography to the next level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic Shield delivers four times better drop performance. Let’s see what this thing can do.",
-                    "image": "https://sg-test-11.slatic.net/shop/f59728bd070b540a4e10ae78b513ab32.jpeg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 1514.70,
-                    "rrp": 1649,
-                    "id": 3
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/7ec39aea6cf658f92daa9317292ce497.png_400x400q90.jpg_.webp",
-                    "name": "Apple iPhone 12 mini",
-                    "description": "5G speed. A14 Bionic, the fastest chip in a smartphone.An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all — in two perfect sizes.",
-                    "image": "https://sg-live-01.slatic.net/p/51229569979496c5d05ccceefd57c95a.jpg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 981,
-                    "rrp": 1149,
-                    "id": 4
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/e49fe551a49a75523bba19ae591aaf1a.jpg_400x400q90.jpg_.webp",
-                    "name": "Apple iPhone SE",
-                    "description": "4.7-inch Retina HD display1\nWater and dust resistant (1 meter for up to 30 minutes, IP67)3\n12MP Wide camera; Portrait mode, Portrait Lighting, Depth Control, next-generation Smart HDR, and 4K video\n7MP front camera with Portrait mode, Portrait Lighting, and Depth Control\nTouch ID for secure authentication\nA13 Bionic chip with third-generation Neural Engine\nFast-charge capable\nWireless charging4\niOS 13 with Dark Mode, new tools for editing photos and video, and new privacy",
-                    "image": "https://sg-test-11.slatic.net/shop/259063019fdf39f8e9219e2d8b1ab073.jpeg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 615,
-                    "rrp": 649,
-                    "id": 5
-                }
-            ]
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/5682c9c1ec0ee9bc835e2420eb817050.jpg_400x400q90.jpg_.webp",
+            "name": "Samsung Galaxy A52 5G",
+            "description": "8GB RAM\nFront Camera 32MP\nBack Camera 64MP + 12MP + 5MP + MP\n4500mAh Battery\n25W Fast Charging\nInfinity-O-Display (120Hz)\nFHD+ Super Amoled",
+            "image": ["https://sg-test-11.slatic.net/shop/9b4adce721278076c526504e8e17a0e8.png_2200x2200q80.jpg_.webp"],
+            "currentPrice": 498,
+            "rrp": 548,
+            "id": 2,
+            "storeId": "S0001"
         },
         {
-            "id": "S0003",
-            "brand": "Xiao Mi",
-            "products": [
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/mdc/8cd8c683f9aba422d6a35c5fda6ea31c.png_400x400q90.jpg_.webp",
-                    "name": "[1 Year Local Official Warranty]Xiaomi Redmi 9 (4GB + 64GB) Global Version",
-                    "description": "Band: 4G / LTE Dimension: 163.32 x 77.01 x 9.1mm\nNo of Cores: Octa core\nCard Slot: Yes\nDisplay (Inches): 6.53\nResolution (px): 2340x1080 FHD+, 394 PPI\nRear Camera: Quad Camera 13MP+8MP+5MP+2MP\nFront Camera: 8MP selfie camera\nOperating System: Android 10, MIUI 12\nSim: Dual Sim Hybrid (2nd SIM or memory card slot)\nBattery Capacity: Non-removable Li-Po 5020 mAh battery",
-                    "image": "https://sg-live-01.slatic.net/p/a3541c0bf96e503dfffabe188824d489.jpg_q80_2200x2200q80.jpg_.webp",
-                    "currentPrice": 229,
-                    "rrp": 229,
-                    "id": 1
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/cc5bb720c0a8b5a4dbe6443a0b3cdb8c.png_400x400q90.jpg_.webp",
-                    "name": "Xiaomi Mi 11 Lite 5G | Free Mi True Wireless Earbuds Basic 2",
-                    "description": "Colors\nTruffle Black\nCitrus Yellow\nMint Green\nStorage & RAM\n8GB+128GB\nLPDDR4X RAM+UFS 2.2 storage \n*Available storage and RAM are less than the total memory due to storage of the operating system and software pre-installed on the device.\nDimensions\nHeight: 160.53mm\nWidth: 75.73mm\nThickness: 6.81mm\nWeight: 159g\nDisplay\n6.55\u201d FHD+AMOLED DotDisplay\n10-bit color depth\n2400x1080, 402ppi\nAspect ratio: 20:9\nContrast ratio: 5000,000:1 (typ)\nColor gamut: Supports DCI-P3 wide color gamut\nBrightness: Normal 500nits\uff08Typ\uff09/up to 800nits\uff08High Brightness mode\uff09\nHDR10+\nRefresh rate: 60/90Hz\nTouch sampling rate: 240Hz\nTrueColor display: JNCD\u22480.32, Delta E\u22480.36\nSupports Sunlight mode 3.0\nSupports Reading mode 3.0\n360-degree ambient light sensors\nCorning\u00ae Gorilla\u00ae Glass 6\nProcessor\nQualcomm\u00ae Snapdragon\u2122 780G\nCPU: Qualcomm\u00ae Kryo\u2122 670, octa-core CPU, up to 2.4GHz\nGPU: Qualcomm\u00ae Adreno\u2122 642 GPU\nBattery & Charging\n4250mAh battery (typ)\nUSB-C\nSupports 33W fast charging\n33W fast charger in box\nCamera\n64MP main camera\nf/1.79,  6P lens\n8MP ultra-wide angle camera\n119\u00b0 FOV , f/2.2\n5MP telemacro camera\nf/2.4, Contrast AF (3cm-7cm)\nRear camera photography features\nTimed burst\nAI SkyScaping\nRear camera video features\nOne-click AI cinema\nTime-lapse video\n8 cinematic video filers(*Feature will arrive OTA update.) \nRear Video recording\n4K | 3840\u00d72160 | at 30fps\n1080p | 1920\u00d71080 | at 60fps\n1080p | 1920\u00d71080 | at 30fps\n720p | 1280\u00d7720 | at 30fps\nSlow motion video: 120fps, 1080p/720p\n20MP front camera\nf/2.24\nFront camera photography features\nNight mode\nAI Beautify \nFront camera video features\nTime-lapse selfie\nSecurity\nArc side fingerprint sensor\nAI Face Unlock\nNFC\nSupport Multifunctional NFC*\nSupports Google Pay\n*Availability varies between markets\nNetwork & Connectivity\nSIM 1 + Hybrid (SIM or MicroSD)*\nSupports 5G/4G/3G/2G\n*5G requires the support of local telecom operator services, and may not be available in all regions\n* Hybrid slot can be used either for a second SIM or a MicroSD card\nSupported Network bands\nSupports 5G/4G/3G/2G\n5G NR:n1/n3/n5/n7/n8/n20/n28/n38/n40/n41/n77/n78/n66\nLTE FDD:1/2/3/4/5/7/8/12/13/17/20/28/32/66\nLTE TDD: 38/40/41\n3G WCDMA:1/2/4/5/8\n2G GSM:2/3/5/8\nSupported Wireless Networks\nSupported protocols: Wi-Fi 4, Wi-Fi 5,Wi-Fi 6 and 802.11a/b/g\nSupports WiFi Direct, WiFi Display\nBluetooth 5.2\nNavigation & Positioning\nGPS: L1+L5\nGlonass: G1, Galileo: E1+E5a\nAudio\nDual speakers\nAudio playback\nSupports audio formats such as MP3 | FLAC | APE |  AAC | WMA | AMR | AWB\nVideo playback\nSupports video formats such as MP4 | MKV | AVI | WMV | WEBM | 3GP | 3G2 | ASF\nSensors\nProximity sensor | Ambient light sensor | Accelerometer | Gyroscope | Electronic compass | Linear motor | IR blaster\nOperating System\nMIUI 12, Android 11\nPackage Contents\nMi 11 Lite 5G | Adapter | USB Type-C Cable | Type-C to 3.5 mm Headphone Adapter | SIM eject tool | Soft case | User guide | Warranty card",
-                    "image": [],
-                    "currentPrice": 549,
-                    "rrp": 549,
-                    "id": 2
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/4ca41c03a6bc8320ae4672883d4e5bf5.png_400x400q90.jpg_.webp",
-                    "name": "Xiaomi POCO X3 - NFC Version",
-                    "description": "Qualcomm Snapdragon 732G, Up to 2.3Ghz, octa-core CPU\nLiquidCool Technology 1.0 Plus, Copper heat pipe+multi-layer graphite\n120Hz display 6.67\" FHD+ DotDisplay, 240Hz touch sampling rate\n64MP AI quad camera, 20MP in-display front camera\n5160mAh (typ) battery, 33W fast charge (in-box charger 33W)",
-                    "image": "https://sg-live-02.slatic.net/p/d3feceec75309dc455f9a5248c20adab.jpg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 339,
-                    "rrp": 339,
-                    "id": 3
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/62d52db7af354f555520baab96a5c588.jpg_400x400q90.jpg_.webp",
-                    "name": "Xiaomi Mi 11i 5G Dual Sim 256GB (8GB RAM) Black / White / Silver",
-                    "description": "Xiaomi Mi 11i features a 6.67 inches (16.94 cm) display with a resolution of 1080 x 2400 Pixels. In addition to this, the aspect ratio of the phone\u2019s display is expected to be 20:9 that will give you an immersive viewing experience while playing games or watching movies.\n\nXiaomi Mi 11i has equipped with an Octa-core Qualcomm SM8350 Snapdragon 888 5G (5 nm) processor that will handle all your daily tasks on your phone smoothly.\n\nIt comes with various memory variations, up to 256GB and 8GB RAM. You would store all your songs, videos, games and more on the phone without worrying about space constraints.\n\nThe phone comes with a triple rear camera set up. There is a 108MP Main Camera, an 8MP Ultra-wide Camera, and a 2 MP Macro Camera. On the front, the phone has a 20MP camera for clicking selfies and making video calls.\n\nXiaomi Mi 11i runs Realme UI run the Android v11 operating system and houses a decent 4520 mAh non-removable battery with 33W Fast Charging support so that you could use it without worrying about battery drainage issues.",
-                    "image": [],
-                    "currentPrice": 860,
-                    "rrp": 1090,
-                    "id": 4
-                }
-            ]
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/1771ae686c62aacab3cdd6e32508a32b.jpg_400x400q90.jpg_.webp",
+            "name": "Samsung Galaxy S21 Ultra 5G",
+            "description": "Brand Samsung\nSKU 1539632696_SGAMZ-7205936655\nBattery Capacity 5000 mAh & Above\nScreen Size (inches) 6.8\nNumber_of_Camera Quad",
+            "image": ["https://sg-test-11.slatic.net/shop/687d257627ef2df34140fa5dc115b437.png_2200x2200q80.jpg_.webp"],
+            "currentPrice": 1698,
+            "rrp": 1798,
+            "id": 3,
+            "storeId": "S0001"
         },
         {
-            "id": "S0004",
-            "brand": "OPPO",
-            "products": [
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/ca5d888295967a407736389f40b04e08.jpg_400x400q90.jpg_.webp",
-                    "name": "OPPO Reno5 5G/ Dual-View Video / AI Highlight Video/ 65W SuperVOOC 2.0 / 90Hz Refresh Rate/ 8+128GB",
-                    "description": "Brand\nOppo\n\nSKU\n1541748619_SGAMZ-7217784899\n\nNumber_of_Camera\nDual\n\nScreen Size (inches)\n6.43\n\nBattery Capacity\n4000 - 4999 mAh",
-                    "image": "https://sg-test-11.slatic.net/shop/cf0aae8df46795146d90f5ad54d61d6e.jpeg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 599,
-                    "rrp": 699,
-                    "id": 1
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/b84f8b38d5a7a8ee15eaa434c9f8bbf5.jpg_400x400q90.jpg_.webp",
-                    "name": "OPPO Reno3 / 48MP Quad Camera / 44MP Front Camera / 8GB + 128GB / 2 Years Warranty",
-                    "description": "48MP Ultra-clear Main Camera + 44MP Front CameraVOOC Flash Charge 3.0Hi-Res Audio & Dolby Atmos",
-                    "image": "https://sg-live-01.slatic.net/shop/982f40620d4e5153578de90edca1eef3.jpeg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 369,
-                    "rrp": 399,
-                    "id": 2
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/cc4a7210c21d3c53edd7eacc285c9ef2.jpg_400x400q90.jpg_.webp",
-                    "name": "OPPO Reno5 Pro 5G/ Dual-View Video / AI Highlight Video/ 65W SuperVOOC 2.0 / 90Hz Refresh Rate/ 12+256GB",
-                    "description": "Display Size: 6.55\u2018\u2019 FHD+ AMOLED Screen\n64MP HD Rear Camera\nBattery capacity\uff1a4350mAh Battery\nSIM Card Type: Nano Dual-Sim\nMediatek Dimensity 1000+\nFingerprint Sensor & AI Face Unlock\nRAM\uff1a12GB RAM + 256GB ROM\nColorOS 11.1 Based on Android 11",
-                    "image": "https://sg-test-11.slatic.net/shop/b80af49a0c71e551bdcb7aa910a2ae86.jpeg_2200x2200q80.jpg_.webp",
-                    "currentPrice": 849,
-                    "rrp": 899,
-                    "id": 3
-                },
-                {
-                    "iconUrl": "https://filebroker-cdn.lazada.sg/kf/Se4bc949f919b425a8d5180e226d92b6cN.jpg",
-                    "name": "Oppo Find X3 Pro 5G 12+256 (Oppo SG 2 yrs warranty)",
-                    "description": "Brand new sealed local set\n2 years Oppo SG warranty\n5G, 12+256GB",
-                    "image": [],
-                    "currentPrice": 1459,
-                    "rrp": 1599,
-                    "id": 4
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/4c6229e030fa435f0195cc06ff9041fb.png_400x400q90.jpg_.webp",
-                    "name": "Oppo Reno 3 8GB 128GB",
-                    "description": "Product descriptions of Oppo Reno 3 8GB 128GB\nSize: 16.2cm (6.4'')Touchscreen: Multi-touch, Capacitive ScreenResolution: 2400 by 1080 pixelsColors: 16 million colorsScreen Ratio: 90.8%Rear Sensor: 13M + 48M + 8M + 2MFront Sensor: 44MPFlash: LED FlashAperture:\nFront: 44MP F2.4\nRear: 48MP F1.8 + 13MP F2.4 + 8MP F2.2 + 2MP F2.4Sensor Size:\n48MP main camera 1/2.0';\n13MP telephoto lens 1/3.4', 1.0um;\n8MP wide-angle lens 1/4',1.12um;\n2MP mono lens 1/5',1.75um;\nFront camera 1/2.8', 0.8umPixel Size:\nRear camera: 4000*3000 (normal mode); 8000*6000 (48MP output mode)\nFront camera: 7680*5760 (44MP output mode); 7296* 5472 (normal mode)Video:\nFront Camera: 1080P/720P@30fps\nRear Camera: 4K/30fps; 1080P@60fps/30fps; 720P@60fps/30fps Frequencies:\nGSM: 850/900/1800/1900MHz\nWCDMA: Bands 1/5/8\nFDD-LTE: Bands 1/3/5/7/8/20/28\nTD-LTE: Bands 38/40/41\nNote: B41: 2535-2655 MHzSIM Card Type: Nano-SIM / Nano-USIMGPS: Built-in GPS; supports A-GPS, Beidou, GlonassBluetooth: 5.0WLAN Function: WLAN 2.4G / WLAN 5.1G / WLAN 5.8G, WLAN DisplayNFC: No\n\nOperating System: ColorOS 7, based on Android 10\nCPU: MTK MT6779V (MTK P90)\nBattery: 3935/4025 mAh (min/typ)\nRAM: 8GB\nStorage: 128GB (SD card is expandable up to 256GB)\nWidth: 73.3 mm\nThickness: 7.9 mm\nWeight: Approximately 170 g",
-                    "image": "https://sg-live-01.slatic.net/p/ee9ac191be2d43344064b150b5984c11.png_2200x2200q80.jpg_.webp",
-                    "currentPrice": 403,
-                    "rrp": 438,
-                    "id": 5
-                }
-            ]
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/5ab466536ccad504849b45dc6bcfcde8.jpg_400x400q90.jpg_.webp",
+            "name": "Samsung Galaxy M31S Dual Sim M317FD 128GB (6GB RAM) Black / Blue",
+            "description": "MonsterDisplay\nSegment leading sAMOLED Infinity-O Display\n\nMonsterProcessor\nBlazing fast processor for unmatched performance\n\nMonsterShot\nwith 64 MP Intelli-Cam\n\nSingle Take\nGet up to 10 photos and video outputs with just one take\n\nMonsterVideos\nEnhanced camera experience with scene optimizer\n\nMonsterSelfies\n32MP front camera for great selfies and slowfies\n\nMonsterSecure\nNow unlock your phone instantly with your face or fingerprint\n\nMonsterPunch\nSegment-leading 6000mAh battery and 25W fast charging to conquer the day and the night\n\nReverse Charging\nPass the charge on the go with a Type C to Type C inbox cable",
+            "image": [],
+            "currentPrice": 450,
+            "rrp": 550,
+            "id": 4,
+            "storeId": "S0001"
         },
         {
-            "id": "S0005",
-            "brand": "OnePlus",
-            "products": 
-            [
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/15749daaf38549fdd4c7ccee2e8b6ba4.jpg_400x400q90.jpg_.webp",
-                    "name": "OnePlus Nord N100 Midnight Frost | 4GB+64GB | 90Hz Smooth Display | 5000 mAh Battery | Dual SIM | Support MicroSD | Free Case and Tempered Glass Screen Protector",
-                    "description": "4GB RAM + 64GB ROM\n90HZ LCD capacitive touchscreen\nEU 2 Pin charger + Free 2 Pin to 3 Pin converter",
-                    "image": [
-                        "https://sg-live-01.slatic.net/p/042210d426af5bddcc5afa335920d676.png_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/58bf826772643dab019bfee370176892.png_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/92184b62cda2025d7cedc20d5fe12ec5.png_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/64f32b2bb9d4c4aca18bd6f32f207053.png_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/86723e26cb498a1bc3d1ff88e4b2d09e.png_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/db88343b2750375f294357e1895154e8.png_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/245af101487b2b32ece9fe912471ae2f.png_2200x2200q80.jpg_.webp"
-                    ],
-                    "currentPrice": 233,
-                    "rrp": 399,
-                    "id": 1
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/d3e59a263edc36d23bb63d023a00cb0e.jpg_400x400q90.jpg_.webp",
-                    "name": "OnePlus Nord AC2003 SG Set | Support 5G | SG 3 Pin Warp Charger | SG Official Local Warranty",
-                    "description": "Nord AC2003 SG Local Set, with SG 3 Pin Warp Charger",
-                    "image": [
-                        "https://sg-live-01.slatic.net/p/be452381542f1228469fa289d273ec90.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/60cf05322c15bff17066069fa192f2eb.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/716f01362992b3d231fa3245af34b9a2.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/b23a0579fecf728fd1e2cf7d727d0323.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/372e341a1b427c9eccf71603239e3669.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/4934cb54da6e04be759f198ef17f3d3a.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/43114e3ce01a2b1fd83c05319d1f28b1.jpg_2200x2200q80.jpg_.webp"
-                    ],
-                    "currentPrice": 533,
-                    "rrp": 649,
-                    "id": 2
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/3a9ddb091eb804a8df4834c236aa81df.jpg_400x400q90.jpg_.webp",
-                    "name": "OnePlus 8T Joy Bundle | SG 3 Pin 65W Wrap Charger | Free Wireless Ear Buds | SG Local Two Years Warranty",
-                    "description": "OnePlus 8T, Two Years SG Local Warranty, SG 3 Pin Warp Charger\nFree Suning Wireless Ear Buds\nOperating System: OxygenOS based on Android\u2122 11\nScreen: 6.55 inches Fluid AMOLED with 120Hz Flat Display\nResolution: 2400 x 1080\nCPU: Qualcomm\u00ae Snapdragon\u2122 865 5G mobile platform\nFront: 16MP Sony IMX471\nRear: 48MP+16MP+5MP+2MP Sony IMX586\nBattery: 4,500 mAh, Warp Charge 65\nAudio: Dual Stereo Speakers, Noise cancellation support, Dolby Atmos\u00ae\nSIM Slot: Dual nano-SIM\nSensor: In-display fingerprint / Accelerometer / Electronic compass / Gyroscope / Ambient light / Proximity / Sensor Core / Flicker-detect",
-                    "image": [
-                        "https://sg-live-01.slatic.net/p/20436dfab97fd21cc86c9f9d19db2464.png_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/3aa3b1906b3ea9435baf0d9b93d56829.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/530ca351cafd04b4ca6c704ef227870e.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/464b3459a44058ad7ddb9d4835858e0d.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/b3bf0ca4921ce39d87d7f7d2090d2a30.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/c1621d283c50f6872ba34734d9b001f7.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/96ffa5cc76888f0f488744f377ecad11.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/cd3d2cd39aade35800fbcebe9ec2abd9.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/0d2b8827b1898d8fd93e03f81590d980.jpg_2200x2200q80.jpg_.webp",
-                        "https://sg-live-01.slatic.net/p/840d4b708c11692fbb3c669cbbcaa8be.jpg_2200x2200q80.jpg_.webp"
-                    ],
-                    "currentPrice": 766,
-                    "rrp": 999,
-                    "id": 3
-                },
-                {
-                    "iconUrl": "https://sg-test-11.slatic.net/p/baadb9fe6a7532c4288ddf604ab2af21.jpg_400x400q90.jpg_.webp",
-                    "name": "OnePlus 9 12GB/256GB | 2 years warranty by OnePlus",
-                    "description": "Dimensions\nHeight: 160 mmWidth: 74.2 mmThickness: 8.7 mmWeight: 192g\nDisplay\nParameters\nSize: 6.55 inches (Measured diagonally from corner to corner.)Resolution: 2400 x 1080 pixels 402 ppiAspect Ratio: 20:9Type: 120 Hz Fluid AMOLEDSupport sRGB, Display P3Cover Glass: Corning\u00ae Gorilla\u00ae Glass\n\nFeatures\nReading ModeNight ModeVibrant Color EffectUltra-high Video Resolution\n\nPerformance\nOperating System: OxygenOS based on Android\u2122 11CPU: Qualcomm\u00ae Snapdragon\u2122 8885G Chipset: X60GPU: Adreno 660RAM: 8GB/12GB LPDDR5Storage: 128GB/256GB UFS 3.1 2-LANEBattery: 4,500 mAh (2S1P 2,250 mAh, non-removable)Warp Charge 65T (10V/6.5A)15W Wireless Charging\n\nCamera\nMain Camera\nSensor: Sony IMX689Sensor Size: 1/1.43\u2033Megapixels: 48Pixel Size: 1.12\u00b5mLens Quantity: 7PFocal Length: 23mm equivalentAperture: \u0192/1.8\n\nUltra-Wide Camera\nSensor: Sony IMX766Sensor Size: 1/1.56\u2033Megapixels: 50Lens Quantity: 7PFocal Length: 14mm equivalentAperture: \u0192/2.2Lens: Freeform Lens\n\nMonochrome Camera\nMegapixels: 2\n\nFlash\nDual LED Flash\n\nAutofocus\nMulti Autofocus (All pixel omni-directional PDAF+CAF)\n\nVideo\n8K video at 30 fps4K video at 30/60 fps1080p video at 30/60 fpsSuper Slow Motion: 1080p video at 240 fps, 720p video at 480 fpsTime-Lapse: 1080p at 30 fps, 4k at 30 fpsVideo Editor\n\nFeatures\nNightscape, Super Macro, UltraShot HDR, Smart Scene Recognition, Portrait mode, Pro mode, Panorama, Tilt-shift mode, Focus Peaking, Cat/Dog Face Focus, RAW Image, Filters, Super Stable, Video Nightscape, Video HDR, Video Portrait, Focus Tracking, Timelapse, Hyperlapse\n\nFront Camera\nSensor: Sony IMX471Megapixels: 16Pixel Size: 1.0 \u00b5mEIS: YesAutofocus: Fixed FocusAperture: \u0192/2.4\n\nVideo\n1080p video at 30fpsTime-Lapse\n\nFeatures\nFace Unlock, HDR, Screen Flash, Face Retouching\n\nConnectivity\nLTE/LTE-A\n4\u00d74 MIMO, Supports up to DL Cat 20/UL Cat 18 ( 2 Gbps /200Mbps), depending on carrier support\n\nBand\nGSM\uff1aB2, 3, 5, 8WCDMA\uff1aB1, 2, 4, 5, 8, 9, 19LTE-FDD\uff1aB1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 32, 66LTE-TDD\uff1aB38, 39, 40, 415G NSA\uff1aN1, 3, 5, 7, 8, 20, 28, 38, 40, 41, 66, 785G SA\uff1aN1, 3, 7, 28, 41, 78MIMO\uff1aLTE: B1, 3, 7, 38, 40, 41 ; NR: N1, 3, 7, 38, 40, 41, 78\n\nWi-Fi\n2\u00d72 MIMO, Support 2.4G/5G, Support WiFi 802.11 a/b/g/n/ac/ax\n\nBluetooth\nBluetooth 5.2, support aptX & aptX HD & LDAC & AAC\n\nNFC\nNFC enabled\n\nPositioning\nGPS (L1+L5 Dual Band), GLONASS, Galileo (E1+E5a Dual Band), Beidou, A-GPS\n\nSensors\nIn-display Fingerprint SensorAccelerometerElectronic CompassGyroscopeAmbient Light SensorProximity SensorSensor CoreFlicker-detect Sensor\n\nPorts\nUSB 3.1 GEN1Type-CSupport standard Type-C earphonesDual nano-SIM slot\n\nButtons\nGestures and on-screen navigation supportAlert Slider\nAudio\nDual Stereo SpeakersNoise cancellation supportDolby Atmos\u00ae\nMultimedia\nAudio Supported Formats\nPlayback: MP3, AAC, AAC+, WMA, AMR-NB, AMR-WB, WAV, FLAC, APE, OGG, MID, M4A, IMY, AC3, EAC3, EAC3-JOC, AC4Recording: WAV, AAC, AMR\n\nVideo Supported Formats\nPlayback: MKV, MOV, MP4, H.265 (HEVC), AVI, WMV, TS, 3GP, FLV, WEBMRecording: MP4\n\nImage Supported Formats\nPlayback: JPEG, PNG, BMP, GIF, WEB, HEIF, HEIC, DNGOutput: JPEG, DNG\n\nIn The Box\nOnePlus 9Warp Charge 65 Power AdapterWarp Charge Type-C to Type-C CableQuick Start GuideWelcome LetterSafety Information and Warranty CardLOGO StickerCaseScreen ProtectorSIM Tray Ejector\nNote\n1. Relevant product parameter names have been addressed on the corresponding pages and will not be repeated here. For descriptions, please refer to the specific instructions on each page.2. The weight of the phone is 192g, and the weight of the screen protector may add an additional 3g. The size and weight of the mobile phone may vary according to configuration, manufacturing process and measurement method.3. Due to the mobile phone system file occupying space (including Android system and pre-installed apps), the available memory capacity is less than this value. Storage capacity will vary based on software version and may vary from device to device.4. Photo pixels of different camera modes may vary, please refer to the actual situation. Video pixels of different shooting modes may also vary, please refer to the actual situation.5. The typical battery capacity is 4500mAh and actual performance may vary. The battery is not removable.6. The USB 3.1 GEN1 function requires a data cable that supports USB 3.1 GEN1 (non-standard configuration, sold separately). The standard data cable supports USB 2.0.7. Product pictures and content on the page are for illustrative purposes only. The actual results (including but not limited to appearance, color, size) and the screen display content (including but not limited to background, UI, and picture) may vary;8. Numbers are theoretical, obtained under a controlled test environment (see each specific name) and provided by the supplier or the OnePlus laboratory. Actual performance may vary due to individual product differences, software versions, use conditions and environmental factors. Please refer to the actual experience.9. Due to the real-time changes in product batches and supply factors, in order to provide accurate information on product information, specifications, and product characteristics, OnePlus may adjust and revise the text names, picture effects, and other content on the above pages in real time to match the reality of the product performance, specifications, index, parts and other information; in the event that page modifications and adjustments are necessary, no special notice will be given.",
-                    "image": [],
-                    "currentPrice": 1009,
-                    "rrp": 1199,
-                    "id": 4
-                }
-            ]
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/2fefead175eb591f8ae72b33ef9b0bbc.png_400x400q90.jpg_.webp",
+            "name": "Samsung Galaxy A50s Dual Sim A507FD 128GB (4GB RAM) Black / Violet / White",
+            "description": "Ready for More\nMake every video and picture absolutely stunning with a 48MP Main camera, 8MP Ultra-wide camera and 5MP Depth Camera. Capture cinematic, shake-free videos with Super Steady Mode and low-light shots as bright as day with Night Mode.\n\nReady for Immersive Viewing\nStep up your viewing experience with the new and improved 16.21cm (6.4\u201d) FHD+ sAMOLED Infinity-U Display.\n\nReady to Impress\nAll new premium 3D prism design with glossy pattern is something you would definitely want to flaunt.\n\nReady to Last\nA 4,000mAh battery that gives you the power to keep going all day long, be it streaming, sharing or gaming. And if you start running low, plug in and power up in no time with 15W Fast Charging.\n\nReady for Gaming\nMulti-task more and play games lag free. Do it all with a Exynos 9611 (10nm chipset) Octa Core processor.\n\nReady for Ease\nWith Samsung Pay, secured by Knox security, payments can be quickly made anytime, and anywhere. Simple. Secure. Everywhere.",
+            "image": [],
+            "currentPrice": 390,
+            "rrp": 490,
+            "id": 5,
+            "storeId": "S0001"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/mdc/e9592d365dbdaaaa27aa39edba680960.jpg_400x400q90.jpg_.webp",
+            "name": "Apple iPhone 12 Pro Max",
+            "description": "5G goes Pro. A14 Bionic rockets past every other smartphone chip. The Pro camera system takes low-light photography to the next level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic Shield delivers four times better drop performance. Let’s see what this thing can do.",
+            "image": ["https://sg-test-11.slatic.net/shop/f59728bd070b540a4e10ae78b513ab32.jpeg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 1703,
+            "rrp": 1799,
+            "id": 6,
+            "storeId": "S0002"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/mdc/33110b4aaeee463e6ac98dcd285d4525.jpg_400x400q90.jpg_.webp",
+            "name": "Apple iPhone 12",
+            "description": "5G speed. A14 Bionic, the fastest chip in a smartphone.\nAn edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all — in two perfect sizes.",
+            "image": ["https://sg-live-01.slatic.net/p/51229569979496c5d05ccceefd57c95a.jpg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 1231,
+            "rrp": 1299,
+            "id": 7,
+            "storeId": "S0002"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/07d36a10faecc6dae7b3bfad04c23904.jpg_400x400q90.jpg_.webp",
+            "name": "Apple iPhone 12 Pro",
+            "description": "5G goes Pro. A14 Bionic rockets past every other smartphone chip. The Pro camera system takes low-light photography to the next level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic Shield delivers four times better drop performance. Let’s see what this thing can do.",
+            "image": ["https://sg-test-11.slatic.net/shop/f59728bd070b540a4e10ae78b513ab32.jpeg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 1514.70,
+            "rrp": 1649,
+            "id": 8,
+            "storeId": "S0002"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/7ec39aea6cf658f92daa9317292ce497.png_400x400q90.jpg_.webp",
+            "name": "Apple iPhone 12 mini",
+            "description": "5G speed. A14 Bionic, the fastest chip in a smartphone.An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all — in two perfect sizes.",
+            "image": ["https://sg-live-01.slatic.net/p/51229569979496c5d05ccceefd57c95a.jpg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 981,
+            "rrp": 1149,
+            "id": 9,
+            "storeId": "S0002"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/e49fe551a49a75523bba19ae591aaf1a.jpg_400x400q90.jpg_.webp",
+            "name": "Apple iPhone SE",
+            "description": "4.7-inch Retina HD display1\nWater and dust resistant (1 meter for up to 30 minutes, IP67)3\n12MP Wide camera; Portrait mode, Portrait Lighting, Depth Control, next-generation Smart HDR, and 4K video\n7MP front camera with Portrait mode, Portrait Lighting, and Depth Control\nTouch ID for secure authentication\nA13 Bionic chip with third-generation Neural Engine\nFast-charge capable\nWireless charging4\niOS 13 with Dark Mode, new tools for editing photos and video, and new privacy",
+            "image": ["https://sg-test-11.slatic.net/shop/259063019fdf39f8e9219e2d8b1ab073.jpeg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 615,
+            "rrp": 649,
+            "id": 10,
+            "storeId": "S0002"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/mdc/8cd8c683f9aba422d6a35c5fda6ea31c.png_400x400q90.jpg_.webp",
+            "name": "[1 Year Local Official Warranty]Xiaomi Redmi 9 (4GB + 64GB) Global Version",
+            "description": "Band: 4G / LTE Dimension: 163.32 x 77.01 x 9.1mm\nNo of Cores: Octa core\nCard Slot: Yes\nDisplay (Inches): 6.53\nResolution (px): 2340x1080 FHD+, 394 PPI\nRear Camera: Quad Camera 13MP+8MP+5MP+2MP\nFront Camera: 8MP selfie camera\nOperating System: Android 10, MIUI 12\nSim: Dual Sim Hybrid (2nd SIM or memory card slot)\nBattery Capacity: Non-removable Li-Po 5020 mAh battery",
+            "image": ["https://sg-live-01.slatic.net/p/a3541c0bf96e503dfffabe188824d489.jpg_q80_2200x2200q80.jpg_.webp"],
+            "currentPrice": 229,
+            "rrp": 229,
+            "id": 11,
+            "storeId": "S0003"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/cc5bb720c0a8b5a4dbe6443a0b3cdb8c.png_400x400q90.jpg_.webp",
+            "name": "Xiaomi Mi 11 Lite 5G | Free Mi True Wireless Earbuds Basic 2",
+            "description": "Colors\nTruffle Black\nCitrus Yellow\nMint Green\nStorage & RAM\n8GB+128GB\nLPDDR4X RAM+UFS 2.2 storage \n*Available storage and RAM are less than the total memory due to storage of the operating system and software pre-installed on the device.\nDimensions\nHeight: 160.53mm\nWidth: 75.73mm\nThickness: 6.81mm\nWeight: 159g\nDisplay\n6.55\u201d FHD+AMOLED DotDisplay\n10-bit color depth\n2400x1080, 402ppi\nAspect ratio: 20:9\nContrast ratio: 5000,000:1 (typ)\nColor gamut: Supports DCI-P3 wide color gamut\nBrightness: Normal 500nits\uff08Typ\uff09/up to 800nits\uff08High Brightness mode\uff09\nHDR10+\nRefresh rate: 60/90Hz\nTouch sampling rate: 240Hz\nTrueColor display: JNCD\u22480.32, Delta E\u22480.36\nSupports Sunlight mode 3.0\nSupports Reading mode 3.0\n360-degree ambient light sensors\nCorning\u00ae Gorilla\u00ae Glass 6\nProcessor\nQualcomm\u00ae Snapdragon\u2122 780G\nCPU: Qualcomm\u00ae Kryo\u2122 670, octa-core CPU, up to 2.4GHz\nGPU: Qualcomm\u00ae Adreno\u2122 642 GPU\nBattery & Charging\n4250mAh battery (typ)\nUSB-C\nSupports 33W fast charging\n33W fast charger in box\nCamera\n64MP main camera\nf/1.79,  6P lens\n8MP ultra-wide angle camera\n119\u00b0 FOV , f/2.2\n5MP telemacro camera\nf/2.4, Contrast AF (3cm-7cm)\nRear camera photography features\nTimed burst\nAI SkyScaping\nRear camera video features\nOne-click AI cinema\nTime-lapse video\n8 cinematic video filers(*Feature will arrive OTA update.) \nRear Video recording\n4K | 3840\u00d72160 | at 30fps\n1080p | 1920\u00d71080 | at 60fps\n1080p | 1920\u00d71080 | at 30fps\n720p | 1280\u00d7720 | at 30fps\nSlow motion video: 120fps, 1080p/720p\n20MP front camera\nf/2.24\nFront camera photography features\nNight mode\nAI Beautify \nFront camera video features\nTime-lapse selfie\nSecurity\nArc side fingerprint sensor\nAI Face Unlock\nNFC\nSupport Multifunctional NFC*\nSupports Google Pay\n*Availability varies between markets\nNetwork & Connectivity\nSIM 1 + Hybrid (SIM or MicroSD)*\nSupports 5G/4G/3G/2G\n*5G requires the support of local telecom operator services, and may not be available in all regions\n* Hybrid slot can be used either for a second SIM or a MicroSD card\nSupported Network bands\nSupports 5G/4G/3G/2G\n5G NR:n1/n3/n5/n7/n8/n20/n28/n38/n40/n41/n77/n78/n66\nLTE FDD:1/2/3/4/5/7/8/12/13/17/20/28/32/66\nLTE TDD: 38/40/41\n3G WCDMA:1/2/4/5/8\n2G GSM:2/3/5/8\nSupported Wireless Networks\nSupported protocols: Wi-Fi 4, Wi-Fi 5,Wi-Fi 6 and 802.11a/b/g\nSupports WiFi Direct, WiFi Display\nBluetooth 5.2\nNavigation & Positioning\nGPS: L1+L5\nGlonass: G1, Galileo: E1+E5a\nAudio\nDual speakers\nAudio playback\nSupports audio formats such as MP3 | FLAC | APE |  AAC | WMA | AMR | AWB\nVideo playback\nSupports video formats such as MP4 | MKV | AVI | WMV | WEBM | 3GP | 3G2 | ASF\nSensors\nProximity sensor | Ambient light sensor | Accelerometer | Gyroscope | Electronic compass | Linear motor | IR blaster\nOperating System\nMIUI 12, Android 11\nPackage Contents\nMi 11 Lite 5G | Adapter | USB Type-C Cable | Type-C to 3.5 mm Headphone Adapter | SIM eject tool | Soft case | User guide | Warranty card",
+            "image": [],
+            "currentPrice": 549,
+            "rrp": 549,
+            "id": 12,
+            "storeId": "S0003"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/4ca41c03a6bc8320ae4672883d4e5bf5.png_400x400q90.jpg_.webp",
+            "name": "Xiaomi POCO X3 - NFC Version",
+            "description": "Qualcomm Snapdragon 732G, Up to 2.3Ghz, octa-core CPU\nLiquidCool Technology 1.0 Plus, Copper heat pipe+multi-layer graphite\n120Hz display 6.67\" FHD+ DotDisplay, 240Hz touch sampling rate\n64MP AI quad camera, 20MP in-display front camera\n5160mAh (typ) battery, 33W fast charge (in-box charger 33W)",
+            "image": ["https://sg-live-02.slatic.net/p/d3feceec75309dc455f9a5248c20adab.jpg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 339,
+            "rrp": 339,
+            "id": 13,
+            "storeId": "S0003"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/62d52db7af354f555520baab96a5c588.jpg_400x400q90.jpg_.webp",
+            "name": "Xiaomi Mi 11i 5G Dual Sim 256GB (8GB RAM) Black / White / Silver",
+            "description": "Xiaomi Mi 11i features a 6.67 inches (16.94 cm) display with a resolution of 1080 x 2400 Pixels. In addition to this, the aspect ratio of the phone\u2019s display is expected to be 20:9 that will give you an immersive viewing experience while playing games or watching movies.\n\nXiaomi Mi 11i has equipped with an Octa-core Qualcomm SM8350 Snapdragon 888 5G (5 nm) processor that will handle all your daily tasks on your phone smoothly.\n\nIt comes with various memory variations, up to 256GB and 8GB RAM. You would store all your songs, videos, games and more on the phone without worrying about space constraints.\n\nThe phone comes with a triple rear camera set up. There is a 108MP Main Camera, an 8MP Ultra-wide Camera, and a 2 MP Macro Camera. On the front, the phone has a 20MP camera for clicking selfies and making video calls.\n\nXiaomi Mi 11i runs Realme UI run the Android v11 operating system and houses a decent 4520 mAh non-removable battery with 33W Fast Charging support so that you could use it without worrying about battery drainage issues.",
+            "image": [],
+            "currentPrice": 860,
+            "rrp": 1090,
+            "id": 14,
+            "storeId": "S0003"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/ca5d888295967a407736389f40b04e08.jpg_400x400q90.jpg_.webp",
+            "name": "OPPO Reno5 5G/ Dual-View Video / AI Highlight Video/ 65W SuperVOOC 2.0 / 90Hz Refresh Rate/ 8+128GB",
+            "description": "Brand\nOppo\n\nSKU\n1541748619_SGAMZ-7217784899\n\nNumber_of_Camera\nDual\n\nScreen Size (inches)\n6.43\n\nBattery Capacity\n4000 - 4999 mAh",
+            "image": ["https://sg-test-11.slatic.net/shop/cf0aae8df46795146d90f5ad54d61d6e.jpeg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 599,
+            "rrp": 699,
+            "id": 15,
+            "storeId": "S0004"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/b84f8b38d5a7a8ee15eaa434c9f8bbf5.jpg_400x400q90.jpg_.webp",
+            "name": "OPPO Reno3 / 48MP Quad Camera / 44MP Front Camera / 8GB + 128GB / 2 Years Warranty",
+            "description": "48MP Ultra-clear Main Camera + 44MP Front CameraVOOC Flash Charge 3.0Hi-Res Audio & Dolby Atmos",
+            "image": ["https://sg-live-01.slatic.net/shop/982f40620d4e5153578de90edca1eef3.jpeg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 369,
+            "rrp": 399,
+            "id": 16,
+            "storeId": "S0004"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/cc4a7210c21d3c53edd7eacc285c9ef2.jpg_400x400q90.jpg_.webp",
+            "name": "OPPO Reno5 Pro 5G/ Dual-View Video / AI Highlight Video/ 65W SuperVOOC 2.0 / 90Hz Refresh Rate/ 12+256GB",
+            "description": "Display Size: 6.55\u2018\u2019 FHD+ AMOLED Screen\n64MP HD Rear Camera\nBattery capacity\uff1a4350mAh Battery\nSIM Card Type: Nano Dual-Sim\nMediatek Dimensity 1000+\nFingerprint Sensor & AI Face Unlock\nRAM\uff1a12GB RAM + 256GB ROM\nColorOS 11.1 Based on Android 11",
+            "image": ["https://sg-test-11.slatic.net/shop/b80af49a0c71e551bdcb7aa910a2ae86.jpeg_2200x2200q80.jpg_.webp"],
+            "currentPrice": 849,
+            "rrp": 899,
+            "id": 17,
+            "storeId": "S0004"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://filebroker-cdn.lazada.sg/kf/Se4bc949f919b425a8d5180e226d92b6cN.jpg",
+            "name": "Oppo Find X3 Pro 5G 12+256 (Oppo SG 2 yrs warranty)",
+            "description": "Brand new sealed local set\n2 years Oppo SG warranty\n5G, 12+256GB",
+            "image": [],
+            "currentPrice": 1459,
+            "rrp": 1599,
+            "id": 18,
+            "storeId": "S0004"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/4c6229e030fa435f0195cc06ff9041fb.png_400x400q90.jpg_.webp",
+            "name": "Oppo Reno 3 8GB 128GB",
+            "description": "Product descriptions of Oppo Reno 3 8GB 128GB\nSize: 16.2cm (6.4'')Touchscreen: Multi-touch, Capacitive ScreenResolution: 2400 by 1080 pixelsColors: 16 million colorsScreen Ratio: 90.8%Rear Sensor: 13M + 48M + 8M + 2MFront Sensor: 44MPFlash: LED FlashAperture:\nFront: 44MP F2.4\nRear: 48MP F1.8 + 13MP F2.4 + 8MP F2.2 + 2MP F2.4Sensor Size:\n48MP main camera 1/2.0';\n13MP telephoto lens 1/3.4', 1.0um;\n8MP wide-angle lens 1/4',1.12um;\n2MP mono lens 1/5',1.75um;\nFront camera 1/2.8', 0.8umPixel Size:\nRear camera: 4000*3000 (normal mode); 8000*6000 (48MP output mode)\nFront camera: 7680*5760 (44MP output mode); 7296* 5472 (normal mode)Video:\nFront Camera: 1080P/720P@30fps\nRear Camera: 4K/30fps; 1080P@60fps/30fps; 720P@60fps/30fps Frequencies:\nGSM: 850/900/1800/1900MHz\nWCDMA: Bands 1/5/8\nFDD-LTE: Bands 1/3/5/7/8/20/28\nTD-LTE: Bands 38/40/41\nNote: B41: 2535-2655 MHzSIM Card Type: Nano-SIM / Nano-USIMGPS: Built-in GPS; supports A-GPS, Beidou, GlonassBluetooth: 5.0WLAN Function: WLAN 2.4G / WLAN 5.1G / WLAN 5.8G, WLAN DisplayNFC: No\n\nOperating System: ColorOS 7, based on Android 10\nCPU: MTK MT6779V (MTK P90)\nBattery: 3935/4025 mAh (min/typ)\nRAM: 8GB\nStorage: 128GB (SD card is expandable up to 256GB)\nWidth: 73.3 mm\nThickness: 7.9 mm\nWeight: Approximately 170 g",
+            "image": ["https://sg-live-01.slatic.net/p/ee9ac191be2d43344064b150b5984c11.png_2200x2200q80.jpg_.webp"],
+            "currentPrice": 403,
+            "rrp": 438,
+            "id": 19,
+            "storeId": "S0004"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/15749daaf38549fdd4c7ccee2e8b6ba4.jpg_400x400q90.jpg_.webp",
+            "name": "OnePlus Nord N100 Midnight Frost | 4GB+64GB | 90Hz Smooth Display | 5000 mAh Battery | Dual SIM | Support MicroSD | Free Case and Tempered Glass Screen Protector",
+            "description": "4GB RAM + 64GB ROM\n90HZ LCD capacitive touchscreen\nEU 2 Pin charger + Free 2 Pin to 3 Pin converter",
+            "image": [
+                "https://sg-live-01.slatic.net/p/042210d426af5bddcc5afa335920d676.png_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/58bf826772643dab019bfee370176892.png_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/92184b62cda2025d7cedc20d5fe12ec5.png_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/64f32b2bb9d4c4aca18bd6f32f207053.png_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/86723e26cb498a1bc3d1ff88e4b2d09e.png_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/db88343b2750375f294357e1895154e8.png_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/245af101487b2b32ece9fe912471ae2f.png_2200x2200q80.jpg_.webp"
+            ],
+            "currentPrice": 233,
+            "rrp": 399,
+            "id": 20,
+            "storeId": "S0005"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/d3e59a263edc36d23bb63d023a00cb0e.jpg_400x400q90.jpg_.webp",
+            "name": "OnePlus Nord AC2003 SG Set | Support 5G | SG 3 Pin Warp Charger | SG Official Local Warranty",
+            "description": "Nord AC2003 SG Local Set, with SG 3 Pin Warp Charger",
+            "image": [
+                "https://sg-live-01.slatic.net/p/be452381542f1228469fa289d273ec90.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/60cf05322c15bff17066069fa192f2eb.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/716f01362992b3d231fa3245af34b9a2.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/b23a0579fecf728fd1e2cf7d727d0323.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/372e341a1b427c9eccf71603239e3669.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/4934cb54da6e04be759f198ef17f3d3a.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/43114e3ce01a2b1fd83c05319d1f28b1.jpg_2200x2200q80.jpg_.webp"
+            ],
+            "currentPrice": 533,
+            "rrp": 649,
+            "id": 21,
+            "storeId": "S0005"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/3a9ddb091eb804a8df4834c236aa81df.jpg_400x400q90.jpg_.webp",
+            "name": "OnePlus 8T Joy Bundle | SG 3 Pin 65W Wrap Charger | Free Wireless Ear Buds | SG Local Two Years Warranty",
+            "description": "OnePlus 8T, Two Years SG Local Warranty, SG 3 Pin Warp Charger\nFree Suning Wireless Ear Buds\nOperating System: OxygenOS based on Android\u2122 11\nScreen: 6.55 inches Fluid AMOLED with 120Hz Flat Display\nResolution: 2400 x 1080\nCPU: Qualcomm\u00ae Snapdragon\u2122 865 5G mobile platform\nFront: 16MP Sony IMX471\nRear: 48MP+16MP+5MP+2MP Sony IMX586\nBattery: 4,500 mAh, Warp Charge 65\nAudio: Dual Stereo Speakers, Noise cancellation support, Dolby Atmos\u00ae\nSIM Slot: Dual nano-SIM\nSensor: In-display fingerprint / Accelerometer / Electronic compass / Gyroscope / Ambient light / Proximity / Sensor Core / Flicker-detect",
+            "image": [
+                "https://sg-live-01.slatic.net/p/20436dfab97fd21cc86c9f9d19db2464.png_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/3aa3b1906b3ea9435baf0d9b93d56829.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/530ca351cafd04b4ca6c704ef227870e.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/464b3459a44058ad7ddb9d4835858e0d.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/b3bf0ca4921ce39d87d7f7d2090d2a30.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/c1621d283c50f6872ba34734d9b001f7.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/96ffa5cc76888f0f488744f377ecad11.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/cd3d2cd39aade35800fbcebe9ec2abd9.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/0d2b8827b1898d8fd93e03f81590d980.jpg_2200x2200q80.jpg_.webp",
+                "https://sg-live-01.slatic.net/p/840d4b708c11692fbb3c669cbbcaa8be.jpg_2200x2200q80.jpg_.webp"
+            ],
+            "currentPrice": 766,
+            "rrp": 999,
+            "id": 22,
+            "storeId": "S0005"
+        },
+        {
+            "type" : "product",
+            "iconUrl": "https://sg-test-11.slatic.net/p/baadb9fe6a7532c4288ddf604ab2af21.jpg_400x400q90.jpg_.webp",
+            "name": "OnePlus 9 12GB/256GB | 2 years warranty by OnePlus",
+            "description": "Dimensions\nHeight: 160 mmWidth: 74.2 mmThickness: 8.7 mmWeight: 192g\nDisplay\nParameters\nSize: 6.55 inches (Measured diagonally from corner to corner.)Resolution: 2400 x 1080 pixels 402 ppiAspect Ratio: 20:9Type: 120 Hz Fluid AMOLEDSupport sRGB, Display P3Cover Glass: Corning\u00ae Gorilla\u00ae Glass\n\nFeatures\nReading ModeNight ModeVibrant Color EffectUltra-high Video Resolution\n\nPerformance\nOperating System: OxygenOS based on Android\u2122 11CPU: Qualcomm\u00ae Snapdragon\u2122 8885G Chipset: X60GPU: Adreno 660RAM: 8GB/12GB LPDDR5Storage: 128GB/256GB UFS 3.1 2-LANEBattery: 4,500 mAh (2S1P 2,250 mAh, non-removable)Warp Charge 65T (10V/6.5A)15W Wireless Charging\n\nCamera\nMain Camera\nSensor: Sony IMX689Sensor Size: 1/1.43\u2033Megapixels: 48Pixel Size: 1.12\u00b5mLens Quantity: 7PFocal Length: 23mm equivalentAperture: \u0192/1.8\n\nUltra-Wide Camera\nSensor: Sony IMX766Sensor Size: 1/1.56\u2033Megapixels: 50Lens Quantity: 7PFocal Length: 14mm equivalentAperture: \u0192/2.2Lens: Freeform Lens\n\nMonochrome Camera\nMegapixels: 2\n\nFlash\nDual LED Flash\n\nAutofocus\nMulti Autofocus (All pixel omni-directional PDAF+CAF)\n\nVideo\n8K video at 30 fps4K video at 30/60 fps1080p video at 30/60 fpsSuper Slow Motion: 1080p video at 240 fps, 720p video at 480 fpsTime-Lapse: 1080p at 30 fps, 4k at 30 fpsVideo Editor\n\nFeatures\nNightscape, Super Macro, UltraShot HDR, Smart Scene Recognition, Portrait mode, Pro mode, Panorama, Tilt-shift mode, Focus Peaking, Cat/Dog Face Focus, RAW Image, Filters, Super Stable, Video Nightscape, Video HDR, Video Portrait, Focus Tracking, Timelapse, Hyperlapse\n\nFront Camera\nSensor: Sony IMX471Megapixels: 16Pixel Size: 1.0 \u00b5mEIS: YesAutofocus: Fixed FocusAperture: \u0192/2.4\n\nVideo\n1080p video at 30fpsTime-Lapse\n\nFeatures\nFace Unlock, HDR, Screen Flash, Face Retouching\n\nConnectivity\nLTE/LTE-A\n4\u00d74 MIMO, Supports up to DL Cat 20/UL Cat 18 ( 2 Gbps /200Mbps), depending on carrier support\n\nBand\nGSM\uff1aB2, 3, 5, 8WCDMA\uff1aB1, 2, 4, 5, 8, 9, 19LTE-FDD\uff1aB1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 32, 66LTE-TDD\uff1aB38, 39, 40, 415G NSA\uff1aN1, 3, 5, 7, 8, 20, 28, 38, 40, 41, 66, 785G SA\uff1aN1, 3, 7, 28, 41, 78MIMO\uff1aLTE: B1, 3, 7, 38, 40, 41 ; NR: N1, 3, 7, 38, 40, 41, 78\n\nWi-Fi\n2\u00d72 MIMO, Support 2.4G/5G, Support WiFi 802.11 a/b/g/n/ac/ax\n\nBluetooth\nBluetooth 5.2, support aptX & aptX HD & LDAC & AAC\n\nNFC\nNFC enabled\n\nPositioning\nGPS (L1+L5 Dual Band), GLONASS, Galileo (E1+E5a Dual Band), Beidou, A-GPS\n\nSensors\nIn-display Fingerprint SensorAccelerometerElectronic CompassGyroscopeAmbient Light SensorProximity SensorSensor CoreFlicker-detect Sensor\n\nPorts\nUSB 3.1 GEN1Type-CSupport standard Type-C earphonesDual nano-SIM slot\n\nButtons\nGestures and on-screen navigation supportAlert Slider\nAudio\nDual Stereo SpeakersNoise cancellation supportDolby Atmos\u00ae\nMultimedia\nAudio Supported Formats\nPlayback: MP3, AAC, AAC+, WMA, AMR-NB, AMR-WB, WAV, FLAC, APE, OGG, MID, M4A, IMY, AC3, EAC3, EAC3-JOC, AC4Recording: WAV, AAC, AMR\n\nVideo Supported Formats\nPlayback: MKV, MOV, MP4, H.265 (HEVC), AVI, WMV, TS, 3GP, FLV, WEBMRecording: MP4\n\nImage Supported Formats\nPlayback: JPEG, PNG, BMP, GIF, WEB, HEIF, HEIC, DNGOutput: JPEG, DNG\n\nIn The Box\nOnePlus 9Warp Charge 65 Power AdapterWarp Charge Type-C to Type-C CableQuick Start GuideWelcome LetterSafety Information and Warranty CardLOGO StickerCaseScreen ProtectorSIM Tray Ejector\nNote\n1. Relevant product parameter names have been addressed on the corresponding pages and will not be repeated here. For descriptions, please refer to the specific instructions on each page.2. The weight of the phone is 192g, and the weight of the screen protector may add an additional 3g. The size and weight of the mobile phone may vary according to configuration, manufacturing process and measurement method.3. Due to the mobile phone system file occupying space (including Android system and pre-installed apps), the available memory capacity is less than this value. Storage capacity will vary based on software version and may vary from device to device.4. Photo pixels of different camera modes may vary, please refer to the actual situation. Video pixels of different shooting modes may also vary, please refer to the actual situation.5. The typical battery capacity is 4500mAh and actual performance may vary. The battery is not removable.6. The USB 3.1 GEN1 function requires a data cable that supports USB 3.1 GEN1 (non-standard configuration, sold separately). The standard data cable supports USB 2.0.7. Product pictures and content on the page are for illustrative purposes only. The actual results (including but not limited to appearance, color, size) and the screen display content (including but not limited to background, UI, and picture) may vary;8. Numbers are theoretical, obtained under a controlled test environment (see each specific name) and provided by the supplier or the OnePlus laboratory. Actual performance may vary due to individual product differences, software versions, use conditions and environmental factors. Please refer to the actual experience.9. Due to the real-time changes in product batches and supply factors, in order to provide accurate information on product information, specifications, and product characteristics, OnePlus may adjust and revise the text names, picture effects, and other content on the above pages in real time to match the reality of the product performance, specifications, index, parts and other information; in the event that page modifications and adjustments are necessary, no special notice will be given.",
+            "image": [],
+            "currentPrice": 1009,
+            "rrp": 1199,
+            "id": 23,
+            "storeId": "S0005"
         }
+      
     ]
 }

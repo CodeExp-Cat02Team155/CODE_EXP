@@ -9,7 +9,7 @@ export default function StoreListing({ item, navigation }) {
   }
 
   function openStore() {
-    navigation.navigate("shop", { item });
+    navigation.navigate("shop", item);
   }
 
   return (

@@ -14,7 +14,7 @@ export default function FavoriteScreen({ navigation }) {
   const [favStoresId, setFavStoresId] = useState(["S0004", "S0001", "S0002"]);
 
   function getStore(id) {
-    return storeList.stores.filter((store) => store.id === id)[0];
+    return storeList.stores.filter((store) => store.id == id)[0];
   }
 
   const menu = [
@@ -57,7 +57,7 @@ export default function FavoriteScreen({ navigation }) {
     return (
       <TouchableOpacity
         style={styles.itemContainer}
-        onPress={() => navigation.navigate("shop", { data })}
+        onPress={() => navigation.navigate("shop", data)}
       >
         <Image source={{ uri: data.iconUrl }} style={styles.itemImage} />
         <Text style={styles.itemText} numberOfLines={1}>
