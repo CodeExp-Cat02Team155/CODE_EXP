@@ -36,6 +36,10 @@ export default function ProductScreen({ route, navigation }) {
       "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/56711067_2371221246241957_3865632581156339712_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uX6Icwxp5coAX_JQptE&_nc_ht=scontent.fsin9-2.fna&oh=39fb345cb548815b26d48b72901a09a9&oe=60CC7B51",
   };
 
+  function goBack() {
+    navigation.goBack();
+  }
+
   function openStore() {
     navigation.navigate("shop", { seller });
   }
@@ -105,6 +109,7 @@ export default function ProductScreen({ route, navigation }) {
       <View style={styles.bannerContainer}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <TouchableOpacity
+            onPress={goBack}
             style={{ backgroundColor: "#FFFFFF70", borderRadius: 25 }}
           >
             <Ionicons name="arrow-back" size={30} />

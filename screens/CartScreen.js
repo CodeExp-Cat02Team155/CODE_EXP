@@ -45,6 +45,13 @@ export default function CartScreen({ navigation }) {
     navigation.navigate("product", id);
   }
 
+  function checkOut() {
+    if (getData().length < 1) {
+      return;
+    }
+    navigation.navigate("payment");
+  }
+
   const renderItem = ({ item }) => {
     const product = {
       id: item.id,
@@ -88,13 +95,15 @@ export default function CartScreen({ navigation }) {
   };
 
   return (
-    <SafeAreaView style={{ padding: 20 }}>
-      <View style={{ height: "90%" }}>
+    <SafeAreaView
+      style={{ flex: 1, paddingHorizontal: 20, paddingVertical: 50 }}
+    >
+      <View style={{ flex: 1 }}>
         <Text style={styles.header}>My Cart</Text>
         <FlatList data={cart} renderItem={renderItem} />
       </View>
-      <View style={styles.bottomRow}>
-        <TouchableOpacity style={styles.buttonPrimary}>
+      <View style={{ alignItems: "center" }}>
+        <TouchableOpacity style={styles.buttonPrimary} onPress={checkOut}>
           <Text style={styles.buttonPrimaryText}>Check Out</Text>
         </TouchableOpacity>
       </View>
@@ -104,7 +113,6 @@ export default function CartScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   header: {
-    paddingTop: 50,
     fontSize: 30,
     paddingBottom: 30,
   },
@@ -141,12 +149,6 @@ const styles = StyleSheet.create({
   quantityText: {
     paddingRight: 20,
     fontSize: 20,
-  },
-  bottomRow: {
-    height: 70,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
   },
   buttonPrimary: {
     backgroundColor: mainColor,
