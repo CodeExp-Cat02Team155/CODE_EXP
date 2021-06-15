@@ -11,6 +11,7 @@ web-build/
 .env
 *__pycache__
 venv/
+secretKey.json
 
 # macOS
 .DS_Store
