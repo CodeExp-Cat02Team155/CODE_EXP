@@ -32,18 +32,13 @@ export default function HomeScreen({ navigation }) {
     global.cart = new Object();
 
     BackHandler.addEventListener("hardwareBackPress", back);
-    return () => {
-      BackHandler.removeEventListener("hardwareBackPress", back);
-    };
+    return () => BackHandler.removeEventListener("hardwareBackPress", back);
   }, []);
 
   function back() {
-    if (navigation.canGoBack()) {
+    if (navigation.canGoBack() || searchTermRef.current.length == 0)
       return false;
-    }
-    if (searchTermRef.current.length == 0) {
-      return false;
-    }
+
     setSearchTerm("");
     setSearching(false);
     return true;

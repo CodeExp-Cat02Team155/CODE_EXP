@@ -8,19 +8,13 @@ import {
   View,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import storeList from "../local_data/list_store.json";
 
 export default function FavoriteScreen({ navigation }) {
-  const [favStoresId, setFavStoresId] = useState(["S0001"]);
+  const [favStoresId, setFavStoresId] = useState(["S0004", "S0001", "S0002"]);
 
   function getStore(id) {
-    // Fetch store details
-    return {
-      id: id,
-      name: "OPPO",
-      followers: 65000,
-      iconUrl:
-        "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/56711067_2371221246241957_3865632581156339712_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uX6Icwxp5coAX_JQptE&_nc_ht=scontent.fsin9-2.fna&oh=39fb345cb548815b26d48b72901a09a9&oe=60CC7B51",
-    };
+    return storeList.stores.filter((store) => store.id === id)[0];
   }
 
   const menu = [
@@ -59,11 +53,11 @@ export default function FavoriteScreen({ navigation }) {
   ];
 
   const storeRenderItem = ({ item }) => {
-    const data = getStore(item.id);
+    const data = getStore(item);
     return (
       <TouchableOpacity
         style={styles.itemContainer}
-        onPress={() => navigation.navigate("shop", { item })}
+        onPress={() => navigation.navigate("shop", { data })}
       >
         <Image source={{ uri: data.iconUrl }} style={styles.itemImage} />
         <Text style={styles.itemText} numberOfLines={1}>

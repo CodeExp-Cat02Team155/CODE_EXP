@@ -1,0 +1,34 @@
+{
+    "stores" : [
+        {
+            "id": "S0001",
+            "name": "Samsung",
+            "followers": 290820,
+            "iconUrl": "https://sg-live-01.slatic.net/original/65fa75cabea090540e56620e95f73146.jpg_200x200q90.jpg_.webp"
+        },
+        {
+            "id": "S0002",
+            "name": "Apple",
+            "followers": 440940,
+            "iconUrl": "https://sg-live-01.slatic.net/original/1e4626fe83563f287ad52f350741b5a6.jpg_200x200q90.jpg_.webp"
+        },
+        {
+            "id": "S0003",
+            "name": "Xiao Mi",
+            "followers": 40850,
+            "iconUrl": "https://sg-live-03.slatic.net/original/029ef88856e554009ef014f6109a8c1d.jpg_200x200q90.jpg_.webp"
+        },
+        {
+            "id": "S0004",
+            "name": "OPPO",
+            "followers": 65000,
+            "iconUrl": "https://sg-test-11.slatic.net/p/8c3fbd768ab006166869768e7b6e1bb8.jpg_200x200q90.jpg_.webp"
+        },
+        {
+            "id": "S0005",
+            "name": "1Plus",
+            "followers": 15220,
+            "iconUrl": "https://sg-live-01.slatic.net/original/9e168460570d337c32993cf14124d45f.jpg_200x200q90.jpg_.webp"
+        }
+    ]
+}
