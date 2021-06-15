@@ -7,10 +7,10 @@ import storeList from "../local_data/list_store.json";
 
 export default function SearchScreen({ navigation, keyword }) {
   const matchedStores = storeList.stores.filter((store) =>
-    store.name.includes(keyword)
+    store.name.toLowerCase().includes(keyword.toLowerCase())
   );
   const matchedProducts = productList.list.filter((product) =>
-    product.name.includes(keyword)
+    product.name.toLowerCase().includes(keyword.toLowerCase())
   );
 
   const listings = [...matchedStores, ...matchedProducts];

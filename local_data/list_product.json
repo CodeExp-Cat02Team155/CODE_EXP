@@ -8,9 +8,9 @@
             "image": ["https://sg-test-11.slatic.net/shop/40b940ea8feaff3494e23ad680609551.jpeg_2200x2200q80.jpg_.webp"],
             "currentPrice": 848,
             "rrp": 1168,
-            "id": 1,
-            "storeId": "S0001"
-
+            "id": "001",
+            "storeId": "S0001",
+            "locationIds" : ["005","006","007"]
         },
         {
             "type" : "product",
@@ -20,8 +20,9 @@
             "image": ["https://sg-test-11.slatic.net/shop/9b4adce721278076c526504e8e17a0e8.png_2200x2200q80.jpg_.webp"],
             "currentPrice": 498,
             "rrp": 548,
-            "id": 2,
-            "storeId": "S0001"
+            "id": "002",
+            "storeId": "S0001",
+            "locationIds" : ["005"]
         },
         {
             "type" : "product",
@@ -31,30 +32,33 @@
             "image": ["https://sg-test-11.slatic.net/shop/687d257627ef2df34140fa5dc115b437.png_2200x2200q80.jpg_.webp"],
             "currentPrice": 1698,
             "rrp": 1798,
-            "id": 3,
-            "storeId": "S0001"
+            "id": "003",
+            "storeId": "S0001",
+            "locationIds" : ["005","006","007"]
         },
         {
             "type" : "product",
-            "iconUrl": "https://sg-test-11.slatic.net/p/5ab466536ccad504849b45dc6bcfcde8.jpg_400x400q90.jpg_.webp",
-            "name": "Samsung Galaxy M31S Dual Sim M317FD 128GB (6GB RAM) Black / Blue",
-            "description": "MonsterDisplay\nSegment leading sAMOLED Infinity-O Display\n\nMonsterProcessor\nBlazing fast processor for unmatched performance\n\nMonsterShot\nwith 64 MP Intelli-Cam\n\nSingle Take\nGet up to 10 photos and video outputs with just one take\n\nMonsterVideos\nEnhanced camera experience with scene optimizer\n\nMonsterSelfies\n32MP front camera for great selfies and slowfies\n\nMonsterSecure\nNow unlock your phone instantly with your face or fingerprint\n\nMonsterPunch\nSegment-leading 6000mAh battery and 25W fast charging to conquer the day and the night\n\nReverse Charging\nPass the charge on the go with a Type C to Type C inbox cable",
+            "iconUrl": "https://laz-img-sg.alicdn.com/p/35260d10b765c447fb6f888d59661dc3.jpg_720x720q80.jpg_.webp",
+            "name": "Samsung Galaxy Z Flip 5G",
+            "description": "Battery Capacity\n3000 - 3999 mAh\nScreen Size (inches)\n6.7\nNumber_of_Camera\nDual\nRAM Memory\n8GB",
             "image": [],
-            "currentPrice": 450,
-            "rrp": 550,
-            "id": 4,
-            "storeId": "S0001"
+            "currentPrice": 1698,
+            "rrp": 1798,
+            "id": "004",
+            "storeId": "S0001",
+            "locationIds" : ["006","007"]
         },
         {
             "type" : "product",
-            "iconUrl": "https://sg-test-11.slatic.net/p/2fefead175eb591f8ae72b33ef9b0bbc.png_400x400q90.jpg_.webp",
-            "name": "Samsung Galaxy A50s Dual Sim A507FD 128GB (4GB RAM) Black / Violet / White",
-            "description": "Ready for More\nMake every video and picture absolutely stunning with a 48MP Main camera, 8MP Ultra-wide camera and 5MP Depth Camera. Capture cinematic, shake-free videos with Super Steady Mode and low-light shots as bright as day with Night Mode.\n\nReady for Immersive Viewing\nStep up your viewing experience with the new and improved 16.21cm (6.4\u201d) FHD+ sAMOLED Infinity-U Display.\n\nReady to Impress\nAll new premium 3D prism design with glossy pattern is something you would definitely want to flaunt.\n\nReady to Last\nA 4,000mAh battery that gives you the power to keep going all day long, be it streaming, sharing or gaming. And if you start running low, plug in and power up in no time with 15W Fast Charging.\n\nReady for Gaming\nMulti-task more and play games lag free. Do it all with a Exynos 9611 (10nm chipset) Octa Core processor.\n\nReady for Ease\nWith Samsung Pay, secured by Knox security, payments can be quickly made anytime, and anywhere. Simple. Secure. Everywhere.",
+            "iconUrl": "https://laz-img-sg.alicdn.com/p/d3092aac8795ca6e3b77e6040938ca2f.jpg_720x720q80.jpg_.webp",
+            "name": "Samsung Galaxy Watch3 45mm",
+            "description": "All free gifts are while stock last\nHeart Health\nAtrial Fibrillation\nHR Alert\nFall Detection\nOxygen Saturation\nRunning with Coaching and Analysis",
             "image": [],
-            "currentPrice": 390,
-            "rrp": 490,
-            "id": 5,
-            "storeId": "S0001"
+            "currentPrice": 498,
+            "rrp": 698,
+            "id": "005",
+            "storeId": "S0001",
+            "locationIds" : ["008","009","010"]
         },
         {
             "type" : "product",
@@ -64,8 +68,9 @@
             "image": ["https://sg-test-11.slatic.net/shop/f59728bd070b540a4e10ae78b513ab32.jpeg_2200x2200q80.jpg_.webp"],
             "currentPrice": 1703,
             "rrp": 1799,
-            "id": 6,
-            "storeId": "S0002"
+            "id": "006",
+            "storeId": "S0002",
+            "locationIds" : ["008","009","010"]
         },
         {
             "type" : "product",
@@ -75,8 +80,9 @@
             "image": ["https://sg-live-01.slatic.net/p/51229569979496c5d05ccceefd57c95a.jpg_2200x2200q80.jpg_.webp"],
             "currentPrice": 1231,
             "rrp": 1299,
-            "id": 7,
-            "storeId": "S0002"
+            "id": "007",
+            "storeId": "S0002",
+            "locationIds" : ["008","009","010"]
         },
         {
             "type" : "product",
@@ -86,8 +92,9 @@
             "image": ["https://sg-test-11.slatic.net/shop/f59728bd070b540a4e10ae78b513ab32.jpeg_2200x2200q80.jpg_.webp"],
             "currentPrice": 1514.70,
             "rrp": 1649,
-            "id": 8,
-            "storeId": "S0002"
+            "id": "008",
+            "storeId": "S0002",
+            "locationIds" : ["008","009","010"]
         },
         {
             "type" : "product",
@@ -97,8 +104,9 @@
             "image": ["https://sg-live-01.slatic.net/p/51229569979496c5d05ccceefd57c95a.jpg_2200x2200q80.jpg_.webp"],
             "currentPrice": 981,
             "rrp": 1149,
-            "id": 9,
-            "storeId": "S0002"
+            "id": "009",
+            "storeId": "S0002",
+            "locationIds" : ["008","009","010"]
         },
         {
             "type" : "product",
@@ -108,8 +116,9 @@
             "image": ["https://sg-test-11.slatic.net/shop/259063019fdf39f8e9219e2d8b1ab073.jpeg_2200x2200q80.jpg_.webp"],
             "currentPrice": 615,
             "rrp": 649,
-            "id": 10,
-            "storeId": "S0002"
+            "id": "010",
+            "storeId": "S0002",
+            "locationIds" : ["008","009","010"]
         },
         {
             "type" : "product",
@@ -119,8 +128,9 @@
             "image": ["https://sg-live-01.slatic.net/p/a3541c0bf96e503dfffabe188824d489.jpg_q80_2200x2200q80.jpg_.webp"],
             "currentPrice": 229,
             "rrp": 229,
-            "id": 11,
-            "storeId": "S0003"
+            "id": "011",
+            "storeId": "S0003",
+            "locationIds" : ["011"]
         },
         {
             "type" : "product",
@@ -130,8 +140,9 @@
             "image": [],
             "currentPrice": 549,
             "rrp": 549,
-            "id": 12,
-            "storeId": "S0003"
+            "id": "012",
+            "storeId": "S0003",
+            "locationIds" : ["011","012","013"]
         },
         {
             "type" : "product",
@@ -141,8 +152,9 @@
             "image": ["https://sg-live-02.slatic.net/p/d3feceec75309dc455f9a5248c20adab.jpg_2200x2200q80.jpg_.webp"],
             "currentPrice": 339,
             "rrp": 339,
-            "id": 13,
-            "storeId": "S0003"
+            "id": "013",
+            "storeId": "S0003",
+            "locationIds" : []
         },
         {
             "type" : "product",
@@ -152,8 +164,9 @@
             "image": [],
             "currentPrice": 860,
             "rrp": 1090,
-            "id": 14,
-            "storeId": "S0003"
+            "id": "014",
+            "storeId": "S0003",
+            "locationIds" : ["011"]
         },
         {
             "type" : "product",
@@ -163,8 +176,9 @@
             "image": ["https://sg-test-11.slatic.net/shop/cf0aae8df46795146d90f5ad54d61d6e.jpeg_2200x2200q80.jpg_.webp"],
             "currentPrice": 599,
             "rrp": 699,
-            "id": 15,
-            "storeId": "S0004"
+            "id": "015",
+            "storeId": "S0004",
+            "locationIds" : ["001","002"]
         },
         {
             "type" : "product",
@@ -174,8 +188,9 @@
             "image": ["https://sg-live-01.slatic.net/shop/982f40620d4e5153578de90edca1eef3.jpeg_2200x2200q80.jpg_.webp"],
             "currentPrice": 369,
             "rrp": 399,
-            "id": 16,
-            "storeId": "S0004"
+            "id": "016",
+            "storeId": "S0004",
+            "locationIds" : ["003"]
         },
         {
             "type" : "product",
@@ -185,30 +200,21 @@
             "image": ["https://sg-test-11.slatic.net/shop/b80af49a0c71e551bdcb7aa910a2ae86.jpeg_2200x2200q80.jpg_.webp"],
             "currentPrice": 849,
             "rrp": 899,
-            "id": 17,
-            "storeId": "S0004"
+            "id": "017",
+            "storeId": "S0004",
+            "locationIds" : ["001","002","003"]
         },
         {
             "type" : "product",
-            "iconUrl": "https://filebroker-cdn.lazada.sg/kf/Se4bc949f919b425a8d5180e226d92b6cN.jpg",
+            "iconUrl": "https://laz-img-sg.alicdn.com/p/0027544ba94635197dad2d4636568d2f.jpg_720x720q80.jpg_.webp",
             "name": "Oppo Find X3 Pro 5G 12+256 (Oppo SG 2 yrs warranty)",
             "description": "Brand new sealed local set\n2 years Oppo SG warranty\n5G, 12+256GB",
             "image": [],
             "currentPrice": 1459,
             "rrp": 1599,
-            "id": 18,
-            "storeId": "S0004"
-        },
-        {
-            "type" : "product",
-            "iconUrl": "https://sg-test-11.slatic.net/p/4c6229e030fa435f0195cc06ff9041fb.png_400x400q90.jpg_.webp",
-            "name": "Oppo Reno 3 8GB 128GB",
-            "description": "Product descriptions of Oppo Reno 3 8GB 128GB\nSize: 16.2cm (6.4'')Touchscreen: Multi-touch, Capacitive ScreenResolution: 2400 by 1080 pixelsColors: 16 million colorsScreen Ratio: 90.8%Rear Sensor: 13M + 48M + 8M + 2MFront Sensor: 44MPFlash: LED FlashAperture:\nFront: 44MP F2.4\nRear: 48MP F1.8 + 13MP F2.4 + 8MP F2.2 + 2MP F2.4Sensor Size:\n48MP main camera 1/2.0';\n13MP telephoto lens 1/3.4', 1.0um;\n8MP wide-angle lens 1/4',1.12um;\n2MP mono lens 1/5',1.75um;\nFront camera 1/2.8', 0.8umPixel Size:\nRear camera: 4000*3000 (normal mode); 8000*6000 (48MP output mode)\nFront camera: 7680*5760 (44MP output mode); 7296* 5472 (normal mode)Video:\nFront Camera: 1080P/720P@30fps\nRear Camera: 4K/30fps; 1080P@60fps/30fps; 720P@60fps/30fps Frequencies:\nGSM: 850/900/1800/1900MHz\nWCDMA: Bands 1/5/8\nFDD-LTE: Bands 1/3/5/7/8/20/28\nTD-LTE: Bands 38/40/41\nNote: B41: 2535-2655 MHzSIM Card Type: Nano-SIM / Nano-USIMGPS: Built-in GPS; supports A-GPS, Beidou, GlonassBluetooth: 5.0WLAN Function: WLAN 2.4G / WLAN 5.1G / WLAN 5.8G, WLAN DisplayNFC: No\n\nOperating System: ColorOS 7, based on Android 10\nCPU: MTK MT6779V (MTK P90)\nBattery: 3935/4025 mAh (min/typ)\nRAM: 8GB\nStorage: 128GB (SD card is expandable up to 256GB)\nWidth: 73.3 mm\nThickness: 7.9 mm\nWeight: Approximately 170 g",
-            "image": ["https://sg-live-01.slatic.net/p/ee9ac191be2d43344064b150b5984c11.png_2200x2200q80.jpg_.webp"],
-            "currentPrice": 403,
-            "rrp": 438,
-            "id": 19,
-            "storeId": "S0004"
+            "id": "018",
+            "storeId": "S0004",
+            "locationIds" : ["001","002","003","004"]
         },
         {
             "type" : "product",
@@ -226,8 +232,9 @@
             ],
             "currentPrice": 233,
             "rrp": 399,
-            "id": 20,
-            "storeId": "S0005"
+            "id": "020",
+            "storeId": "S0005",
+            "locationIds" : []
         },
         {
             "type" : "product",
@@ -245,8 +252,9 @@
             ],
             "currentPrice": 533,
             "rrp": 649,
-            "id": 21,
-            "storeId": "S0005"
+            "id": "021",
+            "storeId": "S0005",
+            "locationIds" : []
         },
         {
             "type" : "product",
@@ -267,8 +275,9 @@
             ],
             "currentPrice": 766,
             "rrp": 999,
-            "id": 22,
-            "storeId": "S0005"
+            "id": "022",
+            "storeId": "S0005",
+            "locationIds" : []
         },
         {
             "type" : "product",
@@ -278,8 +287,9 @@
             "image": [],
             "currentPrice": 1009,
             "rrp": 1199,
-            "id": 23,
-            "storeId": "S0005"
+            "id": "023",
+            "storeId": "S0005",
+            "locationIds" : []
         }
       
     ]

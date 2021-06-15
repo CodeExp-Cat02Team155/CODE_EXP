@@ -1,23 +1,17 @@
 import React from "react";
 import { Text, TouchableOpacity, StyleSheet, View } from "react-native";
 import * as WebBrowser from "expo-web-browser";
+import locationList from "../local_data/list_location.json";
 
-export default function DemoLocation({ addressIds }) {
-  const locations = [
-    {
-      name: "OPPO Concept Store - Jurong Point",
-      address:
-        "Jurong Point Shopping Centre, Jurong West Central 2, #B1-14/15 Jurong Point, 648886",
-    },
-    {
-      name: "OPPO Concept Store - Causeway Point",
-      address:
-        "1 Woodlands Square, #03-12 Causeway Point Shopping Center, Singapore 738099",
-    },
-  ];
+export default function DemoLocation({ locationIds }) {
+  function getLocation(id) {
+    return locationList.list.filter((location) => location.id == id)[0];
+  }
 
   const locationItemArray = [];
-  locations.forEach(({ name, address }) =>
+
+  locationIds.forEach((id) => {
+    const { name, address } = getLocation(id);
     locationItemArray.push(
       <TouchableOpacity
         style={styles.itemContainer}
@@ -31,8 +25,8 @@ export default function DemoLocation({ addressIds }) {
         <Text style={styles.itemHeader}>{name}</Text>
         <Text style={styles.itemAddress}>{address}</Text>
       </TouchableOpacity>
-    )
-  );
+    );
+  });
 
   return (
     <View style={{ width: "100%", padding: 20 }}>

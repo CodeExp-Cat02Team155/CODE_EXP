@@ -23,7 +23,7 @@ export default function ShopScreen({ navigation, route }) {
   const [isFavorite, setFavorite] = useState(checkIfFavorite());
 
   function checkIfFavorite() {
-    return true;
+    return global.favStores.includes(store.id);
   }
 
   function exit() {
@@ -38,6 +38,16 @@ export default function ShopScreen({ navigation, route }) {
   }
 
   function toggleFavorite() {
+    if (isFavorite) {
+      if (global.favStores.includes(store.id)) {
+        const index = global.favStores.indexOf(store.id);
+        global.favStores.splice(index, 1);
+      }
+    } else {
+      if (!global.favStores.includes(store.id)) {
+        global.favStores.push(store.id);
+      }
+    }
     setFavorite(!isFavorite);
   }
 
