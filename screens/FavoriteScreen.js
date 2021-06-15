@@ -38,7 +38,9 @@ export default function FavoriteScreen({ navigation }) {
       name: "My Orders",
       icon: "document-text-outline",
       colorBackground: "#448AEA",
-      action: () => {},
+      action: () => {
+        navigation.navigate("orders");
+      },
     },
     {
       id: 2,

@@ -8,87 +8,57 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import Ionicons from "react-native-vector-icons/Ionicons";
 
 const mainColor = "#0B3454";
 
-export default function CartScreen({ navigation }) {
-  const [cart, setCart] = useState(getData());
-
-  function reduceCount(id) {
-    global.cart[id]--;
-    setCart(getData());
-  }
-
-  function increaseCount(id) {
-    global.cart[id]++;
-    setCart(getData());
-  }
-
-  function getData() {
-    const tempCart = [];
-    const keys = Object.keys(global.cart);
-    const values = Object.values(global.cart);
-    for (let i = 0; i < keys.length; i++) {
-      if (values[i] < 1) {
-        continue;
-      }
-      tempCart.push({
-        id: keys[i],
-        quantity: values[i],
-      });
-    }
-    return tempCart;
-  }
+export default function OrdersScreen({ navigation }) {
+  const orderIds = ["0001"];
 
   function openProduct(id) {
     navigation.navigate("product", id);
   }
 
-  function checkOut() {
-    if (getData().length < 1) {
-      return;
-    }
-    navigation.navigate("payment");
-  }
-
   const renderItem = ({ item }) => {
+    const order = {
+      id: item,
+      productId: "0001",
+      date: Date.now(),
+    };
     const product = {
-      id: item.id,
+      id: order.productId,
       name: "OPPO Reno 5 Pro",
       iconUrl:
         "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
       currentPrice: 819,
       rrp: 899,
     };
+    const dateSplit = Date(order.date).toString().split(" ");
     return (
       <View style={styles.itemContainer}>
-        <TouchableOpacity onPress={() => openProduct(item.id)}>
+        <TouchableOpacity onPress={() => openProduct(product.id)}>
           <Image source={{ uri: product.iconUrl }} style={styles.itemImage} />
         </TouchableOpacity>
-
         <View style={{ flex: 1 }}>
+          <Text
+            style={{
+              paddingTop: 15,
+              paddingHorizontal: 10,
+              paddingBottom: 5,
+              color: "grey",
+            }}
+            numberOfLines={1}
+          >
+            Order #{order.id}
+          </Text>
           <Text numberOfLines={1} style={styles.itemHeader}>
             {product.name}
           </Text>
           <Text style={styles.itemSubHeader} numberOfLines={1}>
+            {dateSplit[2]} {dateSplit[1]} {dateSplit[3]}
+          </Text>
+          <Text style={styles.itemSubHeader} numberOfLines={1}>
             ${product.currentPrice}
           </Text>
-          <View style={styles.row}>
-            <TouchableOpacity
-              style={styles.quantityIcon}
-              onPress={() => reduceCount(item.id)}
-            >
-              <Ionicons name="remove-circle-outline" size={26} />
-            </TouchableOpacity>
-            <Text style={styles.quantityText}>{item.quantity}</Text>
-            <TouchableOpacity
-              style={styles.quantityIcon}
-              onPress={() => increaseCount(item.id)}
-            >
-              <Ionicons name="add-circle-outline" size={26} />
-            </TouchableOpacity>
-          </View>
         </View>
       </View>
     );
@@ -99,17 +69,12 @@ export default function CartScreen({ navigation }) {
       style={{ flex: 1, paddingHorizontal: 20, paddingVertical: 50 }}
     >
       <View style={{ flex: 1 }}>
-        <Text style={styles.header}>My Cart</Text>
+        <Text style={styles.header}>My Orders</Text>
         <FlatList
-          data={cart}
+          data={orderIds}
           keyExtractor={(item) => item.id}
           renderItem={renderItem}
         />
-      </View>
-      <View style={{ alignItems: "center" }}>
-        <TouchableOpacity style={styles.buttonPrimary} onPress={checkOut}>
-          <Text style={styles.buttonPrimaryText}>Check Out</Text>
-        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -122,17 +87,17 @@ const styles = StyleSheet.create({
   },
   itemHeader: {
     fontSize: 20,
-    paddingTop: 15,
-    padding: 10,
+    paddingHorizontal: 10,
+    paddingBottom: 5,
   },
   itemSubHeader: {
     fontSize: 16,
+    paddingBottom: 5,
     paddingHorizontal: 10,
-    paddingBottom: 10,
   },
   itemContainer: {
     width: "100%",
-    height: 120,
+    height: 180,
     borderRadius: 10,
     backgroundColor: "white",
     flexDirection: "row",
