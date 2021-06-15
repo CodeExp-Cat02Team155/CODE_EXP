@@ -2,27 +2,18 @@ import React, { useState } from "react";
 import { FlatList, View } from "react-native";
 import StoreListing from "../listings/StoreListing";
 import ProductListing from "../listings/ProductListing";
+import productList from "../local_data/list_product.json";
+import storeList from "../local_data/list_store.json";
 
 export default function SearchScreen({ navigation, keyword }) {
-  const [listings, setListings] = useState([
-    {
-      type: "store",
-      id: "0001",
-      name: "OPPO",
-      followers: 65000,
-      iconUrl:
-        "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/56711067_2371221246241957_3865632581156339712_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uX6Icwxp5coAX_JQptE&_nc_ht=scontent.fsin9-2.fna&oh=39fb345cb548815b26d48b72901a09a9&oe=60CC7B51",
-    },
-    {
-      type: "product",
-      id: "0001",
-      name: "OPPO Reno 5 Pro",
-      iconUrl:
-        "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
-      currentPrice: 819,
-      rrp: 899,
-    },
-  ]);
+  const matchedStores = storeList.stores.filter((store) =>
+    store.name.includes(keyword)
+  );
+  const matchedProducts = productList.list.filter((product) =>
+    product.name.includes(keyword)
+  );
+
+  const listings = [...matchedStores, ...matchedProducts];
 
   const renderItem = ({ item }) => {
     if (item.type == "store")

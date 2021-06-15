@@ -1,0 +1,39 @@
+{
+    "stores" : [
+        {
+            "type" : "store",
+            "id": "S0001",
+            "name": "Samsung",
+            "followers": 290820,
+            "iconUrl": "https://sg-live-01.slatic.net/original/65fa75cabea090540e56620e95f73146.jpg_200x200q90.jpg_.webp"
+        },
+        {
+            "type" : "store",
+            "id": "S0002",
+            "name": "Apple",
+            "followers": 440940,
+            "iconUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t1.6435-9/109764302_3289428621149720_6353557589794353911_n.png?_nc_cat=1&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=A3IbLyJBeCEAX_5zU0R&tn=2hOeYGP_hTBPnebP&_nc_ht=scontent.fsin9-1.fna&oh=bacc365f98c45fd408cc28d9f933ec72&oe=60CCDC19"
+        },
+        {
+            "type" : "store",
+            "id": "S0003",
+            "name": "Xiaomi",
+            "followers": 40850,
+            "iconUrl": "https://sg-live-03.slatic.net/original/029ef88856e554009ef014f6109a8c1d.jpg_200x200q90.jpg_.webp"
+        },
+        {
+            "type" : "store",
+            "id": "S0004",
+            "name": "OPPO",
+            "followers": 65000,
+            "iconUrl": "https://sg-test-11.slatic.net/p/8c3fbd768ab006166869768e7b6e1bb8.jpg_200x200q90.jpg_.webp"
+        },
+        {
+            "type" : "store",
+            "id": "S0005",
+            "name": "OnePlus",
+            "followers": 15220,
+            "iconUrl": "https://sg-live-01.slatic.net/original/9e168460570d337c32993cf14124d45f.jpg_200x200q90.jpg_.webp"
+        }
+    ]
+}

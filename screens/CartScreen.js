@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Toast from "react-native-easy-toast";
+import productList from "../local_data/list_product.json";
 
 const mainColor = "#0B3454";
 
@@ -56,14 +57,10 @@ export default function CartScreen({ navigation }) {
   }
 
   const renderItem = ({ item }) => {
-    const product = {
-      id: item.id,
-      name: "OPPO Reno 5 Pro",
-      iconUrl:
-        "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
-      currentPrice: 819,
-      rrp: 899,
-    };
+    const product = productList.list.filter(
+      (product) => product.id == item.id
+    )[0];
+
     return (
       <View style={styles.itemContainer}>
         <TouchableOpacity onPress={() => openProduct(item.id)}>

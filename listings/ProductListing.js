@@ -45,9 +45,10 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingLeft: 10,
     paddingRight: 10,
-    fontSize: 20,
+    fontSize: 16,
   },
   productSubHeader: {
     paddingBottom: 20,
+    color: "grey",
   },
 });
