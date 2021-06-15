@@ -77,7 +77,7 @@ export default function ProductScreen({ route, navigation }) {
             <Text style={styles.tabTextSelected}>Demo Location</Text>
           </TouchableOpacity>
         </View>
-        <DemoLocationScreen />
+        <DemoLocationScreen locationIds={product.locationIds} />
       </View>
     );
   }

@@ -1,0 +1,69 @@
+{
+    "list": [
+        {
+            "id" : "001",
+            "name" : "OPPO Concept Store - Jurong Point",
+            "address" : "Jurong Point Shopping Centre, Jurong West Central 2, #B1-14/15 Jurong Point, 648886"
+        },
+        {
+            "id" : "002",
+            "name" : "OPPO Concept Store - Causeway Point",
+            "address" : "1 Woodlands Square, #03-12 Causeway Point Shopping Center, Singapore 738099"
+        },
+        {
+            "id" : "003",
+            "name" : "OPPO Concept Store - NEX",
+            "address" : "23 Serangoon Central, #04-45, Singapore 556083"
+        },
+        {
+            "id" : "004",
+            "name" : "OPPO Concept Store - Suntec City Tower 3",
+            "address" : "8 Temasek Boulevard, Suntec City Mall, Tower 3, #01-627 to #01-630, Temasek Blvd, Singapore 038983"
+        },
+        {
+            "id" : "005",
+            "name" : "Samsung Experience Store - Jurong Point",
+            "address" : "63 Jurong West Central 3, #B1-09/10/11, Singapore 648331"
+        },
+        {
+            "id" : "006",
+            "name" : "Samsung Experience Store - Westgate",
+            "address" : "3 Gateway Dr, #01-01, Singapore 608532"
+        },
+        {
+            "id" : "007",
+            "name" : "Samsung Experience Store - NEX",
+            "address" : "23 Serangoon Central, #04-42 NEX, Singapore 556083"
+        },
+        {
+            "id" : "008",
+            "name" : "Apple Orchard Road",
+            "address" : "270 Orchard Rd, Singapore 238857"
+        },
+        {
+            "id" : "009",
+            "name" : "Apple Jewel Changi Airport",
+            "address" : "78 Airport Blvd., Singapore 819666"
+        },
+        {
+            "id" : "010",
+            "name" : "Apple Marina Bay Sands",
+            "address" : "2 Bayfront Ave, B2-06, Singapore 018972"
+        },
+        {
+            "id" : "011",
+            "name" : "Mi Store - Suntec City",
+            "address" : "3 Temasek Boulevard, Mall, #02 - 337-340 Suntec City, 038983"
+        },
+        {
+            "id" : "012",
+            "name" : "Mi Store - Bukit Panjang Plaza",
+            "address" : "1 Jelebu Rd, Bukit Panjang Rd, #02-45, Singapore 677743"
+        },
+        {
+            "id" : "013",
+            "name" : "Mi Store - Funan Mall",
+            "address" : "107 #03-08 North Bridge Road FUNAN Mall, 179105"
+        }
+    ]
+}
