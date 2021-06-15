@@ -38,7 +38,9 @@ export default function FavoriteScreen({ navigation }) {
       name: "My Orders",
       icon: "document-text-outline",
       colorBackground: "#448AEA",
-      action: () => {},
+      action: () => {
+        navigation.navigate("orders");
+      },
     },
     {
       id: 2,
@@ -86,7 +88,7 @@ export default function FavoriteScreen({ navigation }) {
 
   return (
     <View style={{ width: "100%", flex: 1, alignItems: "center" }}>
-      <Text style={styles.header}>AppName</Text>
+      <Text style={styles.header}>Dashboard</Text>
       <FlatList
         style={styles.favStoreContainer}
         showsVerticalScrollIndicator={false}
@@ -111,10 +113,11 @@ export default function FavoriteScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   header: {
-    paddingTop: 40,
-    fontSize: 20,
+    paddingTop: 50,
+    fontSize: 30,
     paddingLeft: 30,
     paddingRight: 30,
+    paddingBottom: 30,
     width: "100%",
   },
   favStoreContainer: {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { BarCodeScanner } from "expo-barcode-scanner";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function QRScreen({ navigation }) {
   const [hasPermission, setPermission] = useState(null);
@@ -22,6 +23,10 @@ export default function QRScreen({ navigation }) {
     }
   };
 
+  function goBack() {
+    navigation.goBack();
+  }
+
   if (hasPermission === true)
     return (
       <View style={styles.container}>
@@ -29,6 +34,16 @@ export default function QRScreen({ navigation }) {
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
           style={StyleSheet.absoluteFillObject}
         />
+        <View style={styles.bannerContainer}>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <TouchableOpacity
+              onPress={goBack}
+              style={{ backgroundColor: "#FFFFFF70", borderRadius: 25 }}
+            >
+              <Ionicons name="arrow-back" size={30} />
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     );
 
@@ -38,7 +53,7 @@ export default function QRScreen({ navigation }) {
       : "No access to camera";
 
   return (
-    <View style={{ alignItems: "center", justifyContent: "center" }}>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>{displayText}</Text>
     </View>
   );
@@ -47,8 +62,16 @@ export default function QRScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
-    flexDirection: "column",
+    backgroundColor: "white",
+    alignItems: "center",
     justifyContent: "center",
+  },
+  bannerContainer: {
+    width: "100%",
+    height: 95,
+    justifyContent: "flex-end",
+    padding: 10,
+    position: "absolute",
+    top: 0,
   },
 });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Image,
   SafeAreaView,
@@ -15,6 +15,12 @@ export default function ShopScreen({ navigation, route }) {
   const storeId = route.params.item;
   const store = getStore();
   const products = getProducts();
+
+  const [isFavorite, setFavorite] = useState(checkIfFavorite());
+
+  function checkIfFavorite() {
+    return true;
+  }
 
   function getStore() {
     // Fetch store details
@@ -44,6 +50,17 @@ export default function ShopScreen({ navigation, route }) {
     navigation.goBack();
   }
 
+  function getColor() {
+    if (isFavorite) {
+      return "#EC3232";
+    }
+    return "grey";
+  }
+
+  function toggleFavorite() {
+    setFavorite(!isFavorite);
+  }
+
   const renderItem = ({ item }) => {
     return <ProductListing item={item} navigation={navigation} />;
   };
@@ -56,9 +73,14 @@ export default function ShopScreen({ navigation, route }) {
             <Ionicons name="arrow-back" size={30} />
           </TouchableOpacity>
           <Image source={{ uri: store.iconUrl }} style={styles.image} />
-          <Text style={styles.header} numberOfLines={1}>
-            {store.name}
-          </Text>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.header} numberOfLines={1}>
+              {store.name}
+            </Text>
+          </View>
+          <TouchableOpacity onPress={toggleFavorite}>
+            <Ionicons name="heart" size={24} color={getColor()} />
+          </TouchableOpacity>
         </View>
       </View>
       <FlatList
@@ -86,7 +108,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   header: {
-    paddingLeft: 10,
+    paddingHorizontal: 10,
     fontSize: 20,
   },
   image: {
