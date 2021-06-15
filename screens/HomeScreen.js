@@ -18,10 +18,6 @@ import SearchSuggestionScreen from "./SearchSuggestionScreen";
 const mainColor = "#0B3454";
 
 export default function HomeScreen({ navigation }) {
-  useEffect(() => {
-    global.cart = new Object();
-  }, []);
-
   const [searchTerm, _setSearchTerm] = useState("");
   const [isSearching, setSearching] = useState(false);
   const [isProfileOpen, setProfileOpen] = useState(false);
@@ -34,6 +30,9 @@ export default function HomeScreen({ navigation }) {
   };
 
   useEffect(() => {
+    global.cart = new Object();
+    global.searchHistory = [];
+
     BackHandler.addEventListener("hardwareBackPress", back);
     return () => {
       BackHandler.removeEventListener("hardwareBackPress", back);
@@ -98,7 +97,10 @@ export default function HomeScreen({ navigation }) {
                 setSearchTerm(input);
                 setSearching(true);
               }}
-              onBlur={() => setSearching(false)}
+              onBlur={() => {
+                global.searchHistory = [searchTerm, ...global.searchHistory];
+                setSearching(false);
+              }}
               placeholder="Tap to Search"
             />
           </View>
