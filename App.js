@@ -43,8 +43,6 @@ export default function App() {
   const [newPasswordRepeat, setNewPasswordRepeat] = useState("");
 
   function login() {
-    console.log("Login: [" + email + ", " + password + "]");
-
     setEmail("");
     setPassword("");
     setLoggedIn(true);
