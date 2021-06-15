@@ -10,6 +10,7 @@ npm-debug.*
 web-build/
 .env
 *__pycache__
+venv/
 
 # macOS
 .DS_Store

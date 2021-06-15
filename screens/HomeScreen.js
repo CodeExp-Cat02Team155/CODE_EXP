@@ -13,7 +13,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import ProfileScreen from "./ProfileScreen";
 import FavoriteScreen from "./FavoriteScreen";
 import SearchScreen from "./SearchScreen";
-import SearchSuggestionScreen from "./SearchSuggestionScreen";
 
 const mainColor = "#0B3454";
 
@@ -59,11 +58,8 @@ export default function HomeScreen({ navigation }) {
   }
 
   function Content() {
-    if (searchTerm.length == 0)
+    if (searchTerm.length == 0 || isSearching)
       return <FavoriteScreen navigation={navigation} />;
-    if (isSearching) {
-      return <SearchSuggestionScreen keyword={searchTerm} />;
-    }
     return <SearchScreen navigation={navigation} keyword={searchTerm} />;
   }
 

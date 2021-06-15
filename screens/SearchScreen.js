@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, View } from "react-native";
 import StoreListing from "../listings/StoreListing";
 import ProductListing from "../listings/ProductListing";
 
