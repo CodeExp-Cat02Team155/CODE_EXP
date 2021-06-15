@@ -10,6 +10,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  Image,
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -19,6 +20,8 @@ import ShopScreen from "./screens/ShopScreen";
 import QRScreen from "./screens/QRScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
+import PaymentScreen from "./screens/PaymentScreen";
+import OrdersScreen from "./screens/OrdersScreen";
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
@@ -87,6 +90,8 @@ export default function App() {
           <Stack.Screen name="qr" component={QRScreen} />
           <Stack.Screen name="product" component={ProductScreen} />
           <Stack.Screen name="cart" component={CartScreen} />
+          <Stack.Screen name="payment" component={PaymentScreen} />
+          <Stack.Screen name="orders" component={OrdersScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
@@ -98,6 +103,15 @@ export default function App() {
         translucent
         backgroundColor="transparent"
         barStyle="dark-content"
+      />
+      <Image
+        style={{
+          width: 300,
+          height: 110,
+          resizeMode: "contain",
+          marginBottom: 20,
+        }}
+        source={require("./assets/hybrid_text.png")}
       />
       <Input
         iconName="mail-outline"
