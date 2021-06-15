@@ -8,8 +8,11 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
-export default function CartScreen() {
+const mainColor = "#0B3454";
+
+export default function CartScreen({ navigation }) {
   const [cart, setCart] = useState(getData());
 
   function reduceCount(id) {
@@ -38,9 +41,13 @@ export default function CartScreen() {
     return tempCart;
   }
 
+  function openProduct(id) {
+    navigation.navigate("product", id);
+  }
+
   const renderItem = ({ item }) => {
     const product = {
-      id: "0001",
+      id: item.id,
       name: "OPPO Reno 5 Pro",
       iconUrl:
         "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
@@ -49,16 +56,48 @@ export default function CartScreen() {
     };
     return (
       <View style={styles.itemContainer}>
-        <Image source={{ uri: product.iconUrl }} style={styles.itemImage} />
-        <Text style={styles.itemHeader}>{product.name}</Text>
+        <TouchableOpacity onPress={() => openProduct(item.id)}>
+          <Image source={{ uri: product.iconUrl }} style={styles.itemImage} />
+        </TouchableOpacity>
+
+        <View style={{ flex: 1 }}>
+          <Text numberOfLines={1} style={styles.itemHeader}>
+            {product.name}
+          </Text>
+          <Text style={styles.itemSubHeader} numberOfLines={1}>
+            ${product.currentPrice}
+          </Text>
+          <View style={styles.row}>
+            <TouchableOpacity
+              style={styles.quantityIcon}
+              onPress={() => reduceCount(item.id)}
+            >
+              <Ionicons name="remove-circle-outline" size={26} />
+            </TouchableOpacity>
+            <Text style={styles.quantityText}>{item.quantity}</Text>
+            <TouchableOpacity
+              style={styles.quantityIcon}
+              onPress={() => increaseCount(item.id)}
+            >
+              <Ionicons name="add-circle-outline" size={26} />
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     );
   };
 
   return (
     <SafeAreaView style={{ padding: 20 }}>
-      <Text style={styles.header}>My Cart</Text>
-      <FlatList data={cart} renderItem={renderItem} />
+      <View style={{ height: "90%" }}>
+        <Text style={styles.header}>My Cart</Text>
+        <FlatList data={cart} renderItem={renderItem} />
+      </View>
+      <View style={styles.bottomRow}>
+        <TouchableOpacity style={styles.buttonSecondary}>
+          <Text style={styles.buttonSecondaryText}>Check Out</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
@@ -71,7 +110,13 @@ const styles = StyleSheet.create({
   },
   itemHeader: {
     fontSize: 20,
+    paddingTop: 15,
     padding: 10,
+  },
+  itemSubHeader: {
+    fontSize: 16,
+    paddingHorizontal: 10,
+    paddingBottom: 10,
   },
   itemContainer: {
     width: "100%",
@@ -79,10 +124,43 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "white",
     flexDirection: "row",
+    marginBottom: 10,
   },
   itemImage: {
     borderRadius: 10,
     width: 120,
     height: 120,
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
+  quantityIcon: {
+    paddingRight: 20,
+  },
+  quantityText: {
+    paddingRight: 20,
+    fontSize: 20,
+  },
+  bottomRow: {
+    height: 70,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonSecondary: {
+    borderColor: mainColor,
+    borderWidth: 1,
+    height: 40,
+    width: 120,
+    marginLeft: 10,
+    marginRight: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+  },
+  buttonSecondaryText: {
+    color: mainColor,
+    fontWeight: "700",
   },
 });
