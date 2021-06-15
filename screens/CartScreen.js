@@ -94,8 +94,8 @@ export default function CartScreen({ navigation }) {
         <FlatList data={cart} renderItem={renderItem} />
       </View>
       <View style={styles.bottomRow}>
-        <TouchableOpacity style={styles.buttonSecondary}>
-          <Text style={styles.buttonSecondaryText}>Check Out</Text>
+        <TouchableOpacity style={styles.buttonPrimary}>
+          <Text style={styles.buttonPrimaryText}>Check Out</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -148,19 +148,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  buttonSecondary: {
-    borderColor: mainColor,
-    borderWidth: 1,
+  buttonPrimary: {
+    backgroundColor: mainColor,
     height: 40,
     width: 120,
     marginLeft: 10,
     marginRight: 10,
+    marginTop: 50,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
   },
-  buttonSecondaryText: {
-    color: mainColor,
+  buttonPrimaryText: {
+    color: "white",
     fontWeight: "700",
   },
 });

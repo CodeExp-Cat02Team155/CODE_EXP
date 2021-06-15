@@ -33,7 +33,7 @@ export default function SearchScreen({ navigation, keyword }) {
   return (
     <View style={{ flex: 1, width: "100%" }}>
       <FlatList
-        fadingEdgeLength={50}
+        fadingEdgeLength={20}
         style={{ marginTop: 30, paddingTop: 20 }}
         numColumns={2}
         data={listings}
