@@ -95,7 +95,7 @@
         {
             "id": "S0003",
             "brand": "Xiao Mi",
-            "product": [
+            "products": [
                 {
                     "iconUrl": "https://sg-test-11.slatic.net/p/mdc/8cd8c683f9aba422d6a35c5fda6ea31c.png_400x400q90.jpg_.webp",
                     "name": "[1 Year Local Official Warranty]Xiaomi Redmi 9 (4GB + 64GB) Global Version",
@@ -133,7 +133,7 @@
         {
             "id": "S0004",
             "brand": "OPPO",
-            "product": [
+            "products": [
                 {
                     "iconUrl": "https://sg-test-11.slatic.net/p/ca5d888295967a407736389f40b04e08.jpg_400x400q90.jpg_.webp",
                     "name": "OPPO Reno5 5G/ Dual-View Video / AI Highlight Video/ 65W SuperVOOC 2.0 / 90Hz Refresh Rate/ 8+128GB",
@@ -179,7 +179,7 @@
         {
             "id": "S0005",
             "brand": "OnePlus",
-            "product": 
+            "products": 
             [
                 {
                     "iconUrl": "https://sg-test-11.slatic.net/p/15749daaf38549fdd4c7ccee2e8b6ba4.jpg_400x400q90.jpg_.webp",
