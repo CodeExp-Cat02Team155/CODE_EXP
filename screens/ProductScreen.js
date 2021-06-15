@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   ScrollView,
@@ -8,11 +8,14 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import DemoLocationScreen from "./DemoLocationSceen";
+import ProductInfoScreen from "./ProductInfoScreen";
 
 const mainColor = "#0B3454";
 
 export default function ProductScreen({ route, navigation }) {
   const productId = route.params;
+  const [tab, setTab] = useState("info");
 
   const product = {
     id: productId,
@@ -45,9 +48,40 @@ export default function ProductScreen({ route, navigation }) {
     console.log(global.cart);
   }
 
+  function TabView() {
+    if (tab == "info") {
+      return (
+        <View>
+          <View style={styles.tab}>
+            <TouchableOpacity onPress={() => setTab("info")}>
+              <Text style={styles.tabTextSelected}>Product Info</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setTab("where")}>
+              <Text style={styles.tabText}>Demo Location</Text>
+            </TouchableOpacity>
+          </View>
+          <ProductInfoScreen />
+        </View>
+      );
+    }
+    return (
+      <View>
+        <View style={styles.tab}>
+          <TouchableOpacity onPress={() => setTab("info")}>
+            <Text style={styles.tabText}>Product Info</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => setTab("where")}>
+            <Text style={styles.tabTextSelected}>Demo Location</Text>
+          </TouchableOpacity>
+        </View>
+        <DemoLocationScreen />
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.scrollView} fadingEdgeLength={50}>
         <Image source={{ uri: product.iconUrl }} style={styles.image} />
         <Text style={styles.header}>{product.name}</Text>
         <Text style={styles.subHeader}>
@@ -61,6 +95,7 @@ export default function ProductScreen({ route, navigation }) {
             </Text>
           </View>
         </TouchableOpacity>
+        <TabView />
       </ScrollView>
       <View style={styles.bottomRow}>
         <TouchableOpacity style={styles.buttonSecondary} onPress={addToCart}>
@@ -104,6 +139,21 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontWeight: "700",
     textAlignVertical: "center",
+  },
+  tab: {
+    paddingVertical: 15,
+    flexDirection: "row",
+    backgroundColor: mainColor,
+    justifyContent: "space-evenly",
+  },
+  tabText: {
+    fontSize: 16,
+    color: "white",
+  },
+  tabTextSelected: {
+    fontSize: 16,
+    color: "white",
+    fontWeight: "700",
   },
   bottomRow: {
     height: 70,
