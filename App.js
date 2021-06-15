@@ -10,6 +10,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  Image,
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -102,6 +103,15 @@ export default function App() {
         translucent
         backgroundColor="transparent"
         barStyle="dark-content"
+      />
+      <Image
+        style={{
+          width: 300,
+          height: 110,
+          resizeMode: "contain",
+          marginBottom: 20,
+        }}
+        source={require("./assets/hybrid_text.png")}
       />
       <Input
         iconName="mail-outline"
