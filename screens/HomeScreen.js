@@ -30,7 +30,6 @@ export default function HomeScreen({ navigation }) {
 
   useEffect(() => {
     global.cart = new Object();
-    global.searchHistory = [];
 
     BackHandler.addEventListener("hardwareBackPress", back);
     return () => {
@@ -48,13 +47,6 @@ export default function HomeScreen({ navigation }) {
     setSearchTerm("");
     setSearching(false);
     return true;
-  }
-
-  function addToHistory() {
-    if (global.searchHistory.includes(searchTerm)) {
-      return;
-    }
-    global.searchHistory = [searchTerm, ...global.searchHistory];
   }
 
   function Content() {
@@ -101,7 +93,6 @@ export default function HomeScreen({ navigation }) {
                 setSearching(true);
               }}
               onBlur={() => {
-                addToHistory();
                 setSearching(false);
               }}
               placeholder="Tap to Search"

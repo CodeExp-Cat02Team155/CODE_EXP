@@ -45,7 +45,6 @@ export default function ProductScreen({ route, navigation }) {
     } else {
       global.cart[productId] = 1;
     }
-    console.log(global.cart);
   }
 
   function TabView() {

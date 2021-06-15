@@ -18,6 +18,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ShopScreen from "./screens/ShopScreen";
 import QRScreen from "./screens/QRScreen";
 import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
@@ -87,6 +88,7 @@ export default function App() {
           <Stack.Screen name="shop" component={ShopScreen} />
           <Stack.Screen name="qr" component={QRScreen} />
           <Stack.Screen name="product" component={ProductScreen} />
+          <Stack.Screen name="cart" component={CartScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
