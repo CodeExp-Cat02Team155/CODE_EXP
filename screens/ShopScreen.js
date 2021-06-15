@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     height: 95,
     backgroundColor: "white",
     justifyContent: "flex-end",
-    padding: 15,
+    padding: 10,
     elevation: 5,
   },
   header: {

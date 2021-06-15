@@ -9,33 +9,6 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const menu = [
-  {
-    id: 0,
-    name: "My Cart",
-    icon: "cart-outline",
-    colorBackground: "#EC3232",
-  },
-  {
-    id: 1,
-    name: "My Orders",
-    icon: "document-text-outline",
-    colorBackground: "#448AEA",
-  },
-  {
-    id: 2,
-    name: "Message",
-    icon: "chatbubbles-outline",
-    colorBackground: "#4BBD4D",
-  },
-  {
-    id: 3,
-    name: "More",
-    icon: "grid-outline",
-    colorBackground: "#FBC72B",
-  },
-];
-
 export default function FavoriteScreen({ navigation }) {
   const [favStoresId, setFavStoresId] = useState(["S0001"]);
 
@@ -49,6 +22,39 @@ export default function FavoriteScreen({ navigation }) {
         "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/56711067_2371221246241957_3865632581156339712_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uX6Icwxp5coAX_JQptE&_nc_ht=scontent.fsin9-2.fna&oh=39fb345cb548815b26d48b72901a09a9&oe=60CC7B51",
     };
   }
+
+  const menu = [
+    {
+      id: 0,
+      name: "My Cart",
+      icon: "cart-outline",
+      colorBackground: "#EC3232",
+      action: () => {
+        navigation.navigate("cart");
+      },
+    },
+    {
+      id: 1,
+      name: "My Orders",
+      icon: "document-text-outline",
+      colorBackground: "#448AEA",
+      action: () => {},
+    },
+    {
+      id: 2,
+      name: "Message",
+      icon: "chatbubbles-outline",
+      colorBackground: "#4BBD4D",
+      action: () => {},
+    },
+    {
+      id: 3,
+      name: "More",
+      icon: "grid-outline",
+      colorBackground: "#FBC72B",
+      action: () => {},
+    },
+  ];
 
   const storeRenderItem = ({ item }) => {
     const data = getStore(item.id);
@@ -67,7 +73,7 @@ export default function FavoriteScreen({ navigation }) {
 
   const menuRendermItem = ({ item }) => {
     return (
-      <TouchableOpacity style={styles.itemContainer}>
+      <TouchableOpacity style={styles.itemContainer} onPress={item.action}>
         <View style={styles.icon} backgroundColor={item.colorBackground}>
           <Ionicons name={item.icon} size={25} color="white" />
         </View>

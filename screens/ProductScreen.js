@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import DemoLocationScreen from "./DemoLocationSceen";
 import ProductInfoScreen from "./ProductInfoScreen";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const mainColor = "#0B3454";
 
@@ -45,7 +46,6 @@ export default function ProductScreen({ route, navigation }) {
     } else {
       global.cart[productId] = 1;
     }
-    console.log(global.cart);
   }
 
   function TabView() {
@@ -80,8 +80,8 @@ export default function ProductScreen({ route, navigation }) {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView style={styles.scrollView} fadingEdgeLength={50}>
+    <SafeAreaView style={{ flex: 1, paddingTop: 30, backgroundColor: "white" }}>
+      <ScrollView style={styles.scrollView} fadingEdgeLength={20}>
         <Image source={{ uri: product.iconUrl }} style={styles.image} />
         <Text style={styles.header}>{product.name}</Text>
         <Text style={styles.subHeader}>
@@ -102,6 +102,15 @@ export default function ProductScreen({ route, navigation }) {
           <Text style={styles.buttonSecondaryText}>Add to Cart</Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.bannerContainer}>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <TouchableOpacity
+            style={{ backgroundColor: "#FFFFFF70", borderRadius: 25 }}
+          >
+            <Ionicons name="arrow-back" size={30} />
+          </TouchableOpacity>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
@@ -109,13 +118,21 @@ export default function ProductScreen({ route, navigation }) {
 const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
-    backgroundColor: "white",
+  },
+  bannerContainer: {
+    width: "100%",
+    height: 95,
+    justifyContent: "flex-end",
+    padding: 10,
+    position: "absolute",
+    top: 0,
   },
   image: {
     width: "100%",
     aspectRatio: 1,
   },
   header: {
+    paddingTop: 20,
     fontSize: 30,
     paddingHorizontal: 20,
   },
@@ -160,7 +177,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "white",
   },
   buttonSecondary: {
     borderColor: mainColor,
