@@ -8,13 +8,15 @@ import {
   View,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Toast from "react-native-easy-toast";
+
 import storeList from "../local_data/list_store.json";
 
 export default function FavoriteScreen({ navigation }) {
   const [favStoresId, setFavStoresId] = useState(["S0004", "S0001", "S0002"]);
 
   function getStore(id) {
-    return storeList.stores.filter((store) => store.id === id)[0];
+    return storeList.stores.filter((store) => store.id == id)[0];
   }
 
   const menu = [
@@ -41,14 +43,18 @@ export default function FavoriteScreen({ navigation }) {
       name: "Message",
       icon: "chatbubbles-outline",
       colorBackground: "#4BBD4D",
-      action: () => {},
+      action: () => {
+        toast.show("Coming soon");
+      },
     },
     {
       id: 3,
       name: "More",
       icon: "grid-outline",
       colorBackground: "#FBC72B",
-      action: () => {},
+      action: () => {
+        toast.show("Coming soon");
+      },
     },
   ];
 
@@ -57,7 +63,7 @@ export default function FavoriteScreen({ navigation }) {
     return (
       <TouchableOpacity
         style={styles.itemContainer}
-        onPress={() => navigation.navigate("shop", { data })}
+        onPress={() => navigation.navigate("shop", data)}
       >
         <Image source={{ uri: data.iconUrl }} style={styles.itemImage} />
         <Text style={styles.itemText} numberOfLines={1}>
@@ -82,6 +88,7 @@ export default function FavoriteScreen({ navigation }) {
 
   return (
     <View style={{ width: "100%", flex: 1, alignItems: "center" }}>
+      <Toast ref={(_toast) => (toast = _toast)} />
       <Text style={styles.header}>Dashboard</Text>
       <FlatList
         style={styles.favStoreContainer}

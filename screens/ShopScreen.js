@@ -13,13 +13,13 @@ import ProductListing from "../listings/ProductListing";
 import productList from "../local_data/list_product.json";
 
 export default function ShopScreen({ navigation, route }) {
-  const store = route.params.data;
+  const store = route.params;
   const products = getProducts(store.id);
 
   function getProducts(id) {
-    return productList.list.filter((product) => product.id === id)[0].products;
+    return productList.list.filter((product) => product.storeId == id);
   }
-  
+
   const [isFavorite, setFavorite] = useState(checkIfFavorite());
 
   function checkIfFavorite() {

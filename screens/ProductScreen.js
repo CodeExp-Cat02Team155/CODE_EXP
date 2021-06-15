@@ -11,6 +11,9 @@ import {
 import DemoLocationScreen from "./DemoLocationSceen";
 import ProductInfoScreen from "./ProductInfoScreen";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Toast from "react-native-easy-toast";
+import productList from "../local_data/list_product.json";
+import storeList from "../local_data/list_store.json";
 
 const mainColor = "#0B3454";
 
@@ -18,33 +21,26 @@ export default function ProductScreen({ route, navigation }) {
   const productId = route.params;
   const [tab, setTab] = useState("info");
 
-  const product = {
-    id: productId,
-    name: "OPPO Reno 5 Pro",
-    iconUrl:
-      "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
-    currentPrice: 819,
-    rrp: 899,
-    sellerId: "0001",
-  };
+  const product = productList.list.filter(
+    (product) => product.id == productId
+  )[0];
 
-  const seller = {
-    id: "0001",
-    name: "OPPO",
-    followers: 65000,
-    iconUrl:
-      "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/56711067_2371221246241957_3865632581156339712_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uX6Icwxp5coAX_JQptE&_nc_ht=scontent.fsin9-2.fna&oh=39fb345cb548815b26d48b72901a09a9&oe=60CC7B51",
-  };
+  const seller = storeList.stores.filter(
+    (store) => store.id == product.storeId
+  )[0];
 
   function goBack() {
     navigation.goBack();
   }
 
   function openStore() {
-    navigation.navigate("shop", { seller });
+    navigation.navigate("shop", seller);
   }
 
+  var toast;
+
   function addToCart() {
+    toast.show("Added to cart");
     if (productId in global.cart) {
       global.cart[productId]++;
     } else {
@@ -64,7 +60,10 @@ export default function ProductScreen({ route, navigation }) {
               <Text style={styles.tabText}>Demo Location</Text>
             </TouchableOpacity>
           </View>
-          <ProductInfoScreen />
+          <ProductInfoScreen
+            description={product.description}
+            images={product.image}
+          />
         </View>
       );
     }
@@ -85,6 +84,7 @@ export default function ProductScreen({ route, navigation }) {
 
   return (
     <SafeAreaView style={{ flex: 1, paddingTop: 30, backgroundColor: "white" }}>
+      <Toast ref={(_toast) => (toast = _toast)} />
       <ScrollView style={styles.scrollView} fadingEdgeLength={20}>
         <Image source={{ uri: product.iconUrl }} style={styles.image} />
         <Text style={styles.header}>{product.name}</Text>

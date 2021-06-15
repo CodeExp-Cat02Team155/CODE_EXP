@@ -14,6 +14,7 @@ This project uses the following:
 5. npm install @react-navigation/stack
 6. npm i react-native-scalable-image
 7. npm install expo-web-browser
+8. npm i react-native-easy-toast
 
 For now login auth is disabled so just press the button, no need type anything
 

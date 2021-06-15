@@ -9,11 +9,14 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Toast from "react-native-easy-toast";
+import productList from "../local_data/list_product.json";
 
 const mainColor = "#0B3454";
 
 export default function CartScreen({ navigation }) {
   const [cart, setCart] = useState(getData());
+  var toast;
 
   function reduceCount(id) {
     global.cart[id]--;
@@ -47,20 +50,17 @@ export default function CartScreen({ navigation }) {
 
   function checkOut() {
     if (getData().length < 1) {
+      toast.show("Cart is empty");
       return;
     }
     navigation.navigate("payment");
   }
 
   const renderItem = ({ item }) => {
-    const product = {
-      id: item.id,
-      name: "OPPO Reno 5 Pro",
-      iconUrl:
-        "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
-      currentPrice: 819,
-      rrp: 899,
-    };
+    const product = productList.list.filter(
+      (product) => product.id == item.id
+    )[0];
+
     return (
       <View style={styles.itemContainer}>
         <TouchableOpacity onPress={() => openProduct(item.id)}>
@@ -98,6 +98,7 @@ export default function CartScreen({ navigation }) {
     <SafeAreaView
       style={{ flex: 1, paddingHorizontal: 20, paddingVertical: 50 }}
     >
+      <Toast ref={(_toast) => (toast = _toast)} />
       <View style={{ flex: 1 }}>
         <Text style={styles.header}>My Cart</Text>
         <FlatList
