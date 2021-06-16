@@ -12,9 +12,14 @@ import {
   View,
   Image,
 } from "react-native";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Toast from "react-native-easy-toast";
+import firebase from "firebase/app";
+import auth from "firebase/auth";
+
 import HomeScreen from "./screens/HomeScreen";
 import ShopScreen from "./screens/ShopScreen";
 import QRScreen from "./screens/QRScreen";
@@ -22,38 +27,25 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import OrdersScreen from "./screens/OrdersScreen";
-import firebase from "firebase/app";
-import Toast from "react-native-easy-toast";
-import auth from "firebase/auth";
-
-var firebaseConfig = {
-  apiKey: "AIzaSyBj7z_OcbMHqTs_Wi9ArMYnENW2OfH4ST0",
-  authDomain: "codeexp2021.firebaseapp.com",
-  databaseURL: "https://codeexp2021-default-rtdb.firebaseio.com",
-  projectId: "codeexp2021",
-  storageBucket: "codeexp2021.appspot.com",
-  messagingSenderId: "1021334246721",
-  appId: "1:1021334246721:web:fddc4f6d41715274443dc0",
-  measurementId: "G-HKK92WHSWN",
-};
-
-if (firebase.apps.length === 0) {
-  firebase.initializeApp(firebaseConfig);
-}
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
 
+if (firebase.apps.length === 0)
+  firebase.initializeApp({
+    apiKey: "AIzaSyBj7z_OcbMHqTs_Wi9ArMYnENW2OfH4ST0",
+    authDomain: "codeexp2021.firebaseapp.com",
+    databaseURL: "https://codeexp2021-default-rtdb.firebaseio.com",
+    projectId: "codeexp2021",
+    storageBucket: "codeexp2021.appspot.com",
+    messagingSenderId: "1021334246721",
+    appId: "1:1021334246721:web:fddc4f6d41715274443dc0",
+    measurementId: "G-HKK92WHSWN",
+  });
+
 export default function App() {
   var toast;
-  useEffect(() => {
-    const listener = DeviceEventEmitter.addListener("logout", () => {
-      firebase.auth().signOut();
-      setLoggedIn(false);
-    });
-    return () => listener.remove();
-  }, []);
-
+  var firebaseAuth = firebase.auth();
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -61,46 +53,46 @@ export default function App() {
   const [newPassword, setNewPassword] = useState("");
   const [newPasswordRepeat, setNewPasswordRepeat] = useState("");
 
-  firebase.auth().onAuthStateChanged((user) => {
+  useEffect(() => {
+    const listener = DeviceEventEmitter.addListener("logout", () => {
+      firebaseAuth.signOut();
+      setLoggedIn(false);
+    });
+    return () => listener.remove();
+  }, []);
+
+  firebaseAuth.onAuthStateChanged((user) => {
     if (user != null) {
       global.userId = user.uid;
       global.email = user.email;
       setEmail("");
       setPassword("");
       setLoggedIn(true);
-    } else {
-      global.userId = null;
-    }
+    } else global.userId = null;
+
     setLoggedIn(user != null);
   });
 
   function login() {
-    firebase
-      .auth()
+    firebaseAuth
       .signInWithEmailAndPassword(email, password)
-      .catch((error) => {
-        toast.show("Invalid email/password");
-      });
+      .catch((error) => toast.show(error.message));
   }
 
   function createAccount() {
-    if (newPassword != newPasswordRepeat) {
-      Alert.alert("Password Error", "The 2 passwords are not the same!");
-      return;
-    } else if (newPassword.length < 8) {
-      Alert.alert("Password Error", "The 2 passwords are not the same!");
-      return;
-    }
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, newPassword)
-      .catch((error) => {
-        toast.show("Failed to create");
-      })
-      .then(() => {
-        toast.show("Account created");
-        resetSignUpScreen();
-      });
+    if (email.length < 1) Alert.alert("Error: Email", "Email cannot be empty!");
+    else if (newPassword.length < 8 || newPasswordRepeat.length < 8)
+      Alert.alert("Error: Password", "Password must be at least 8 characters!");
+    else if (newPassword != newPasswordRepeat)
+      Alert.alert("Error: Password", "The 2 passwords are not the same!");
+    else
+      firebaseAuth
+        .createUserWithEmailAndPassword(email, newPassword)
+        .then(() => {
+          toast.show("Account created");
+          resetSignUpScreen();
+        })
+        .catch((error) => Alert.alert("Error: Sign Up", error.message));
   }
 
   function resetSignUpScreen() {
@@ -128,8 +120,6 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Toast ref={(_toast) => (toast = _toast)} />
-
       <StatusBar
         translucent
         backgroundColor="transparent"
@@ -179,7 +169,6 @@ export default function App() {
         <View style={styles.headerContainer}>
           <Text style={styles.header}>Sign Up</Text>
         </View>
-
         <View style={styles.modalContainer}>
           <Input
             iconName="mail-outline"
@@ -218,6 +207,7 @@ export default function App() {
           </View>
         </View>
       </Modal>
+      <Toast ref={(t) => (toast = t)} />
     </SafeAreaView>
   );
 }
