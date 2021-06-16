@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
   FlatList,
+  DeviceEventEmitter,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ProductListing from "../listings/ProductListing";
@@ -48,6 +49,7 @@ export default function ShopScreen({ navigation, route }) {
         global.favStores.push(store.id);
       }
     }
+    DeviceEventEmitter.emit("refreshFav");
     setFavorite(!isFavorite);
   }
 
