@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   FlatList,
   Image,
@@ -6,18 +6,31 @@ import {
   TouchableOpacity,
   StyleSheet,
   View,
+  DeviceEventEmitter,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Toast from "react-native-easy-toast";
 
 import storeList from "../local_data/list_store.json";
 
-global.favStores = ["S0004"];
-
 export default function FavoriteScreen({ navigation }) {
   function getStore(id) {
     return storeList.stores.filter((store) => store.id == id)[0];
   }
+
+  const [isRefresh, _setRefresh] = useState(false);
+  const refreshRef = useRef(isRefresh);
+  const setRefresh = (input) => {
+    refreshRef.current = input;
+    _setRefresh(input);
+  };
+
+  useEffect(() => {
+    const listener = DeviceEventEmitter.addListener("refreshFav", () => {
+      setRefresh(!refreshRef.current);
+    });
+    return () => listener.remove();
+  }, []);
 
   const menu = [
     {
@@ -94,13 +107,13 @@ export default function FavoriteScreen({ navigation }) {
         style={styles.favStoreContainer}
         showsVerticalScrollIndicator={false}
         data={global.favStores}
+        refreshing={isRefresh}
         numColumns={4}
         keyExtractor={(item) => item.id}
         renderItem={storeRenderItem}
       />
       <View style={{ height: 100, marginTop: 20 }}>
         <FlatList
-          extraData={global.favStores.length}
           style={styles.menuContainer}
           showsVerticalScrollIndicator={false}
           data={menu}

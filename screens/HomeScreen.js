@@ -30,6 +30,7 @@ export default function HomeScreen({ navigation }) {
 
   useEffect(() => {
     global.cart = new Object();
+    global.favStores = [];
 
     BackHandler.addEventListener("hardwareBackPress", back);
     return () => BackHandler.removeEventListener("hardwareBackPress", back);
