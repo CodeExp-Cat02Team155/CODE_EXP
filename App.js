@@ -64,6 +64,7 @@ export default function App() {
   firebase.auth().onAuthStateChanged((user) => {
     if (user != null) {
       global.userId = user.uid;
+      global.email = user.email;
       setEmail("");
       setPassword("");
       setLoggedIn(true);
