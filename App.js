@@ -22,19 +22,35 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import OrdersScreen from "./screens/OrdersScreen";
+import firebase from "firebase/app";
+import Toast from "react-native-easy-toast";
+import auth from "firebase/auth";
+
+var firebaseConfig = {
+  apiKey: "AIzaSyBj7z_OcbMHqTs_Wi9ArMYnENW2OfH4ST0",
+  authDomain: "codeexp2021.firebaseapp.com",
+  databaseURL: "https://codeexp2021-default-rtdb.firebaseio.com",
+  projectId: "codeexp2021",
+  storageBucket: "codeexp2021.appspot.com",
+  messagingSenderId: "1021334246721",
+  appId: "1:1021334246721:web:fddc4f6d41715274443dc0",
+  measurementId: "G-HKK92WHSWN",
+};
+
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const Stack = createStackNavigator();
 const mainColor = "#0B3454";
 
-// dummy value for authentication, to be replaced when switching to authentication from server
-const dummyEmail = "admin";
-const dummyPassword = "12345";
-
 export default function App() {
+  var toast;
   useEffect(() => {
-    const listener = DeviceEventEmitter.addListener("logout", () =>
-      setLoggedIn(false)
-    );
+    const listener = DeviceEventEmitter.addListener("logout", () => {
+      firebase.auth().signOut();
+      setLoggedIn(false);
+    });
     return () => listener.remove();
   }, []);
 
@@ -45,33 +61,46 @@ export default function App() {
   const [newPassword, setNewPassword] = useState("");
   const [newPasswordRepeat, setNewPasswordRepeat] = useState("");
 
-  function login() {
-    setEmail("");
-    setPassword("");
-    setLoggedIn(true);
-
-    // Authentication [email, password] with DB
-
-    /* Test authentication
-    if (email === dummyEmail && password === dummyPassword)
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user != null) {
+      global.userId = user.uid;
+      global.email = user.email;
+      setEmail("");
+      setPassword("");
       setLoggedIn(true);
-    else {
-      Alert.alert("Authentication Error", "Invalid email / password!");
-      console.log(
-        "Error: login\n Error Message: email or password is wrong!"
-      );
+    } else {
+      global.userId = null;
     }
-    */
+    setLoggedIn(user != null);
+  });
+
+  function login() {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch((error) => {
+        toast.show("Invalid email/password");
+      });
   }
 
   function createAccount() {
-    if (newPassword === newPasswordRepeat) {
-      console.log("Create Account: [" + email + ", " + newPassword + "]");
-
-      // Add [email, password1] to database
-
-      resetSignUpScreen();
-    } else Alert.alert("Password Error", "The 2 passwords are not the same!");
+    if (newPassword != newPasswordRepeat) {
+      Alert.alert("Password Error", "The 2 passwords are not the same!");
+      return;
+    } else if (newPassword.length < 8) {
+      Alert.alert("Password Error", "The 2 passwords are not the same!");
+      return;
+    }
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, newPassword)
+      .catch((error) => {
+        toast.show("Failed to create");
+      })
+      .then(() => {
+        toast.show("Account created");
+        resetSignUpScreen();
+      });
   }
 
   function resetSignUpScreen() {
@@ -99,6 +128,8 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Toast ref={(_toast) => (toast = _toast)} />
+
       <StatusBar
         translucent
         backgroundColor="transparent"

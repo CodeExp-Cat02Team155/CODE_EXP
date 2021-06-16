@@ -24,6 +24,7 @@ export default function FavoriteScreen({ navigation }) {
     refreshRef.current = input;
     _setRefresh(input);
   };
+  var toast;
 
   useEffect(() => {
     const listener = DeviceEventEmitter.addListener("refreshFav", () => {

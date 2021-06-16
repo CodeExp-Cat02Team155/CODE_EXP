@@ -9,22 +9,14 @@ import {
 
 const mainColor = "#0B3454";
 
-export default function ProfileScreen({ userId }) {
-  const user = getUser();
-
-  function getUser() {
-    return {
-      email: "abc123@gmail.com",
-    };
-  }
-
+export default function ProfileScreen() {
   function logout() {
     DeviceEventEmitter.emit("logout");
   }
 
   return (
     <View style={styles.popup}>
-      <Text style={styles.header}>{user.email}</Text>
+      <Text style={styles.header}>{global.email}</Text>
       <TouchableOpacity onPress={logout} style={styles.buttonPrimary}>
         <Text style={styles.buttonPrimaryText}>Logout</Text>
       </TouchableOpacity>
