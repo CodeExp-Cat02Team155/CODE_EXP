@@ -15,6 +15,7 @@ This project uses the following:
 6. npm i react-native-scalable-image
 7. npm install expo-web-browser
 8. npm i react-native-easy-toast
+9. expo install firebase
 
 For now login auth is disabled so just press the button, no need type anything
 
