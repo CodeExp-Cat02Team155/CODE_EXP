@@ -1,9 +1,7 @@
 # CODE_EXP
 
-TODOS:
-
-1. Implement DB
-   App.js - lines 51, 69
+Email: a@a.com
+Passwd: 11111111 (8 x '1's)
 
 This project uses the following:
 
@@ -15,9 +13,4 @@ This project uses the following:
 6. npm i react-native-scalable-image
 7. npm install expo-web-browser
 8. npm i react-native-easy-toast
-9. expo install firebase
-
-For now login auth is disabled so just press the button, no need type anything
-
-Username: admin
-Password: 12345
+9. npm install firebase
