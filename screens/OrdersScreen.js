@@ -8,8 +8,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-
-const mainColor = "#0B3454";
+import productList from "../local_data/list_product.json";
 
 export default function OrdersScreen({ navigation }) {
   const orderIds = ["0001"];
@@ -21,17 +20,13 @@ export default function OrdersScreen({ navigation }) {
   const renderItem = ({ item }) => {
     const order = {
       id: item,
-      productId: "0001",
+      productId: "001",
       date: Date.now(),
     };
-    const product = {
-      id: order.productId,
-      name: "OPPO Reno 5 Pro",
-      iconUrl:
-        "https://laz-img-sg.alicdn.com/p/2af2af5550a6a6f199a7df742e0613ee.jpg_720x720q80.jpg_.webp",
-      currentPrice: 819,
-      rrp: 899,
-    };
+    const product = productList.list.filter(
+      (product) => product.id == order.productId
+    )[0];
+
     const dateSplit = Date(order.date).toString().split(" ");
     return (
       <View style={styles.itemContainer}>

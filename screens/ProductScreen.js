@@ -7,6 +7,7 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
+  Alert,
 } from "react-native";
 import DemoLocationScreen from "./DemoLocationSceen";
 import ProductInfoScreen from "./ProductInfoScreen";
@@ -21,9 +22,25 @@ export default function ProductScreen({ route, navigation }) {
   const productId = route.params;
   const [tab, setTab] = useState("info");
 
-  const product = productList.list.filter(
+  var product = productList.list.filter(
     (product) => product.id == productId
   )[0];
+
+  if (product == undefined) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text style={{ fontSize: 20, padding: 20 }}>Product Not Found</Text>
+        <TouchableOpacity
+          style={styles.buttonSecondary}
+          onPress={() => navigation.goBack()}
+        >
+          <Text style={styles.buttonSecondaryText}>Go Back</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
+  console.log(product);
 
   const seller = storeList.stores.filter(
     (store) => store.id == product.storeId
