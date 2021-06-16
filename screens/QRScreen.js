@@ -54,7 +54,7 @@ export default function QRScreen({ navigation }) {
 
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>{displayText}</Text>
+      <Text style={{ fontSize: 20 }}>{displayText}</Text>
     </View>
   );
 }
